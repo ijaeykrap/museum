@@ -1,0 +1,422 @@
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff") format("woff");
+  font-weight: Bold;
+}
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff") format("woff");
+  font-weight: SemiBold;
+}
+@font-face {
+  font-family: "Pretendard-Light";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Pretendard";
+}
+
+.item {
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+}
+.item .inner {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 81.33%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.item .inner .grid {
+  width: 100%;
+  height: 459px;
+  display: grid;
+  grid-template-columns: repeat(2, 50.16%);
+  grid-template-rows: repeat(3, 153px);
+}
+.item .inner .grid .img {
+  width: 100%;
+  height: 100%;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+}
+.item .inner .grid .img.animate:nth-child(1), .item .inner .grid .img.animate:nth-child(4), .item .inner .grid .img.animate:nth-child(5) {
+  transition: all 0.3s;
+  opacity: 1;
+}
+.item .inner .grid .img.animate:nth-child(2), .item .inner .grid .img.animate:nth-child(3), .item .inner .grid .img.animate:nth-child(6) {
+  transition: all 0.5s;
+  opacity: 1;
+}
+.item .inner .text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.item .inner .text > * {
+  margin: 0;
+}
+.item .inner .text h3 {
+  font-size: 1.875rem;
+  font-family: "Pretendard";
+  margin-bottom: 10px;
+  transform: translateY(-20%);
+  opacity: 0;
+}
+.item .inner .text h3.animate {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: all 0.3s;
+}
+.item .inner .text span {
+  font-family: "NanumSquareRegular";
+  text-align: end;
+  font-size: 1.625rem;
+  line-height: 2.5rem;
+  word-break: keep-all;
+  transform: translateY(-20%);
+  opacity: 0;
+}
+.item .inner .text span.animate {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: all 0.4s;
+}
+.item .inner .text p {
+  font-family: "Pretendard-Light";
+  text-align: end;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  margin-top: 50px;
+  word-break: keep-all;
+  transform: translateY(-20%);
+  opacity: 0;
+}
+.item .inner .text p.animate {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+@media screen and (min-width: 768px) {
+  .item {
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+  }
+  .item .inner {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 87.5%;
+    margin: 0 auto;
+    padding: 50px 0;
+    border-left: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+  }
+  .item .inner .grid {
+    width: 94.04%;
+    margin: 0 auto;
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(3, 200px);
+  }
+  .item .inner .grid .img {
+    width: 100%;
+    height: 100%;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+  }
+  .item .inner .grid .img.animate:nth-child(1), .item .inner .grid .img.animate:nth-child(4), .item .inner .grid .img.animate:nth-child(5) {
+    transition: all 0.3s;
+    opacity: 1;
+  }
+  .item .inner .grid .img.animate:nth-child(2), .item .inner .grid .img.animate:nth-child(3), .item .inner .grid .img.animate:nth-child(6) {
+    transition: all 0.5s;
+    opacity: 1;
+  }
+  .item .inner .text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 2.97%;
+  }
+  .item .inner .text > * {
+    margin: 0;
+  }
+  .item .inner .text h3 {
+    font-size: 2rem;
+    font-family: "Pretendard";
+    margin-bottom: 10px;
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  .item .inner .text h3.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .item .inner .text span {
+    font-family: "NanumSquareRegular";
+    font-size: 1.75rem;
+    width: 82.95%;
+    word-break: keep-all;
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  .item .inner .text span.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.4s;
+  }
+  .item .inner .text p {
+    font-family: "Pretendard-Light";
+    font-size: 1.375rem;
+    line-height: 2rem;
+    margin-top: 50px;
+    word-break: keep-all;
+    width: 64.43%;
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  .item .inner .text p.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.5s;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .item {
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 300px;
+  }
+  .item .inner {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    width: 89.06%;
+    margin: 0 auto;
+    padding: 80px 0;
+    border-left: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+  }
+  .item .inner .grid {
+    width: 87.5%;
+    margin: 0 auto;
+    height: 532px;
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    grid-template-rows: repeat(2, 266px);
+  }
+  .item .inner .grid .img {
+    width: 100%;
+    height: 100%;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+  }
+  .item .inner .grid .img.animate:nth-child(1), .item .inner .grid .img.animate:nth-child(4), .item .inner .grid .img.animate:nth-child(5) {
+    transition: all 0.3s;
+    opacity: 1;
+  }
+  .item .inner .grid .img.animate:nth-child(2), .item .inner .grid .img.animate:nth-child(3), .item .inner .grid .img.animate:nth-child(6) {
+    transition: all 0.5s;
+    opacity: 1;
+  }
+  .item .inner .text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 6.25%;
+  }
+  .item .inner .text > * {
+    margin: 0;
+  }
+  .item .inner .text h3 {
+    font-size: 2.125rem;
+    font-family: "Pretendard";
+    margin-bottom: 10px;
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  .item .inner .text h3.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .item .inner .text span {
+    font-family: "NanumSquareRegular";
+    font-size: 1.875rem;
+    width: 82.95%;
+    word-break: keep-all;
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  .item .inner .text span.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.4s;
+  }
+  .item .inner .text p {
+    font-family: "Pretendard-Light";
+    font-size: 1.625rem;
+    line-height: 2.5rem;
+    margin-top: 60px;
+    word-break: keep-all;
+    width: 64.43%;
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  .item .inner .text p.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.5s;
+  }
+}
+@media screen and (min-width: 1650px) {
+  .item {
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+  }
+  .item .inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 1596px;
+    margin: 0 auto;
+    padding: 80px 0;
+    border-left: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+  }
+  .item .inner .grid {
+    width: 50%;
+    margin: 0;
+    height: 798px;
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    grid-template-rows: repeat(3, 266px);
+  }
+  .item .inner .grid .img {
+    width: 100%;
+    height: 100%;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+  }
+  .item .inner .grid .img:first-child {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .item .inner .grid .img:nth-child(2) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+  .item .inner .grid .img:nth-child(3) {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  .item .inner .grid .img:nth-child(4) {
+    grid-row-start: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+  .item .inner .grid .img:nth-child(5) {
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .item .inner .grid .img:nth-child(6) {
+    grid-row-start: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  .item .inner .grid .img.animate:nth-child(1), .item .inner .grid .img.animate:nth-child(4), .item .inner .grid .img.animate:nth-child(5) {
+    transition: all 0.3s;
+    opacity: 1;
+  }
+  .item .inner .grid .img.animate:nth-child(2), .item .inner .grid .img.animate:nth-child(3), .item .inner .grid .img.animate:nth-child(6) {
+    transition: all 0.5s;
+    opacity: 1;
+  }
+  .item .inner .text {
+    width: 41.72%;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    padding-right: 1.87%;
+  }
+  .item .inner .text > * {
+    margin: 0;
+  }
+  .item .inner .text h3 {
+    font-size: 2.125rem;
+    font-family: "Pretendard";
+    margin-bottom: 10px;
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  .item .inner .text h3.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .item .inner .text span {
+    font-family: "NanumSquareRegular";
+    font-size: 1.875rem;
+    width: 100%;
+    word-break: keep-all;
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  .item .inner .text span.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.4s;
+  }
+  .item .inner .text p {
+    font-family: "Pretendard-Light";
+    font-size: 1.625rem;
+    line-height: 2.5rem;
+    margin-top: 60px;
+    word-break: keep-all;
+    width: 100%;
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  .item .inner .text p.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.5s;
+  }
+}/*# sourceMappingURL=Dproject.module.css.map */

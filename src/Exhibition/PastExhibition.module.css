@@ -1,0 +1,571 @@
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff") format("woff");
+  font-weight: Bold;
+}
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff") format("woff");
+  font-weight: "SemiBold";
+}
+@font-face {
+  font-family: "Pretendard-Light";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
+  font-style: normal;
+}
+* {
+  font-family: "Pretendard";
+}
+
+.content {
+  width: 100%;
+}
+.content .index {
+  width: 81.33%;
+  margin: 0 auto;
+}
+.content .index ul {
+  margin: 50px 0;
+  padding: 0;
+}
+.content .index ul li {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.125rem;
+  font-family: "NanumSquareRegular";
+  border: 1px solid #000;
+  border-radius: 50px;
+  padding: 10px 14px;
+  margin: 0 20px 20px 0;
+}
+.content .index ul li:hover {
+  background-color: #000;
+  color: #fff;
+}
+.content .index ul li:last-child {
+  margin-bottom: 0;
+}
+.content .index ul .pushed {
+  background-color: #000;
+  color: #fff;
+}
+.content .list {
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+  padding-bottom: 100px;
+}
+.content .list .inner {
+  width: 81.33%;
+  margin: 0 auto;
+}
+.content .list .inner .yearBlock {
+  width: 100%;
+  margin: 30px 0;
+  display: flex;
+  justify-content: end;
+}
+.content .list .inner .year {
+  appearance: none;
+  font-size: 1.125rem;
+  font-family: "Pretendard";
+  background: url("../../public/img/logo-triangle.svg") no-repeat right 12px center;
+  padding: 6px 10px;
+  width: 182px;
+  height: 33px;
+}
+.content .list .inner ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.content .list .inner ul li {
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+  padding: 10px 0;
+  cursor: pointer;
+}
+.content .list .inner ul li:hover .img {
+  opacity: 0.7;
+  transition: opacity 0.5s;
+}
+.content .list .inner ul li .text {
+  margin-bottom: 10px;
+  height: 165px;
+  position: relative;
+}
+.content .list .inner ul li .text > * {
+  margin: 0;
+  display: block;
+  word-break: keep-all;
+}
+.content .list .inner ul li .text .place {
+  font-size: 1rem;
+  font-family: "Pretendard-SemiBold";
+}
+.content .list .inner ul li .text .title {
+  font-size: 1.125rem;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  font-family: "Pretendard-Bold";
+}
+.content .list .inner ul li .text .sub {
+  font-size: 1rem;
+}
+.content .list .inner ul li .text .date {
+  font-size: 1rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+}
+.content .list .inner ul li .img {
+  width: 100%;
+  height: 128px;
+  background-size: cover;
+  background-position: center;
+}
+.content .list .inner .nothing {
+  font-size: 1.25rem;
+}
+.content .more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #e4e4e4;
+  height: 231px;
+  width: 100%;
+}
+.content .more a {
+  display: block;
+  font-size: 1.125rem;
+  border: 1px solid #000;
+  width: 201px;
+  height: 51px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+}
+.content .more a:hover {
+  background-color: #000;
+  color: #fff;
+  transition: 0.2s;
+}
+
+@media screen and (min-width: 768px) {
+  .content {
+    width: 100%;
+  }
+  .content .index {
+    width: 87.5%;
+    margin: 0 auto;
+  }
+  .content .index ul {
+    margin: 50px 0;
+    padding: 0;
+  }
+  .content .index ul li {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.375rem;
+    font-family: "NanumSquareRegular";
+    border: 1px solid #000;
+    border-radius: 50px;
+    padding: 13px 25px;
+    margin: 0 20px 20px 0;
+  }
+  .content .index ul li:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  .content .index ul li:last-child {
+    margin-bottom: 0px;
+  }
+  .content .index ul .pushed {
+    background-color: #000;
+    color: #fff;
+  }
+  .content .list {
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+  }
+  .content .list .inner {
+    width: 87.5%;
+    margin: 0 auto;
+  }
+  .content .list .inner .yearBlock {
+    width: 100%;
+    margin: 50px 0;
+    display: flex;
+    justify-content: end;
+  }
+  .content .list .inner .year {
+    appearance: none;
+    font-size: 1.375rem;
+    font-family: "Pretendard";
+    background: url("../../public/img/logo-triangle.svg") no-repeat right 12px center;
+    padding: 8px 16px;
+    width: 223px;
+    height: 41px;
+  }
+  .content .list .inner ul {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 48.21%);
+    column-gap: 3.57%;
+    row-gap: 100px;
+    margin: 0;
+  }
+  .content .list .inner ul li {
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    padding: 15px 0;
+    cursor: pointer;
+  }
+  .content .list .inner ul li:hover .img {
+    opacity: 0.7;
+    transition: opacity 0.5s;
+  }
+  .content .list .inner ul li .text {
+    height: 226px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .content .list .inner ul li .text > * {
+    margin: 0;
+    display: block;
+    word-break: keep-all;
+  }
+  .content .list .inner ul li .text .place {
+    font-size: 1.25rem;
+    font-family: "Pretendard-SemiBold";
+  }
+  .content .list .inner ul li .text .title {
+    font-size: 1.375rem;
+    margin-top: 8px;
+    margin-bottom: 4px;
+    font-family: "Pretendard-Bold";
+  }
+  .content .list .inner ul li .text .sub {
+    font-size: 1.25rem;
+  }
+  .content .list .inner ul li .text .date {
+    font-size: 1.25rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+  }
+  .content .list .inner ul li .img {
+    width: 100%;
+    height: 230px;
+    background-size: cover;
+    background-position: center;
+  }
+  .content .list .inner .nothing {
+    font-size: 1.375rem;
+  }
+  .content .more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #e4e4e4;
+    height: 240px;
+    width: 100%;
+  }
+  .content .more a {
+    display: block;
+    font-size: 1.375rem;
+    border: 1px solid #000;
+    width: 260px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+  }
+  .content .more a:hover {
+    background-color: #000;
+    color: #fff;
+    transition: 0.2s;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content {
+    width: 100%;
+  }
+  .content .index {
+    width: 89.06%;
+    margin: 0 auto;
+  }
+  .content .index ul {
+    margin: 50px 0;
+    padding: 0;
+  }
+  .content .index ul li {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-family: "NanumSquareRegular";
+    border: 1px solid #000;
+    border-radius: 50px;
+    padding: 14px 25px;
+    margin: 0 20px 0 0;
+  }
+  .content .index ul li:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  .content .index ul li:last-child {
+    margin-top: 20px;
+  }
+  .content .index ul .pushed {
+    background-color: #000;
+    color: #fff;
+  }
+  .content .list {
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+  }
+  .content .list .inner {
+    width: 89.06%;
+    margin: 0 auto;
+  }
+  .content .list .inner .yearBlock {
+    width: 100%;
+    margin: 50px 0;
+    display: flex;
+    justify-content: end;
+  }
+  .content .list .inner .year {
+    appearance: none;
+    font-size: 1.5rem;
+    font-family: "Pretendard";
+    background: url("../../public/img/logo-triangle.svg") no-repeat right 10px center;
+    padding: 19px 21px;
+    width: 255px;
+    height: 66px;
+  }
+  .content .list .inner ul {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 31.57%);
+    column-gap: 2.63%;
+    row-gap: 150px;
+    margin: 0;
+  }
+  .content .list .inner ul li {
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    padding: 20px 0;
+    cursor: pointer;
+  }
+  .content .list .inner ul li:hover .img {
+    opacity: 0.7;
+    transition: opacity 0.5s;
+  }
+  .content .list .inner ul li .text {
+    height: 250px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .content .list .inner ul li .text > * {
+    margin: 0;
+    display: block;
+    word-break: keep-all;
+  }
+  .content .list .inner ul li .text .place {
+    font-size: 1.375rem;
+    font-family: "Pretendard-SemiBold";
+  }
+  .content .list .inner ul li .text .title {
+    font-size: 1.5rem;
+    margin-top: 8px;
+    margin-bottom: 4px;
+    font-family: "Pretendard-Bold";
+  }
+  .content .list .inner ul li .text .sub {
+    font-size: 1.375rem;
+  }
+  .content .list .inner ul li .text .date {
+    font-size: 1.375rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+  }
+  .content .list .inner ul li .img {
+    width: 100%;
+    height: 230px;
+    background-size: cover;
+    background-position: center;
+  }
+  .content .list .inner .nothing {
+    font-size: 1.5rem;
+  }
+  .content .more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 261px;
+    width: 100%;
+  }
+  .content .more a {
+    display: block;
+    font-size: 1.75rem;
+    border: 1px solid #000;
+    width: 281px;
+    height: 81px;
+    text-align: center;
+    line-height: 81px;
+    cursor: pointer;
+  }
+  .content .more a:hover {
+    background-color: #000;
+    color: #fff;
+    transition: 0.2s;
+  }
+}
+@media screen and (min-width: 1650px) {
+  .content {
+    width: 100%;
+  }
+  .content .index {
+    width: 1596px;
+    margin: 0 auto;
+  }
+  .content .index ul {
+    margin: 50px 0;
+    padding: 0;
+  }
+  .content .index ul li {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-family: "NanumSquareRegular";
+    border: 1px solid #000;
+    border-radius: 50px;
+    padding: 17px 25px;
+    margin: 0 20px 0 0;
+  }
+  .content .index ul li:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  .content .index ul li:last-child {
+    margin-top: 0px;
+  }
+  .content .index ul .pushed {
+    background-color: #000;
+    color: #fff;
+  }
+  .content .list {
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+  }
+  .content .list .inner {
+    width: 1596px;
+    margin: 0 auto;
+  }
+  .content .list .inner .yearBlock {
+    width: 100%;
+    margin: 80px 0;
+    display: flex;
+    justify-content: end;
+  }
+  .content .list .inner .year {
+    appearance: none;
+    font-size: 1.5rem;
+    font-family: "Pretendard";
+    background: url("../../public/img/logo-triangle.svg") no-repeat right 12px center;
+    padding: 6px 10px;
+    width: 255px;
+    height: 66px;
+  }
+  .content .list .inner ul {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 23.87%);
+    column-gap: 24px;
+    row-gap: 150px;
+    margin: 0;
+  }
+  .content .list .inner ul li {
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    padding: 30px 0;
+    cursor: pointer;
+  }
+  .content .list .inner ul li:hover .img {
+    opacity: 0.7;
+    transition: opacity 0.5s;
+  }
+  .content .list .inner ul li .text {
+    margin-bottom: 10px;
+    height: 250px;
+    position: relative;
+  }
+  .content .list .inner ul li .text > * {
+    margin: 0;
+    display: block;
+    word-break: keep-all;
+  }
+  .content .list .inner ul li .text .place {
+    font-size: 1.375rem;
+    font-family: "Pretendard-SemiBold";
+  }
+  .content .list .inner ul li .text .title {
+    font-size: 1.5rem;
+    margin-top: 8px;
+    margin-bottom: 4px;
+    font-family: "Pretendard-Bold";
+  }
+  .content .list .inner ul li .text .sub {
+    font-size: 1.375rem;
+  }
+  .content .list .inner ul li .text .date {
+    font-size: 1.375rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+  }
+  .content .list .inner ul li .img {
+    width: 100%;
+    height: 230px;
+    background-size: cover;
+    background-position: center;
+  }
+  .content .list .inner .nothing {
+    font-size: 1.625rem;
+  }
+  .content .more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .content .more a {
+    display: block;
+    font-size: 1.625rem;
+    border: 1px solid #000;
+    width: 281px;
+    height: 81px;
+    text-align: center;
+    line-height: 81px;
+    cursor: pointer;
+  }
+  .content .more a:hover {
+    background-color: #000;
+    color: #fff;
+    transition: 0.2s;
+  }
+}/*# sourceMappingURL=PastExhibition.module.css.map */

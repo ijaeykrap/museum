@@ -1,0 +1,277 @@
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff") format("woff");
+  font-weight: Bold;
+}
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff") format("woff");
+  font-weight: SemiBold;
+}
+@font-face {
+  font-family: "Pretendard-Light";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: light;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+li {
+  list-style: none;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.banner {
+  width: 100%;
+  height: 180px;
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner .bannerInner {
+  width: 81.33%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+.banner .bannerInner .img {
+  width: 144px;
+  height: 90px;
+  background-size: cover;
+  background-image: url("../../public/img/logo-d-project.svg");
+}
+.banner .bannerInner .text h3 {
+  width: 140px;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+  word-break: keep-all;
+  text-align: right;
+  margin: 0;
+  font-family: "Pretendard-Light";
+}
+.banner .bannerInner .text p {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .banner {
+    width: 100%;
+    height: 288px;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .banner .bannerInner {
+    width: 87.5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+  }
+  .banner .bannerInner .img {
+    width: 220px;
+    height: 138px;
+    background-size: cover;
+    background-image: url("../../public/img/logo-d-project.svg");
+  }
+  .banner .bannerInner .text {
+    width: 435px;
+    display: flex;
+    flex-direction: column;
+  }
+  .banner .bannerInner .text h3 {
+    width: 222px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    word-break: keep-all;
+    text-align: left;
+    margin: 0;
+    font-family: "Pretendard-Light";
+  }
+  .banner .bannerInner .text p {
+    font-size: 1.125rem;
+    line-height: 1.5625rem;
+    display: block;
+    word-break: keep-all;
+    font-family: "Pretendard-Light";
+    margin: 0;
+    margin-top: 26px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .banner {
+    width: 100%;
+    height: 328px;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .banner .bannerInner {
+    width: 89.06%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+  }
+  .banner .bannerInner .img {
+    width: 297px;
+    height: 186px;
+    background-size: cover;
+    background-image: url("../../public/img/logo-d-project.svg");
+  }
+  .banner .bannerInner .text {
+    width: 532px;
+    display: flex;
+    flex-direction: column;
+  }
+  .banner .bannerInner .text h3 {
+    width: 277px;
+    font-size: 1.875rem;
+    line-height: 2rem;
+    word-break: keep-all;
+    text-align: left;
+    margin: 0;
+    font-family: "Pretendard-Light";
+  }
+  .banner .bannerInner .text p {
+    font-size: 1.375rem;
+    line-height: 2rem;
+    display: block;
+    word-break: keep-all;
+    font-family: "Pretendard-Light";
+    margin: 0;
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .banner {
+    width: 100%;
+    height: 328px;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .banner .bannerInner {
+    width: 89.06%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+  }
+  .banner .bannerInner .img {
+    width: 297px;
+    height: 186px;
+    background-size: cover;
+    background-image: url("../../public/img/logo-d-project.svg");
+  }
+  .banner .bannerInner .text {
+    width: 532px;
+  }
+  .banner .bannerInner .text h3 {
+    width: 277px;
+    font-size: 1.875rem;
+    line-height: 2rem;
+    word-break: keep-all;
+    text-align: left;
+    margin: 0;
+    font-family: "Pretendard-Light";
+  }
+  .banner .bannerInner .text p {
+    font-size: 1.375rem;
+    line-height: 2rem;
+    display: block;
+    word-break: keep-all;
+    font-family: "Pretendard-Light";
+    margin: 0;
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 1650px) {
+  .banner {
+    width: 100%;
+    height: 280px;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .banner .bannerInner {
+    width: 1596px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+  }
+  .banner .bannerInner .img {
+    width: 297px;
+    height: 186px;
+    background-size: cover;
+    background-image: url("../../public/img/logo-d-project.svg");
+  }
+  .banner .bannerInner .text {
+    width: 941px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .banner .bannerInner .text h3 {
+    width: 277px;
+    font-size: 1.875rem;
+    line-height: 2rem;
+    word-break: keep-all;
+    text-align: left;
+    margin: 0;
+    font-family: "Pretendard-Light";
+  }
+  .banner .bannerInner .text p {
+    font-size: 1.375rem;
+    line-height: 2rem;
+    display: inline-block;
+    word-break: keep-all;
+    font-family: "Pretendard-Light";
+    margin: 0;
+    margin-top: 0;
+  }
+}/*# sourceMappingURL=Banner.module.css.map */

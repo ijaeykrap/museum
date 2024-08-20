@@ -1,0 +1,59 @@
+.btnContainer {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 100;
+}
+.btnContainer > * {
+  background-image: url("../../public/img/logo-scrollBtn.svg");
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  background-size: cover;
+  border: none;
+  background-color: transparent;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+}
+.btnContainer > *:hover {
+  filter: invert(80%);
+}
+.btnContainer .bottom {
+  transform: rotateX(180deg);
+}
+
+@media screen and (min-width: 1024px) {
+  .btnContainer {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 100;
+  }
+  .btnContainer > * {
+    background-image: url("../../public/img/logo-scrollBtn.svg");
+    width: 48px;
+    height: 48px;
+    border-radius: 50px;
+    background-size: cover;
+    border: none;
+    background-color: transparent;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .btnContainer > *:hover {
+    filter: invert(80%);
+  }
+  .btnContainer .bottom {
+    transform: rotateX(180deg);
+  }
+}/*# sourceMappingURL=ScrollBtn.module.css.map */

@@ -1,0 +1,634 @@
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff") format("woff");
+  font-weight: Bold;
+}
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff") format("woff");
+  font-weight: SemiBold;
+}
+@font-face {
+  font-family: "Pretendard-Light";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Pretendard";
+}
+
+.dealim {
+  width: 100%;
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 150px;
+  user-select: none;
+}
+.dealim .inner {
+  width: 81.33%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 50px 0 50px;
+}
+.dealim .inner .indicator {
+  width: 100%;
+  height: 4px;
+  margin: 0 auto 20px auto;
+  background-color: #d8d8d8;
+  position: relative;
+  transform: translateY(-50%);
+  opacity: 0;
+}
+.dealim .inner .indicator.animate {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: all 0.3s;
+}
+.dealim .inner .indicator .scroll {
+  height: 4px;
+  background-color: #000;
+  position: absolute;
+}
+.dealim .inner .slide {
+  width: 100%;
+  transform: translateY(-10%);
+  opacity: 0;
+  overflow-x: hidden;
+}
+.dealim .inner .slide.animate {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: all 0.3s;
+}
+.dealim .inner .slide .list {
+  width: 600%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.dealim .inner .slide .list .item {
+  width: 16.66%;
+  display: inline-block;
+}
+.dealim .inner .slide .list .item:first-child .img {
+  height: 395px;
+}
+.dealim .inner .slide .list .item:nth-child(2) .img {
+  height: 180px;
+}
+.dealim .inner .slide .list .item:nth-child(3) .img {
+  height: 300px;
+}
+.dealim .inner .slide .list .item:nth-child(4) .img {
+  height: 395px;
+}
+.dealim .inner .slide .list .item:nth-child(5) .img {
+  height: 200px;
+}
+.dealim .inner .slide .list .item:last-child .img {
+  height: 230px;
+}
+.dealim .inner .slide .list .item .block {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+}
+.dealim .inner .slide .list .item .block .img {
+  width: 100%;
+  margin: 0 auto;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.dealim .inner .slide .list .item .block span {
+  font-size: 1.125rem;
+  width: 78.36%;
+  word-break: keep-all;
+  text-align: right;
+}
+.dealim .inner .text {
+  width: 100%;
+  margin: 50px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.dealim .inner .text > * {
+  margin: 0;
+}
+.dealim .inner .text h3 {
+  font-size: 1.875rem;
+  font-family: "Pretendard";
+  margin-bottom: 10px;
+  transform: translateY(-20%);
+  opacity: 0;
+}
+.dealim .inner .text h3.animate {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: all 0.3s;
+}
+.dealim .inner .text span {
+  font-family: "NanumSquareRegular";
+  font-size: 1.625rem;
+  text-align: end;
+  word-break: keep-all;
+  transform: translateY(-20%);
+  opacity: 0;
+}
+.dealim .inner .text span.animate {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: all 0.4s;
+}
+.dealim .inner .text p {
+  font-family: "Pretendard-Light";
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  margin-top: 50px;
+  word-break: keep-all;
+  text-align: end;
+  transform: translateY(-20%);
+  opacity: 0;
+}
+.dealim .inner .text p.animate {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+@media screen and (min-width: 768px) {
+  .dealim {
+    width: 100%;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 150px;
+  }
+  .dealim .inner {
+    border-left: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+    width: 87.5%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 50px 0;
+  }
+  .dealim .inner .indicator {
+    width: 100%;
+    height: 4px;
+    margin: 0 auto 20px auto;
+    background-color: #d8d8d8;
+    position: relative;
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  .dealim .inner .indicator.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .dealim .inner .indicator .scroll {
+    height: 4px;
+    background-color: #000;
+    position: absolute;
+  }
+  .dealim .inner .slide {
+    width: 100%;
+    transform: translateY(-10%);
+    opacity: 0;
+    overflow-x: hidden;
+  }
+  .dealim .inner .slide.animate {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: all 0.3s;
+  }
+  .dealim .inner .slide .list {
+    width: 358%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 0.99%;
+  }
+  .dealim .inner .slide .list .item {
+    width: 15.83%;
+    display: inline-block;
+    padding-right: 0;
+  }
+  .dealim .inner .slide .list .item:first-child .img {
+    height: 520px;
+  }
+  .dealim .inner .slide .list .item:nth-child(2) .img {
+    height: 230px;
+  }
+  .dealim .inner .slide .list .item:nth-child(3) .img {
+    height: 330px;
+  }
+  .dealim .inner .slide .list .item:nth-child(4) .img {
+    height: 500px;
+  }
+  .dealim .inner .slide .list .item:nth-child(5) .img {
+    height: 200px;
+  }
+  .dealim .inner .slide .list .item:last-child .img {
+    height: 230px;
+  }
+  .dealim .inner .slide .list .item .block {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+  }
+  .dealim .inner .slide .list .item .block .img {
+    width: 100%;
+    margin: 0 auto;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .dealim .inner .slide .list .item .block span {
+    font-size: 1.125rem;
+    width: 78.36%;
+    word-break: keep-all;
+    text-align: right;
+  }
+  .dealim .inner .text {
+    width: 100%;
+    margin: 50px 0 0 0;
+    padding-right: 2.97%;
+    display: flex;
+    flex-direction: column;
+  }
+  .dealim .inner .text > * {
+    margin: 0;
+  }
+  .dealim .inner .text h3 {
+    font-size: 2rem;
+    font-family: "Pretendard";
+    margin-bottom: 10px;
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  .dealim .inner .text h3.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .dealim .inner .text span {
+    font-family: "NanumSquareRegular";
+    font-size: 1.75rem;
+    width: 84.91%;
+    word-break: keep-all;
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  .dealim .inner .text span.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.4s;
+  }
+  .dealim .inner .text p {
+    font-family: "Pretendard-Light";
+    font-size: 1.375rem;
+    line-height: 2rem;
+    margin-top: 50px;
+    word-break: keep-all;
+    width: 89.58%;
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  .dealim .inner .text p.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.5s;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .dealim {
+    width: 100%;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 150px;
+  }
+  .dealim .inner {
+    border-left: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+    width: 89.06%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 80px 0;
+  }
+  .dealim .inner .indicator {
+    width: 100%;
+    height: 4px;
+    margin: 0 auto 20px auto;
+    background-color: #d8d8d8;
+    position: relative;
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  .dealim .inner .indicator.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .dealim .inner .indicator .scroll {
+    height: 4px;
+    background-color: #000;
+    position: absolute;
+  }
+  .dealim .inner .slide {
+    width: 100%;
+    transform: translateY(-10%);
+    opacity: 0;
+    overflow-x: hidden;
+  }
+  .dealim .inner .slide.animate {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: all 0.3s;
+  }
+  .dealim .inner .slide .list {
+    width: 263%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 0.99%;
+  }
+  .dealim .inner .slide .list .item {
+    width: 15.83%;
+    display: inline-block;
+    padding-right: 0;
+  }
+  .dealim .inner .slide .list .item:first-child .img {
+    height: 520px;
+  }
+  .dealim .inner .slide .list .item:nth-child(2) .img {
+    height: 230px;
+  }
+  .dealim .inner .slide .list .item:nth-child(3) .img {
+    height: 330px;
+  }
+  .dealim .inner .slide .list .item:nth-child(4) .img {
+    height: 500px;
+  }
+  .dealim .inner .slide .list .item:nth-child(5) .img {
+    height: 200px;
+  }
+  .dealim .inner .slide .list .item:last-child .img {
+    height: 230px;
+  }
+  .dealim .inner .slide .list .item .block {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+  }
+  .dealim .inner .slide .list .item .block .img {
+    width: 100%;
+    margin: 0 auto;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .dealim .inner .slide .list .item .block span {
+    font-size: 1.125rem;
+    width: 78.36%;
+    word-break: keep-all;
+    text-align: right;
+  }
+  .dealim .inner .text {
+    width: 100%;
+    margin: 80px 0 0 0;
+    padding-right: 5.48%;
+    display: flex;
+    flex-direction: column;
+  }
+  .dealim .inner .text > * {
+    margin: 0;
+  }
+  .dealim .inner .text h3 {
+    font-size: 2.125rem;
+    font-family: "Pretendard";
+    margin-bottom: 10px;
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  .dealim .inner .text h3.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .dealim .inner .text span {
+    font-family: "NanumSquareRegular";
+    font-size: 1.875rem;
+    width: 55.81%;
+    word-break: keep-all;
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  .dealim .inner .text span.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.4s;
+  }
+  .dealim .inner .text p {
+    font-family: "Pretendard-Light";
+    font-size: 1.625rem;
+    line-height: 2.5rem;
+    margin-top: 60px;
+    word-break: keep-all;
+    width: 94.07%;
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  .dealim .inner .text p.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.5s;
+  }
+}
+@media screen and (min-width: 1650px) {
+  .dealim {
+    width: 100%;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 300px;
+  }
+  .dealim .inner {
+    border-left: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+    width: 1596px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 80px 0 80px 0;
+  }
+  .dealim .inner .indicator {
+    width: 100%;
+    height: 4px;
+    margin: 0 auto 20px auto;
+    background-color: #d8d8d8;
+    position: relative;
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  .dealim .inner .indicator.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .dealim .inner .indicator .scroll {
+    height: 4px;
+    background-color: #000;
+    position: absolute;
+  }
+  .dealim .inner .slide {
+    width: 100%;
+    transform: translateY(-10%);
+    opacity: 0;
+    overflow-x: hidden;
+  }
+  .dealim .inner .slide.animate {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: all 0.3s;
+  }
+  .dealim .inner .slide .list {
+    width: 150%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 0.99%;
+  }
+  .dealim .inner .slide .list .item {
+    width: 15.83%;
+    display: inline-block;
+    padding-right: 0;
+  }
+  .dealim .inner .slide .list .item:first-child .img {
+    height: 520px;
+  }
+  .dealim .inner .slide .list .item:nth-child(2) .img {
+    height: 230px;
+  }
+  .dealim .inner .slide .list .item:nth-child(3) .img {
+    height: 330px;
+  }
+  .dealim .inner .slide .list .item:nth-child(4) .img {
+    height: 500px;
+  }
+  .dealim .inner .slide .list .item:nth-child(5) .img {
+    height: 200px;
+  }
+  .dealim .inner .slide .list .item:last-child .img {
+    height: 230px;
+  }
+  .dealim .inner .slide .list .item .block {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+  }
+  .dealim .inner .slide .list .item .block .img {
+    width: 100%;
+    margin: 0 auto;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .dealim .inner .slide .list .item .block span {
+    font-size: 1.125rem;
+    width: 78.36%;
+    word-break: keep-all;
+    text-align: right;
+  }
+  .dealim .inner .text {
+    width: 100%;
+    margin: 80px 0 0 0;
+    padding-right: 7.44%;
+    display: flex;
+    flex-direction: column;
+  }
+  .dealim .inner .text > * {
+    margin: 0;
+  }
+  .dealim .inner .text h3 {
+    font-size: 2.25rem;
+    font-family: "Pretendard";
+    margin-bottom: 10px;
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  .dealim .inner .text h3.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .dealim .inner .text span {
+    font-family: "NanumSquareRegular";
+    font-size: 1.875rem;
+    width: 100%;
+    word-break: keep-all;
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  .dealim .inner .text span.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.4s;
+  }
+  .dealim .inner .text p {
+    font-family: "Pretendard-Light";
+    font-size: 1.625rem;
+    line-height: 2.5rem;
+    margin-top: 60px;
+    word-break: keep-all;
+    width: 78%;
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  .dealim .inner .text p.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.5s;
+  }
+}/*# sourceMappingURL=Dealim.module.css.map */

@@ -1,0 +1,183 @@
+$color1: #919191;
+$color2: #000;
+$color3: #fff;
+$lineColor: #e4e4e4;
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
+    format("woff");
+  font-weight: Bold;
+}
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
+    format("woff");
+  font-weight: SemiBold;
+}
+@font-face {
+  font-family: "Pretendard-Light";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
+    format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Pretendard";
+}
+.nav {
+  width: 100%;
+  height: 248px;
+  border-bottom: 1px solid $lineColor;
+  margin-bottom: 150px;
+
+  .inner {
+    width: 81.33%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    ul {
+      position: absolute;
+      top: 50px;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      li {
+        color: $color1;
+        font-family: "NanumSquareBold";
+        cursor: pointer;
+        font-size: 1.25rem;
+
+        &:hover {
+          color: $color2;
+        }
+        &.clicked {
+          color: $color2;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    width: 100%;
+    height: 200px;
+    border-bottom: 1px solid $lineColor;
+    margin-bottom: 150px;
+
+    .inner {
+      width: 87.5%;
+      height: 100%;
+      margin: 0 auto;
+      position: relative;
+      ul {
+        position: absolute;
+        top: 144px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        li {
+          color: $color1;
+          font-family: "NanumSquareBold";
+          cursor: pointer;
+          font-size: 1.5rem;
+
+          &:hover {
+            color: $color2;
+          }
+          &.clicked {
+            color: $color2;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav {
+    width: 100%;
+    height: 200px;
+    border-bottom: 1px solid $lineColor;
+    margin-bottom: 150px;
+
+    .inner {
+      width: 89.06%;
+      height: 100%;
+      margin: 0 auto;
+      position: relative;
+      ul {
+        position: absolute;
+        top: 141px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        li {
+          color: $color1;
+          font-family: "NanumSquareBold";
+          cursor: pointer;
+          font-size: 1.625rem;
+
+          &:hover {
+            color: $color2;
+          }
+          &.clicked {
+            color: $color2;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1650px) {
+  .nav {
+    width: 100%;
+    height: 200px;
+    border-bottom: 1px solid $lineColor;
+    margin-bottom: 150px;
+
+    .inner {
+      width: 1596px;
+      height: 100%;
+      margin: 0 auto;
+      position: relative;
+      ul {
+        position: absolute;
+        top: 139px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        li {
+          color: $color1;
+          font-family: "NanumSquareBold";
+          cursor: pointer;
+          font-size: 1.75rem;
+
+          &:hover {
+            color: $color2;
+          }
+          &.clicked {
+            color: $color2;
+          }
+        }
+      }
+    }
+  }
+}

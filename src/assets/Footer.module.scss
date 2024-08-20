@@ -1,0 +1,590 @@
+$color1: #000;
+$color2: #fff;
+$catColor: #919191;
+$lineColor: #e4e4e4;
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
+    format("woff");
+  font-weight: Bold;
+}
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
+    format("woff");
+  font-weight: SemiBold;
+}
+@font-face {
+  font-family: "Pretendard-Light";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
+    format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+}
+footer {
+  @mixin innerWidth {
+    width: 81.33%;
+    margin: 0 auto;
+  }
+  .list {
+    margin-top: 150px;
+    border-top: 1px solid $lineColor;
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      .sub {
+        .inner {
+          padding: 50px 0;
+          @include innerWidth;
+          display: flex;
+          flex-direction: column;
+          gap: 35px;
+          li {
+            display: flex;
+            flex-direction: column;
+            width: 74.09%;
+            &:first-child {
+              .logo {
+                background-image: url("../../public/img/logo-d-museum.svg");
+                width: 153px;
+                height: 31px;
+              }
+            }
+            &:nth-child(2) {
+              .logo {
+                background-image: url("../../public/img/logo-dealim.svg");
+                width: 154px;
+                height: 31px;
+              }
+            }
+            &:last-child {
+              .text {
+                display: none;
+              }
+              .logo {
+                background-image: url("../../public/img/logo-d-project.svg");
+                width: 120px;
+                height: 70px;
+                margin: 0;
+              }
+            }
+
+            .logo {
+              background-size: cover;
+              text-indent: 100%;
+              white-space: nowrap;
+              overflow: hidden;
+              margin-bottom: 20px;
+            }
+            .text {
+              display: flex;
+              flex-direction: column;
+              h4 {
+                font-size: 1.125rem;
+                margin-bottom: 10px;
+              }
+              span {
+                font-size: 1rem;
+                word-break: keep-all;
+              }
+              .num {
+                margin-top: 8px;
+                span {
+                  margin-right: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .link {
+        border-top: 1px solid $lineColor;
+        border-bottom: 1px solid $lineColor;
+        .inner {
+          border-left: 1px solid $lineColor;
+          border-right: 1px solid $lineColor;
+          @include innerWidth;
+          padding: 45px 0 45px 30px;
+          li {
+            margin-bottom: 10px;
+            &:last-child {
+              margin-bottom: 0;
+            }
+            a {
+              cursor: pointer;
+              font-size: 1.25rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .info {
+    padding: 40px 0;
+    .inner {
+      @include innerWidth;
+      .anchor {
+        a {
+          font-size: 1.125rem;
+          cursor: pointer;
+
+          &::after {
+            content: "|";
+            margin: 0 3px;
+          }
+          &:last-child {
+            &::after {
+              content: none;
+            }
+          }
+        }
+      }
+
+      .para {
+        p {
+          font-size: 1.125rem;
+          margin-top: 15px;
+          &:first-child {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  footer {
+    @mixin innerWidth {
+      width: 87.5%;
+      margin: 0 auto;
+    }
+
+    .list {
+      margin-top: 300px;
+      border-top: 1px solid $lineColor;
+      .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        .sub {
+          .inner {
+            padding: 50px 0 50px 9.37%;
+            @include innerWidth;
+            display: flex;
+            flex-direction: column;
+            gap: 70px;
+            border-left: 1px solid $lineColor;
+            border-right: 1px solid $lineColor;
+            li {
+              display: flex;
+              flex-direction: column;
+              width: 74.09%;
+              &:first-child {
+                .logo {
+                  background-image: url("../../public/img/logo-d-museum.svg");
+                  width: 246px;
+                  height: 50px;
+                }
+              }
+              &:nth-child(2) {
+                .logo {
+                  background-image: url("../../public/img/logo-dealim.svg");
+                  width: 248px;
+                  height: 50px;
+                }
+              }
+              &:last-child {
+                .text {
+                  display: none;
+                }
+                .logo {
+                  background-image: url("../../public/img/logo-d-project.svg");
+                  width: 198px;
+                  height: 123px;
+                  margin: 0;
+                }
+              }
+
+              .logo {
+                background-size: cover;
+                text-indent: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                margin-bottom: 20px;
+              }
+              .text {
+                display: flex;
+                flex-direction: column;
+                h4 {
+                  font-size: 1.5rem;
+                  margin-bottom: 10px;
+                }
+                span {
+                  font-size: 1.125rem;
+                  word-break: keep-all;
+                }
+                .num {
+                  margin-top: 8px;
+                  span {
+                    margin-right: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .link {
+          border-top: 1px solid $lineColor;
+          border-bottom: 1px solid $lineColor;
+          .inner {
+            border-left: 1px solid $lineColor;
+            border-right: 1px solid $lineColor;
+            @include innerWidth;
+            padding: 45px 0 45px 9.37%;
+            li {
+              margin-bottom: 10px;
+              &:last-child {
+                margin-bottom: 0;
+              }
+              a {
+                cursor: pointer;
+                font-size: 1.375rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .info {
+      padding: 40px 0;
+      .inner {
+        @include innerWidth;
+        .anchor {
+          a {
+            font-size: 1.25rem;
+            cursor: pointer;
+
+            &::after {
+              content: "|";
+              margin: 0 3px;
+            }
+            &:last-child {
+              &::after {
+                content: none;
+              }
+            }
+          }
+        }
+
+        .para {
+          p {
+            font-size: 1.25rem;
+            margin-top: 15px;
+            word-break: keep-all;
+            &:first-child {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  footer {
+    @mixin innerWidth {
+      width: 89.06%;
+      margin: 0 auto;
+    }
+    .list {
+      margin-top: 300px;
+      border-top: 1px solid $lineColor;
+      .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .sub {
+          .inner {
+            padding: 50px 4.38%;
+            @include innerWidth;
+            display: flex;
+            flex-direction: row;
+            gap: 7.12%;
+            border-left: 1px solid $lineColor;
+            border-right: 1px solid $lineColor;
+            li {
+              display: flex;
+              flex-direction: column;
+              width: 74.09%;
+              &:first-child {
+                .logo {
+                  background-image: url("../../public/img/logo-d-museum.svg");
+                  width: 246px;
+                  height: 50px;
+                }
+              }
+              &:nth-child(2) {
+                .logo {
+                  background-image: url("../../public/img/logo-dealim.svg");
+                  width: 248px;
+                  height: 50px;
+                }
+              }
+              &:last-child {
+                .text {
+                  display: none;
+                }
+                .logo {
+                  background-image: url("../../public/img/logo-d-project.svg");
+                  width: 198px;
+                  height: 123px;
+                  margin: 0;
+                }
+              }
+
+              .logo {
+                background-size: cover;
+                text-indent: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                margin-bottom: 20px;
+              }
+              .text {
+                display: flex;
+                flex-direction: column;
+                h4 {
+                  font-size: 1.5rem;
+                  margin-bottom: 10px;
+                }
+                span {
+                  font-size: 1.125rem;
+                  word-break: keep-all;
+                }
+                .num {
+                  margin-top: 8px;
+                  span {
+                    margin-right: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .link {
+          border-top: 1px solid $lineColor;
+          border-bottom: 1px solid $lineColor;
+          .inner {
+            border-left: 1px solid $lineColor;
+            border-right: 1px solid $lineColor;
+            @include innerWidth;
+            padding: 45px 0 45px 4.38%;
+            li {
+              margin-bottom: 10px;
+              &:last-child {
+                margin-bottom: 0;
+              }
+              a {
+                cursor: pointer;
+                font-size: 1.375rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .info {
+      padding: 40px 0;
+      .inner {
+        @include innerWidth;
+        .anchor {
+          a {
+            font-size: 1.25rem;
+            cursor: pointer;
+
+            &::after {
+              content: "|";
+              margin: 0 3px;
+            }
+            &:last-child {
+              &::after {
+                content: none;
+              }
+            }
+          }
+        }
+
+        .para {
+          p {
+            font-size: 1.25rem;
+            margin-top: 15px;
+            word-break: keep-all;
+            &:first-child {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1650px) {
+  footer {
+    .list {
+      margin-top: 300px;
+      border-top: 1px solid $lineColor;
+      .container {
+        width: 1596px;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        border-right: 1px solid $lineColor;
+
+        .sub {
+          width: 76.12%;
+          .inner {
+            padding: 50px 4.38%;
+            width: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            gap: 11.93%;
+            border-left: 1px solid $lineColor;
+            border-right: 1px solid $lineColor;
+            li {
+              display: flex;
+              flex-direction: column;
+              width: 74.09%;
+              &:first-child {
+                .logo {
+                  background-image: url("../../public/img/logo-d-museum.svg");
+                  width: 246px;
+                  height: 50px;
+                }
+              }
+              &:nth-child(2) {
+                .logo {
+                  background-image: url("../../public/img/logo-dealim.svg");
+                  width: 248px;
+                  height: 50px;
+                }
+              }
+              &:last-child {
+                .text {
+                  display: none;
+                }
+                .logo {
+                  background-image: url("../../public/img/logo-d-project.svg");
+                  width: 198px;
+                  height: 123px;
+                  margin: 0;
+                }
+              }
+
+              .logo {
+                background-size: cover;
+                text-indent: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                margin-bottom: 20px;
+              }
+              .text {
+                display: flex;
+                flex-direction: column;
+                h4 {
+                  font-size: 1.5rem;
+                  margin-bottom: 10px;
+                }
+                span {
+                  font-size: 1.125rem;
+                  word-break: keep-all;
+                }
+                .num {
+                  margin-top: 8px;
+                  span {
+                    margin-right: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .link {
+          width: 23.87%;
+          border-top: none;
+          border-bottom: none;
+          .inner {
+            border-left: none;
+            border-right: none;
+            width: 100%;
+            margin: 0;
+            padding: 45px 0 45px 13.12%;
+            li {
+              margin-bottom: 10px;
+              &:last-child {
+                margin-bottom: 0;
+              }
+              a {
+                cursor: pointer;
+                font-size: 1.375rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .info {
+      padding: 100px 0;
+      border-top: 1px solid $lineColor;
+      .inner {
+        width: 1596px;
+        margin: 0 auto;
+        .anchor {
+          a {
+            font-size: 1.25rem;
+            cursor: pointer;
+
+            &::after {
+              content: "|";
+              margin: 0 3px;
+            }
+            &:last-child {
+              &::after {
+                content: none;
+              }
+            }
+          }
+        }
+
+        .para {
+          p {
+            font-size: 1.25rem;
+            margin-top: 15px;
+            word-break: keep-all;
+            &:first-child {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

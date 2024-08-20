@@ -1,0 +1,437 @@
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff") format("woff");
+  font-weight: Bold;
+}
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff") format("woff");
+  font-weight: SemiBold;
+}
+@font-face {
+  font-family: "Pretendard-Light";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+.exhibition {
+  overflow: hidden;
+  width: 100%;
+}
+.exhibition .list {
+  width: 100%;
+  font-family: "Pretendard";
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.exhibition .list .item {
+  width: 100%;
+  height: 554px;
+  cursor: pointer;
+  position: relative;
+  opacity: 0;
+}
+.exhibition .list .item:first-child {
+  transform: translateX(-20%);
+}
+.exhibition .list .item:last-child {
+  transform: translateX(20%);
+}
+.exhibition .list .item.animate {
+  opacity: 1;
+  transition: all 0.3s;
+}
+.exhibition .list .item.animate:first-child {
+  transform: translateX(0);
+}
+.exhibition .list .item.animate:last-child {
+  transform: translateX(0);
+}
+.exhibition .list .item:last-child .text {
+  color: #fff;
+}
+.exhibition .list .item .img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.exhibition .list .item .img .hov {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.exhibition .list .item .text {
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.exhibition .list .item .text .place {
+  font-size: 1.5rem;
+  font-family: "Pretendard-SemiBold";
+}
+.exhibition .list .item .text .title {
+  margin-top: 20px;
+  margin-bottom: 6px;
+  font-size: 2rem;
+  font-family: "Pretendard-SemiBold";
+}
+.exhibition .list .item .text .sub {
+  font-size: 2rem;
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "Pretendard-SemiBold";
+}
+.exhibition .list .item .text .date {
+  font-family: "Pretendard";
+  font-size: 1.375rem;
+}
+.exhibition .list .item .text .book {
+  margin-top: 87px;
+  padding: 19px 38px;
+  font-family: "Pretendard";
+  font-size: 1.25rem;
+}
+.exhibition .list .item:last-child .book {
+  color: #fff;
+  border: 1px solid #fff;
+}
+.exhibition .list .item:last-child .book:hover {
+  color: #000;
+  background-color: #fff;
+  transition: 0.3s;
+}
+.exhibition .list .item:first-child .book {
+  color: #000;
+  border: 1px solid #000;
+}
+.exhibition .list .item:first-child .book:hover {
+  color: #fff;
+  background-color: #000;
+  transition: 0.3s;
+}
+.exhibition .list .item:hover .hov {
+  display: block;
+  transition: 0.3s;
+}
+.exhibition .list .item:hover .text {
+  opacity: 100%;
+  transition: 0.3s;
+}
+
+@media screen and (min-width: 768px) {
+  .exhibition {
+    width: 100%;
+  }
+  .exhibition .list {
+    width: 100%;
+    font-family: "Pretendard";
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .exhibition .list .item {
+    width: 100%;
+    height: 780px;
+    cursor: pointer;
+    position: relative;
+    opacity: 0;
+  }
+  .exhibition .list .item.animate {
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .exhibition .list .item:last-child .text {
+    color: #fff;
+  }
+  .exhibition .list .item .img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  .exhibition .list .item .img .hov {
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  .exhibition .list .item .text {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .exhibition .list .item .text .place {
+    font-size: 1.625rem;
+    font-family: "Pretendard-SemiBold";
+  }
+  .exhibition .list .item .text .title {
+    margin-top: 20px;
+    margin-bottom: 6px;
+    font-size: 2.5rem;
+    font-family: "Pretendard-SemiBold";
+  }
+  .exhibition .list .item .text .sub {
+    font-size: 2.5rem;
+    margin: 0;
+    margin-bottom: 20px;
+    font-family: "Pretendard-SemiBold";
+  }
+  .exhibition .list .item .text .date {
+    font-family: "Pretendard";
+    font-size: 1.5rem;
+  }
+  .exhibition .list .item .text .book {
+    margin-top: 40px;
+    padding: 22px 49px;
+    font-family: "Pretendard";
+    font-size: 1.625rem;
+  }
+  .exhibition .list .item:last-child .book {
+    color: #fff;
+    border: 1px solid #fff;
+  }
+  .exhibition .list .item:last-child .book:hover {
+    color: #000;
+    background-color: #fff;
+    transition: 0.3s;
+  }
+  .exhibition .list .item:first-child .book {
+    color: #000;
+    border: 1px solid #000;
+  }
+  .exhibition .list .item:first-child .book:hover {
+    color: #fff;
+    background-color: #000;
+    transition: 0.3s;
+  }
+  .exhibition .list .item:hover .hov {
+    display: block;
+    transition: 0.3s;
+  }
+  .exhibition .list .item:hover .text {
+    opacity: 100%;
+    transition: 0.3s;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .exhibition {
+    width: 100%;
+  }
+  .exhibition .list {
+    width: 100%;
+    font-family: "Pretendard";
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+  }
+  .exhibition .list .item {
+    width: 100%;
+    height: 780px;
+    cursor: pointer;
+    position: relative;
+    opacity: 0;
+  }
+  .exhibition .list .item.animate {
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .exhibition .list .item:last-child .text {
+    color: #fff;
+  }
+  .exhibition .list .item .img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  .exhibition .list .item .img .hov {
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  .exhibition .list .item .text {
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .exhibition .list .item .text .place {
+    font-size: 1.625rem;
+    font-family: "Pretendard-SemiBold";
+  }
+  .exhibition .list .item .text .title {
+    margin-top: 20px;
+    margin-bottom: 6px;
+    font-size: 2.5rem;
+    font-family: "Pretendard-SemiBold";
+  }
+  .exhibition .list .item .text .sub {
+    font-size: 2.5rem;
+    margin: 0;
+    margin-bottom: 20px;
+    font-family: "Pretendard-SemiBold";
+  }
+  .exhibition .list .item .text .date {
+    font-family: "Pretendard";
+    font-size: 1.5rem;
+  }
+  .exhibition .list .item .text .book {
+    margin-top: 40px;
+    padding: 22px 49px;
+    font-family: "Pretendard";
+    font-size: 1.625rem;
+  }
+  .exhibition .list .item:last-child .book {
+    color: #fff;
+    border: 1px solid #fff;
+  }
+  .exhibition .list .item:last-child .book:hover {
+    color: #000;
+    background-color: #fff;
+    transition: 0.3s;
+  }
+  .exhibition .list .item:first-child .book {
+    color: #000;
+    border: 1px solid #000;
+  }
+  .exhibition .list .item:first-child .book:hover {
+    color: #fff;
+    background-color: #000;
+    transition: 0.3s;
+  }
+  .exhibition .list .item:hover .hov {
+    display: block;
+    transition: 0.3s;
+  }
+  .exhibition .list .item:hover .text {
+    opacity: 100%;
+    transition: 0.3s;
+  }
+}
+@media screen and (min-width: 1650px) {
+  .exhibition {
+    width: 100%;
+  }
+  .exhibition .list {
+    width: 100%;
+    font-family: "Pretendard";
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+  }
+  .exhibition .list .item {
+    width: 100%;
+    height: 780px;
+    cursor: pointer;
+    position: relative;
+    opacity: 0;
+  }
+  .exhibition .list .item.animate {
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .exhibition .list .item:last-child .text {
+    color: #fff;
+  }
+  .exhibition .list .item .img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  .exhibition .list .item .img .hov {
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  .exhibition .list .item .text {
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .exhibition .list .item .text .place {
+    font-size: 1.625rem;
+    font-family: "Pretendard-SemiBold";
+  }
+  .exhibition .list .item .text .title {
+    margin-top: 20px;
+    margin-bottom: 6px;
+    font-size: 2.5rem;
+    font-family: "Pretendard-SemiBold";
+  }
+  .exhibition .list .item .text .sub {
+    font-size: 2.5rem;
+    margin: 0;
+    margin-bottom: 20px;
+    font-family: "Pretendard-SemiBold";
+  }
+  .exhibition .list .item .text .date {
+    font-family: "Pretendard";
+    font-size: 1.5rem;
+  }
+  .exhibition .list .item .text .book {
+    margin-top: 40px;
+    padding: 22px 49px;
+    font-family: "Pretendard";
+    font-size: 1.625rem;
+  }
+  .exhibition .list .item:last-child .book {
+    color: #fff;
+    border: 1px solid #fff;
+  }
+  .exhibition .list .item:last-child .book:hover {
+    color: #000;
+    background-color: #fff;
+    transition: 0.3s;
+  }
+  .exhibition .list .item:first-child .book {
+    color: #000;
+    border: 1px solid #000;
+  }
+  .exhibition .list .item:first-child .book:hover {
+    color: #fff;
+    background-color: #000;
+    transition: 0.3s;
+  }
+  .exhibition .list .item:hover .hov {
+    display: block;
+    transition: 0.3s;
+  }
+  .exhibition .list .item:hover .text {
+    opacity: 100%;
+    transition: 0.3s;
+  }
+}/*# sourceMappingURL=Exhibition.module.css.map */

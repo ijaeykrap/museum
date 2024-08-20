@@ -1,0 +1,79 @@
+$lineColor: #e4e4e4;
+body {
+  margin: 0;
+  padding: 0;
+}
+.titleSection {
+  padding-top: 80px;
+  width: 100%;
+  border-bottom: 1px solid $lineColor;
+  margin-bottom: 0;
+  .inner {
+    width: 81.33%;
+    margin: 0 auto;
+    .title {
+      font-family: "NanumSquareBold";
+      font-size: 3.75rem;
+      text-transform: uppercase;
+      margin: 40px 0;
+      display: block;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .titleSection {
+    padding-top: 100px;
+    width: 100%;
+    border-bottom: 1px solid $lineColor;
+    margin-bottom: 0;
+    .inner {
+      width: 87.5%;
+      margin: 0 auto;
+      .title {
+        font-family: "NanumSquareBold";
+        font-size: 5rem;
+        text-transform: uppercase;
+        margin: 50px 0;
+        display: block;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .titleSection {
+    padding-top: 120px;
+    width: 100%;
+    border-bottom: 1px solid $lineColor;
+    margin-bottom: 0;
+    .inner {
+      width: 89.06%;
+      margin: 0 auto;
+      .title {
+        font-family: "NanumSquareBold";
+        font-size: 7.5rem;
+        text-transform: uppercase;
+        margin: 50px 0;
+        display: block;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1650px) {
+  .titleSection {
+    padding-top: 120px;
+    width: 100%;
+    border-bottom: 1px solid $lineColor;
+    margin-bottom: 0;
+    .inner {
+      width: 1596px;
+      margin: 0 auto;
+      .title {
+        font-family: "NanumSquareBold";
+        font-size: 7.5rem;
+        text-transform: uppercase;
+        margin: 50px 0;
+        display: block;
+      }
+    }
+  }
+}
