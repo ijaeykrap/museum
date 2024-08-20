@@ -1,0 +1,601 @@
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff") format("woff");
+  font-weight: Bold;
+}
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff") format("woff");
+  font-weight: SemiBold;
+}
+@font-face {
+  font-family: "Pretendard-Light";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+* {
+  font-family: "Pretendard";
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+li {
+  list-style: none;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.exhibition {
+  margin-bottom: 150px;
+  width: 100%;
+  overflow: hidden;
+}
+.exhibition .title {
+  width: 100%;
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+}
+.exhibition .title .titleBlock {
+  width: 81.33%;
+  margin: 0 auto;
+  height: 135px;
+  position: relative;
+}
+.exhibition .title .titleBlock h2 {
+  font-size: 1.625rem;
+  position: absolute;
+  bottom: 25px;
+  margin: 0;
+  font-family: "NanumSquareBold";
+}
+.exhibition .list .item .img {
+  height: 206px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.exhibition .list .item:first-child .img {
+  background-image: url("../../public/img/main-exhibit-pc-01.jpg");
+  transform: translateX(-50%);
+  opacity: 0%;
+}
+.exhibition .list .item:last-child .img {
+  background-image: url("../../public/img/main-exhibit-pc-02.png");
+  transform: translateX(50%);
+  opacity: 0%;
+}
+.exhibition .list .item.animate .img {
+  transform: translateX(0%);
+  opacity: 1;
+  transition: all 0.3s;
+}
+.exhibition .list .item .text {
+  width: 81.33%;
+  margin: 50px auto 100px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.exhibition .list .item .text > * {
+  display: block;
+  margin: 0;
+}
+.exhibition .list .item .text h3 {
+  opacity: 0;
+  font-size: 1.5rem;
+  line-height: 31px;
+  word-break: keep-all;
+  text-align: right;
+  font-family: "Pretendard-SemiBold";
+}
+.exhibition .list .item .text h3.animate {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+.exhibition .list .item .text .place {
+  opacity: 0;
+  font-size: 1.25rem;
+  margin-top: 8px;
+}
+.exhibition .list .item .text .place.animate {
+  opacity: 1;
+  transition: opacity 0.35s;
+}
+.exhibition .list .item .text .date {
+  opacity: 0;
+  font-size: 1.125rem;
+  margin-top: 24px;
+  font-family: "Pretendard-Light";
+}
+.exhibition .list .item .text .date.animate {
+  opacity: 1;
+  transition: opacity 0.4s;
+}
+.exhibition .list .item .text .book {
+  opacity: 0;
+  display: block;
+  width: 120px;
+  height: 60px;
+  background-color: #000;
+  color: #fff;
+  line-height: 60px;
+  text-align: center;
+  margin-top: 38px;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+.exhibition .list .item .text .book.animate {
+  opacity: 1;
+  transition: all 0.45s;
+}
+.exhibition .list .item .text .book:hover {
+  transition: all 0.3s;
+  background-color: #555;
+  color: #fff;
+}
+.exhibition .more {
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+  height: 113px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.exhibition .more a {
+  font-family: "Pretendard-SemiBold";
+  display: inline-block;
+  font-size: 1.125rem;
+  position: relative;
+}
+.exhibition .more a::after {
+  content: "";
+  background-image: url(../../public/img/logo-anchor.svg);
+  width: 17px;
+  height: 17px;
+  background-size: cover;
+  background-position: center;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 105%;
+  transform: translateY(-50%);
+  transition: all 0.3s;
+}
+.exhibition .more a:hover::after {
+  left: 115%;
+}
+
+@media screen and (min-width: 768px) {
+  .exhibition {
+    margin-bottom: 300px;
+    width: 100%;
+  }
+  .exhibition .title {
+    width: 100%;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+  }
+  .exhibition .title .titleBlock {
+    width: 87.5%;
+    margin: 0 auto;
+    height: 270px;
+    position: relative;
+  }
+  .exhibition .title .titleBlock h2 {
+    font-size: 2.25rem;
+    position: absolute;
+    bottom: 50px;
+    margin: 0;
+    font-family: "NanumSquareBold";
+  }
+  .exhibition .list .item:first-child .img {
+    background-image: url("../../public/img/main-exhibit-pc-01.jpg");
+  }
+  .exhibition .list .item:last-child .img {
+    background-image: url("../../public/img/main-exhibit-pc-02.png");
+  }
+  .exhibition .list .item .img {
+    height: 436px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .exhibition .list .item .text {
+    border-left: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+    width: 87.5%;
+    margin: 0 auto;
+    padding: 50px 30px 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .exhibition .list .item .text > * {
+    display: block;
+    margin: 0;
+  }
+  .exhibition .list .item .text h3 {
+    font-size: 1.875rem;
+    line-height: 31px;
+    word-break: keep-all;
+    text-align: right;
+  }
+  .exhibition .list .item .text h3 br {
+    display: inline-block;
+    content: " ";
+    padding: 0 2px;
+  }
+  .exhibition .list .item .text .place {
+    font-size: 1.5rem;
+    margin-top: 8px;
+  }
+  .exhibition .list .item .text .date {
+    font-size: 1.375rem;
+    margin-top: 24px;
+    font-weight: 300;
+  }
+  .exhibition .list .item .text .book {
+    display: block;
+    width: 160px;
+    height: 75px;
+    background-color: #000;
+    color: #fff;
+    line-height: 75px;
+    text-align: center;
+    margin-top: 38px;
+    font-size: 1.5rem;
+    transition: 0.3s;
+  }
+  .exhibition .list .item .text .book:hover {
+    background-color: #555;
+    color: #fff;
+  }
+  .exhibition .more {
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    height: 206px;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 25px;
+    padding-right: 15.36%;
+  }
+  .exhibition .more a {
+    display: inline-block;
+    font-size: 1.375rem;
+    position: relative;
+  }
+  .exhibition .more a::after {
+    content: "";
+    background-image: url(../../public/img/logo-anchor.svg);
+    width: 28px;
+    height: 26px;
+    background-size: cover;
+    background-position: center;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 105%;
+    transform: translateY(-50%);
+    transition: 0.3s;
+  }
+  .exhibition .more a:hover::after {
+    left: 115%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .exhibition {
+    margin-bottom: 300px;
+    width: 100%;
+  }
+  .exhibition .title {
+    width: 100%;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+  }
+  .exhibition .title .titleBlock {
+    width: 89.06%;
+    margin: 0 auto;
+    height: 270px;
+    position: relative;
+  }
+  .exhibition .title .titleBlock h2 {
+    font-size: 2.5rem;
+    position: absolute;
+    bottom: 50px;
+    margin: 0;
+    font-family: "NanumSquareBold";
+  }
+  .exhibition .list .item:first-child .img {
+    background-image: url("../../public/img/main-exhibit-1024-01.jpg");
+    width: 48.82%;
+    float: left;
+  }
+  .exhibition .list .item:first-child .text {
+    border-right: 1px solid #e4e4e4;
+    border-left: none;
+    width: 45.7%;
+    margin-right: 5.46%;
+    padding-right: 5.27%;
+    align-items: flex-end;
+  }
+  .exhibition .list .item:first-child .text h3 {
+    text-align: right;
+  }
+  .exhibition .list .item:last-child .img {
+    background-image: url("../../public/img/main-exhibit-1024-02.png");
+    width: 51.17%;
+    float: right;
+  }
+  .exhibition .list .item:last-child .text {
+    border-left: 1px solid #e4e4e4;
+    border-right: none;
+    width: 43.16%;
+    margin-left: 5.46%;
+    align-items: flex-start;
+    padding-left: 5.27%;
+  }
+  .exhibition .list .item:last-child .text h3 {
+    text-align: left;
+  }
+  .exhibition .list .item .img {
+    height: 436px;
+    background-position: center;
+    background-size: cover;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .exhibition .list .item .text {
+    height: 436px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .exhibition .list .item .text > * {
+    display: block;
+    margin: 0;
+  }
+  .exhibition .list .item .text h3 {
+    font-size: 1.875rem;
+    line-height: 31px;
+    word-break: keep-all;
+  }
+  .exhibition .list .item .text h3 br {
+    display: block;
+    content: " ";
+    padding: 0 2px;
+  }
+  .exhibition .list .item .text .place {
+    font-size: 1.5rem;
+    margin-top: 8px;
+  }
+  .exhibition .list .item .text .date {
+    font-size: 1.375rem;
+    margin-top: 24px;
+    font-weight: 300;
+  }
+  .exhibition .list .item .text .book {
+    display: block;
+    width: 160px;
+    height: 75px;
+    background-color: #000;
+    color: #fff;
+    line-height: 75px;
+    text-align: center;
+    margin-top: 38px;
+    font-size: 1.5rem;
+    transition: 0.3s;
+  }
+  .exhibition .list .item .text .book:hover {
+    background-color: #555;
+    color: #fff;
+  }
+  .exhibition .more {
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    height: 206px;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 25px;
+    padding-right: 10.83%;
+  }
+  .exhibition .more a {
+    display: inline-block;
+    font-size: 1.375rem;
+    position: relative;
+  }
+  .exhibition .more a::after {
+    content: "";
+    background-image: url(../../public/img/logo-anchor.svg);
+    width: 28px;
+    height: 26px;
+    background-size: cover;
+    background-position: center;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 105%;
+    transform: translateY(-50%);
+    transition: 0.3s;
+  }
+  .exhibition .more a:hover::after {
+    left: 115%;
+  }
+}
+@media screen and (min-width: 1650px) {
+  .exhibition {
+    margin-bottom: 300px;
+    width: 100%;
+  }
+  .exhibition .title {
+    width: 100%;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+  }
+  .exhibition .title .titleBlock {
+    width: 1596px;
+    margin: 0 auto;
+    height: 270px;
+    position: relative;
+  }
+  .exhibition .title .titleBlock h2 {
+    font-size: 2.5rem;
+    position: absolute;
+    bottom: 50px;
+    margin: 0;
+    font-family: "NanumSquareBold";
+  }
+  .exhibition .list .item {
+    width: 100%;
+  }
+  .exhibition .list .item:first-child .img {
+    background-image: url("../../public/img/main-exhibit-pc-01.jpg");
+    width: 49.37%;
+    float: left;
+  }
+  .exhibition .list .item:first-child .text {
+    border-right: 1px solid #e4e4e4;
+    border-left: none;
+    width: 809px;
+    margin-right: auto;
+    padding-right: 134px;
+    align-items: flex-end;
+  }
+  .exhibition .list .item:first-child .text h3 {
+    text-align: right;
+  }
+  .exhibition .list .item:last-child .img {
+    background-image: url("../../public/img/main-exhibit-pc-02.png");
+    width: 50.62%;
+    float: right;
+  }
+  .exhibition .list .item:last-child .text {
+    border-left: 1px solid #e4e4e4;
+    border-right: none;
+    width: 786px;
+    margin-left: auto;
+    align-items: flex-start;
+    padding-left: 134px;
+  }
+  .exhibition .list .item:last-child .text h3 {
+    text-align: left;
+  }
+  .exhibition .list .item .img {
+    height: 436px;
+    background-position: center;
+    background-size: cover;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .exhibition .list .item .text {
+    height: 436px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .exhibition .list .item .text > * {
+    display: block;
+    margin: 0;
+  }
+  .exhibition .list .item .text h3 {
+    font-size: 1.875rem;
+    line-height: 31px;
+    word-break: keep-all;
+  }
+  .exhibition .list .item .text h3 br {
+    display: inline-block;
+    content: " ";
+    padding: 0 2px;
+  }
+  .exhibition .list .item .text .place {
+    font-size: 1.5rem;
+    margin-top: 8px;
+  }
+  .exhibition .list .item .text .date {
+    font-size: 1.375rem;
+    margin-top: 24px;
+    font-weight: 300;
+  }
+  .exhibition .list .item .text .book {
+    display: block;
+    width: 160px;
+    height: 75px;
+    background-color: #000;
+    color: #fff;
+    line-height: 75px;
+    text-align: center;
+    margin-top: 38px;
+    font-size: 1.5rem;
+    transition: 0.3s;
+  }
+  .exhibition .list .item .text .book:hover {
+    background-color: #555;
+    color: #fff;
+  }
+  .exhibition .more {
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    height: 211px;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 25px;
+    padding-right: 11.3%;
+  }
+  .exhibition .more a {
+    display: inline-block;
+    font-size: 1.625rem;
+    position: relative;
+  }
+  .exhibition .more a::after {
+    content: "";
+    background-image: url(../../public/img/logo-anchor.svg);
+    width: 31px;
+    height: 30px;
+    background-size: cover;
+    background-position: center;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 105%;
+    transform: translateY(-50%);
+    transition: 0.3s;
+  }
+  .exhibition .more a:hover::after {
+    left: 115%;
+  }
+}/*# sourceMappingURL=exhibition.module.css.map */

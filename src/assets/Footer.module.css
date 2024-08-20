@@ -1,0 +1,500 @@
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff") format("woff");
+  font-weight: Bold;
+}
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff") format("woff");
+  font-weight: SemiBold;
+}
+@font-face {
+  font-family: "Pretendard-Light";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+li {
+  list-style: none;
+}
+
+footer .list {
+  margin-top: 150px;
+  border-top: 1px solid #e4e4e4;
+}
+footer .list .container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+footer .list .container .sub .inner {
+  padding: 50px 0;
+  width: 81.33%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+footer .list .container .sub .inner li {
+  display: flex;
+  flex-direction: column;
+  width: 74.09%;
+}
+footer .list .container .sub .inner li:first-child .logo {
+  background-image: url("../../public/img/logo-d-museum.svg");
+  width: 153px;
+  height: 31px;
+}
+footer .list .container .sub .inner li:nth-child(2) .logo {
+  background-image: url("../../public/img/logo-dealim.svg");
+  width: 154px;
+  height: 31px;
+}
+footer .list .container .sub .inner li:last-child .text {
+  display: none;
+}
+footer .list .container .sub .inner li:last-child .logo {
+  background-image: url("../../public/img/logo-d-project.svg");
+  width: 120px;
+  height: 70px;
+  margin: 0;
+}
+footer .list .container .sub .inner li .logo {
+  background-size: cover;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+footer .list .container .sub .inner li .text {
+  display: flex;
+  flex-direction: column;
+}
+footer .list .container .sub .inner li .text h4 {
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+}
+footer .list .container .sub .inner li .text span {
+  font-size: 1rem;
+  word-break: keep-all;
+}
+footer .list .container .sub .inner li .text .num {
+  margin-top: 8px;
+}
+footer .list .container .sub .inner li .text .num span {
+  margin-right: 12px;
+}
+footer .list .container .link {
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+}
+footer .list .container .link .inner {
+  border-left: 1px solid #e4e4e4;
+  border-right: 1px solid #e4e4e4;
+  width: 81.33%;
+  margin: 0 auto;
+  padding: 45px 0 45px 30px;
+}
+footer .list .container .link .inner li {
+  margin-bottom: 10px;
+}
+footer .list .container .link .inner li:last-child {
+  margin-bottom: 0;
+}
+footer .list .container .link .inner li a {
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+footer .info {
+  padding: 40px 0;
+}
+footer .info .inner {
+  width: 81.33%;
+  margin: 0 auto;
+}
+footer .info .inner .anchor a {
+  font-size: 1.125rem;
+  cursor: pointer;
+}
+footer .info .inner .anchor a::after {
+  content: "|";
+  margin: 0 3px;
+}
+footer .info .inner .anchor a:last-child::after {
+  content: none;
+}
+footer .info .inner .para p {
+  font-size: 1.125rem;
+  margin-top: 15px;
+}
+footer .info .inner .para p:first-child {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  footer .list {
+    margin-top: 300px;
+    border-top: 1px solid #e4e4e4;
+  }
+  footer .list .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  footer .list .container .sub .inner {
+    padding: 50px 0 50px 9.37%;
+    width: 87.5%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    border-left: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+  }
+  footer .list .container .sub .inner li {
+    display: flex;
+    flex-direction: column;
+    width: 74.09%;
+  }
+  footer .list .container .sub .inner li:first-child .logo {
+    background-image: url("../../public/img/logo-d-museum.svg");
+    width: 246px;
+    height: 50px;
+  }
+  footer .list .container .sub .inner li:nth-child(2) .logo {
+    background-image: url("../../public/img/logo-dealim.svg");
+    width: 248px;
+    height: 50px;
+  }
+  footer .list .container .sub .inner li:last-child .text {
+    display: none;
+  }
+  footer .list .container .sub .inner li:last-child .logo {
+    background-image: url("../../public/img/logo-d-project.svg");
+    width: 198px;
+    height: 123px;
+    margin: 0;
+  }
+  footer .list .container .sub .inner li .logo {
+    background-size: cover;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  footer .list .container .sub .inner li .text {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .list .container .sub .inner li .text h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  footer .list .container .sub .inner li .text span {
+    font-size: 1.125rem;
+    word-break: keep-all;
+  }
+  footer .list .container .sub .inner li .text .num {
+    margin-top: 8px;
+  }
+  footer .list .container .sub .inner li .text .num span {
+    margin-right: 12px;
+  }
+  footer .list .container .link {
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+  }
+  footer .list .container .link .inner {
+    border-left: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+    width: 87.5%;
+    margin: 0 auto;
+    padding: 45px 0 45px 9.37%;
+  }
+  footer .list .container .link .inner li {
+    margin-bottom: 10px;
+  }
+  footer .list .container .link .inner li:last-child {
+    margin-bottom: 0;
+  }
+  footer .list .container .link .inner li a {
+    cursor: pointer;
+    font-size: 1.375rem;
+  }
+  footer .info {
+    padding: 40px 0;
+  }
+  footer .info .inner {
+    width: 87.5%;
+    margin: 0 auto;
+  }
+  footer .info .inner .anchor a {
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+  footer .info .inner .anchor a::after {
+    content: "|";
+    margin: 0 3px;
+  }
+  footer .info .inner .anchor a:last-child::after {
+    content: none;
+  }
+  footer .info .inner .para p {
+    font-size: 1.25rem;
+    margin-top: 15px;
+    word-break: keep-all;
+  }
+  footer .info .inner .para p:first-child {
+    display: block;
+  }
+}
+@media screen and (min-width: 1024px) {
+  footer .list {
+    margin-top: 300px;
+    border-top: 1px solid #e4e4e4;
+  }
+  footer .list .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  footer .list .container .sub .inner {
+    padding: 50px 4.38%;
+    width: 89.06%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 7.12%;
+    border-left: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+  }
+  footer .list .container .sub .inner li {
+    display: flex;
+    flex-direction: column;
+    width: 74.09%;
+  }
+  footer .list .container .sub .inner li:first-child .logo {
+    background-image: url("../../public/img/logo-d-museum.svg");
+    width: 246px;
+    height: 50px;
+  }
+  footer .list .container .sub .inner li:nth-child(2) .logo {
+    background-image: url("../../public/img/logo-dealim.svg");
+    width: 248px;
+    height: 50px;
+  }
+  footer .list .container .sub .inner li:last-child .text {
+    display: none;
+  }
+  footer .list .container .sub .inner li:last-child .logo {
+    background-image: url("../../public/img/logo-d-project.svg");
+    width: 198px;
+    height: 123px;
+    margin: 0;
+  }
+  footer .list .container .sub .inner li .logo {
+    background-size: cover;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  footer .list .container .sub .inner li .text {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .list .container .sub .inner li .text h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  footer .list .container .sub .inner li .text span {
+    font-size: 1.125rem;
+    word-break: keep-all;
+  }
+  footer .list .container .sub .inner li .text .num {
+    margin-top: 8px;
+  }
+  footer .list .container .sub .inner li .text .num span {
+    margin-right: 12px;
+  }
+  footer .list .container .link {
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+  }
+  footer .list .container .link .inner {
+    border-left: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+    width: 89.06%;
+    margin: 0 auto;
+    padding: 45px 0 45px 4.38%;
+  }
+  footer .list .container .link .inner li {
+    margin-bottom: 10px;
+  }
+  footer .list .container .link .inner li:last-child {
+    margin-bottom: 0;
+  }
+  footer .list .container .link .inner li a {
+    cursor: pointer;
+    font-size: 1.375rem;
+  }
+  footer .info {
+    padding: 40px 0;
+  }
+  footer .info .inner {
+    width: 89.06%;
+    margin: 0 auto;
+  }
+  footer .info .inner .anchor a {
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+  footer .info .inner .anchor a::after {
+    content: "|";
+    margin: 0 3px;
+  }
+  footer .info .inner .anchor a:last-child::after {
+    content: none;
+  }
+  footer .info .inner .para p {
+    font-size: 1.25rem;
+    margin-top: 15px;
+    word-break: keep-all;
+  }
+  footer .info .inner .para p:first-child {
+    display: block;
+  }
+}
+@media screen and (min-width: 1650px) {
+  footer .list {
+    margin-top: 300px;
+    border-top: 1px solid #e4e4e4;
+  }
+  footer .list .container {
+    width: 1596px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    border-right: 1px solid #e4e4e4;
+  }
+  footer .list .container .sub {
+    width: 76.12%;
+  }
+  footer .list .container .sub .inner {
+    padding: 50px 4.38%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 11.93%;
+    border-left: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+  }
+  footer .list .container .sub .inner li {
+    display: flex;
+    flex-direction: column;
+    width: 74.09%;
+  }
+  footer .list .container .sub .inner li:first-child .logo {
+    background-image: url("../../public/img/logo-d-museum.svg");
+    width: 246px;
+    height: 50px;
+  }
+  footer .list .container .sub .inner li:nth-child(2) .logo {
+    background-image: url("../../public/img/logo-dealim.svg");
+    width: 248px;
+    height: 50px;
+  }
+  footer .list .container .sub .inner li:last-child .text {
+    display: none;
+  }
+  footer .list .container .sub .inner li:last-child .logo {
+    background-image: url("../../public/img/logo-d-project.svg");
+    width: 198px;
+    height: 123px;
+    margin: 0;
+  }
+  footer .list .container .sub .inner li .logo {
+    background-size: cover;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  footer .list .container .sub .inner li .text {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .list .container .sub .inner li .text h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  footer .list .container .sub .inner li .text span {
+    font-size: 1.125rem;
+    word-break: keep-all;
+  }
+  footer .list .container .sub .inner li .text .num {
+    margin-top: 8px;
+  }
+  footer .list .container .sub .inner li .text .num span {
+    margin-right: 12px;
+  }
+  footer .list .container .link {
+    width: 23.87%;
+    border-top: none;
+    border-bottom: none;
+  }
+  footer .list .container .link .inner {
+    border-left: none;
+    border-right: none;
+    width: 100%;
+    margin: 0;
+    padding: 45px 0 45px 13.12%;
+  }
+  footer .list .container .link .inner li {
+    margin-bottom: 10px;
+  }
+  footer .list .container .link .inner li:last-child {
+    margin-bottom: 0;
+  }
+  footer .list .container .link .inner li a {
+    cursor: pointer;
+    font-size: 1.375rem;
+  }
+  footer .info {
+    padding: 100px 0;
+    border-top: 1px solid #e4e4e4;
+  }
+  footer .info .inner {
+    width: 1596px;
+    margin: 0 auto;
+  }
+  footer .info .inner .anchor a {
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+  footer .info .inner .anchor a::after {
+    content: "|";
+    margin: 0 3px;
+  }
+  footer .info .inner .anchor a:last-child::after {
+    content: none;
+  }
+  footer .info .inner .para p {
+    font-size: 1.25rem;
+    margin-top: 15px;
+    word-break: keep-all;
+  }
+  footer .info .inner .para p:first-child {
+    display: block;
+  }
+}/*# sourceMappingURL=Footer.module.css.map */

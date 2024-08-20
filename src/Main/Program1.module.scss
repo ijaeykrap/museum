@@ -1,0 +1,386 @@
+$lineColor: #e4e4e4;
+$color1: #000;
+$color2: #fff;
+$indicatorColor: #d8d8d8;
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
+    format("woff");
+  font-weight: Bold;
+}
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
+    format("woff");
+  font-weight: SemiBold;
+}
+@font-face {
+  font-family: "Pretendard-Light";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
+    format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: $color1;
+}
+li {
+  list-style: none;
+}
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.program1 {
+  border-bottom: 1px solid $lineColor;
+  border-top: 1px solid $lineColor;
+  margin-bottom: 150px;
+
+  .title {
+    width: 100%;
+    border-bottom: 1px solid $lineColor;
+    .titleBlock {
+      position: relative;
+      height: 135px;
+      width: 81.33%;
+      margin: 0 auto;
+      h2 {
+        font-size: 1.625rem;
+        position: absolute;
+        bottom: 25px;
+        margin: 0;
+        font-family: "NanumSquareBold";
+      }
+    }
+  }
+  .content {
+    width: 81.33%;
+    margin: 0 auto;
+    .img {
+      background-size: cover;
+      width: 100%;
+      height: 210px;
+      background-position: center;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      opacity: 0;
+      &.animate {
+        opacity: 1;
+        transition: opacity 0.3s;
+      }
+    }
+    .text {
+      width: 100%;
+      margin: 50px auto 100px auto;
+      & > * {
+        margin: 0;
+      }
+      h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        transform: translateY(-30%);
+        opacity: 0;
+        &.animate {
+          transform: translateY(0%);
+          opacity: 1;
+          transition: all 0.3s;
+        }
+      }
+      p {
+        font-size: 1.125rem;
+        width: 100%;
+        word-break: keep-all;
+        margin-top: 12px;
+        line-height: 1.5rem;
+        transform: translateY(-30%);
+        opacity: 0;
+        &.animate {
+          transform: translateY(0%);
+          opacity: 1;
+          transition: all 0.4s;
+        }
+      }
+      a {
+        width: 200px;
+        height: 50px;
+        display: block;
+        font-size: 1.25rem;
+        cursor: pointer;
+        background-color: $color1;
+        color: $color2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 50px;
+        transition: 0.3s;
+        transform: translateY(-30%);
+        opacity: 0;
+        &.animate {
+          transform: translateY(0%);
+          opacity: 1;
+          transition: all 0.5s;
+        }
+        &:hover {
+          background-color: #555;
+          color: $color2;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .program1 {
+    border-bottom: 1px solid $lineColor;
+    border-top: 1px solid $lineColor;
+    margin-bottom: 150px;
+    .title {
+      width: 100%;
+      border-bottom: 1px solid $lineColor;
+      .titleBlock {
+        position: relative;
+        height: 270px;
+        width: 87.5%;
+        margin: 0 auto;
+        h2 {
+          font-size: 2.25rem;
+          position: absolute;
+          bottom: 50px;
+          margin: 0;
+          font-family: "NanumSquareBold";
+        }
+      }
+    }
+    .content {
+      width: 87.5%;
+      margin: 0 auto;
+      .img {
+        background-size: cover;
+        width: 100%;
+        height: 393px;
+        background-position: center;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      .text {
+        width: 100%;
+        margin: 66px auto 90px auto;
+        & > * {
+          margin: 0;
+        }
+        h3 {
+          font-size: 1.875rem;
+          font-weight: bold;
+        }
+        p {
+          font-size: 1.5rem;
+          width: 100%;
+          word-break: keep-all;
+          margin-top: 10px;
+          line-height: 2.3125rem;
+        }
+        a {
+          width: 246px;
+          height: 90px;
+          display: block;
+          font-size: 1.5rem;
+          cursor: pointer;
+          background-color: $color1;
+          color: $color2;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 auto;
+          margin-top: 90px;
+          transition: 0.3s;
+          &:hover {
+            background-color: #555;
+            color: $color2;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .program1 {
+    border-bottom: 1px solid $lineColor;
+    border-top: 1px solid $lineColor;
+    margin-bottom: 300px;
+    .title {
+      width: 100%;
+      border-bottom: 1px solid $lineColor;
+      .titleBlock {
+        position: relative;
+        height: 270px;
+        width: 89.06%;
+        margin: 0 auto;
+        h2 {
+          font-size: 2.5rem;
+          position: absolute;
+          bottom: 50px;
+          margin: 0;
+          font-family: "NanumSquareBold";
+        }
+      }
+    }
+    .content {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      .img {
+        background-size: cover;
+        width: 56.44%;
+        height: 700px;
+        background-position: center;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      .text {
+        width: 43.55%;
+        height: 700px;
+        display: flex;
+        padding: 0 66px 0 76px;
+        margin: 0;
+        flex-direction: column;
+        justify-content: center;
+        & > * {
+          margin: 0;
+        }
+        h3 {
+          font-size: 1.875rem;
+          font-weight: bold;
+        }
+        p {
+          font-size: 1.5rem;
+          width: 100%;
+          word-break: keep-all;
+          margin-top: 20px;
+          line-height: 2.3125rem;
+        }
+        a {
+          width: 246px;
+          height: 84px;
+          display: block;
+          font-size: 1.5rem;
+          cursor: pointer;
+          background-color: $color1;
+          color: $color2;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 auto;
+          margin-top: 70px;
+          transition: 0.3s;
+          &:hover {
+            background-color: #555;
+            color: $color2;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1650px) {
+  .program1 {
+    border-bottom: 1px solid $lineColor;
+    border-top: 1px solid $lineColor;
+    margin-bottom: 300px;
+    .title {
+      width: 100%;
+      border-bottom: 1px solid $lineColor;
+      .titleBlock {
+        position: relative;
+        height: 270px;
+        width: 1596px;
+        margin: 0 auto;
+        h2 {
+          font-size: 2.5rem;
+          position: absolute;
+          bottom: 50px;
+          margin: 0;
+          font-family: "NanumSquareBold";
+        }
+      }
+    }
+    .content {
+      width: 1596px;
+      margin: 0 auto;
+      display: flex;
+      gap: 5.2%;
+      border-right: 1px solid $lineColor;
+
+      .img {
+        background-size: cover;
+        width: 56.44%;
+        height: 700px;
+        background-position: center;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      .text {
+        height: 700px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+        & > * {
+          margin: 0;
+        }
+        h3 {
+          font-size: 1.875rem;
+          font-weight: bold;
+        }
+        p {
+          font-size: 1.5rem;
+          width: 100%;
+          word-break: keep-all;
+          margin-top: 24px;
+          line-height: 2.3125rem;
+        }
+        a {
+          width: 246px;
+          height: 90px;
+          display: block;
+          font-size: 1.5rem;
+          cursor: pointer;
+          background-color: $color1;
+          color: $color2;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 auto;
+          margin-top: 70px;
+          transition: 0.3s;
+          &:hover {
+            background-color: #555;
+            color: $color2;
+          }
+        }
+      }
+    }
+  }
+}

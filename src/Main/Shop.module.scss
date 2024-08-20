@@ -1,0 +1,643 @@
+$lineColor: #e4e4e4;
+$color1: #000;
+$color2: #fff;
+$indicatorColor: #d8d8d8;
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
+    format("woff");
+  font-weight: Bold;
+}
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
+    format("woff");
+  font-weight: SemiBold;
+}
+@font-face {
+  font-family: "Pretendard-Light";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
+    format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+.shop {
+  border-top: 1px solid $lineColor;
+  border-bottom: 1px solid $lineColor;
+  margin-bottom: 150px;
+  width: 100%;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  .title {
+    width: 100%;
+    border-bottom: 1px solid $lineColor;
+    .titleBlock {
+      position: relative;
+      height: 135px;
+      width: 81.33%;
+      margin: 0 auto;
+      h2 {
+        position: absolute;
+        font-size: 1.625rem;
+        bottom: 25px;
+        margin: 0;
+        font-family: "NanumSquareBold";
+      }
+    }
+  }
+  .inner {
+    width: 81.33%;
+    margin: 0 auto;
+    padding: 30px 0 50px 0;
+
+    .slide {
+      overflow-x: hidden;
+      .list {
+        width: 300%;
+        display: flex;
+        flex-direction: row;
+        .item {
+          width: 33.33%;
+          margin: 0 auto;
+          .block {
+            width: 75.08%;
+            margin: 0 auto;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            .link {
+              display: flex;
+              flex-direction: column;
+              gap: 20px;
+              .img {
+                width: 100%;
+                height: 229px;
+                text-indent: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                transform: translateY(-10%);
+                opacity: 0;
+                &.animate {
+                  transform: translateY(0%);
+                  opacity: 1;
+                  transition: all 0.3s;
+                }
+              }
+              .text {
+                h3 {
+                  font-size: 1.5rem;
+                  font-family: "Pretendard-Bold";
+                  margin: 0;
+                  transform: translateY(-20%);
+                  opacity: 0;
+                  &.animate {
+                    transform: translateY(0%);
+                    opacity: 1;
+                    transition: all 0.3s;
+                  }
+                }
+                p {
+                  font-size: 1.125rem;
+                  line-height: 1.5rem;
+                  font-family: "Pretendard";
+                  margin: 12px 0 0 0;
+                  word-break: keep-all;
+                  transform: translateY(-20%);
+                  opacity: 0;
+                  &.animate {
+                    transform: translateY(0%);
+                    opacity: 1;
+                    transition: all 0.4s;
+                  }
+                }
+              }
+              &:hover {
+                .text {
+                  h3 {
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .scroll {
+    width: 38.4%;
+    height: 4px;
+    margin: 0 auto 50px auto;
+    position: relative;
+    cursor: pointer;
+    transform: translateY(-20%);
+    opacity: 0;
+    &.animate {
+      transform: translateY(0%);
+      opacity: 1;
+      transition: all 0.5s;
+    }
+    div {
+      width: 33.3%;
+      height: 4px;
+      position: absolute;
+      top: 0;
+      transition: all 0.3s;
+      background-color: $indicatorColor;
+
+      &.active {
+        background-color: $color1;
+      }
+      &:first-child {
+        left: 0;
+      }
+      &:nth-child(2) {
+        left: 33.3%;
+      }
+      &:last-child {
+        left: 66.6%;
+      }
+    }
+  }
+  .more {
+    border-top: 1px solid $lineColor;
+    height: 113px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    a {
+      font-family: "Pretendard-SemiBold";
+      display: inline-block;
+      font-size: 1.125rem;
+      position: relative;
+      margin: 0 11.73% 0 0;
+      &::after {
+        content: "";
+        background-image: url(../../public/img/logo-anchor.svg);
+        width: 17px;
+        height: 17px;
+        background-size: cover;
+        background-position: center;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 110%;
+        transform: translateY(-50%);
+        transition: all 0.3s;
+      }
+      &:hover::after {
+        left: 125%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .shop {
+    border-top: 1px solid $lineColor;
+    border-bottom: 1px solid $lineColor;
+    margin-bottom: 150px;
+    width: 100%;
+
+    .title {
+      width: 100%;
+      border-bottom: 1px solid $lineColor;
+      .titleBlock {
+        position: relative;
+        height: 270px;
+        width: 87.5%;
+        margin: 0 auto;
+        h2 {
+          position: absolute;
+          font-size: 2.25rem;
+          bottom: 50px;
+          margin: 0;
+          font-family: "NanumSquareBold";
+        }
+      }
+    }
+    .inner {
+      margin: 0 auto;
+      width: 87.5%;
+      border-left: 1px solid $lineColor;
+      border-right: 1px solid $lineColor;
+      padding: 50px 0;
+      .slide {
+        width: 100%;
+        overflow-x: hidden;
+        .list {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 50px;
+          .item {
+            width: 100%;
+            margin: 0 auto;
+            .block {
+              width: 82.58%;
+              margin: 0 auto;
+              .link {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                gap: 8.72%;
+                .img {
+                  width: 41.36;
+                  height: 205px;
+                  text-indent: 100%;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  background-position: center;
+                  background-size: contain;
+                  background-repeat: no-repeat;
+                  transform: translateY(-10%);
+                  opacity: 0;
+                  &.animate {
+                    transform: translateY(0%);
+                    opacity: 1;
+                    transition: all 0.3s;
+                  }
+                }
+                .text {
+                  margin-top: 0px;
+                  width: 57.47%;
+                  h3 {
+                    font-size: 1.5rem;
+                    font-family: "Pretendard-Bold";
+                    margin: 0;
+                    word-break: keep-all;
+                    transform: translateY(-20%);
+                    opacity: 0;
+                    &.animate {
+                      transform: translateY(0%);
+                      opacity: 1;
+                      transition: all 0.3s;
+                    }
+                  }
+                  p {
+                    font-size: 1.125rem;
+                    font-family: "Pretendard";
+                    margin: 20px 0 0 0;
+                    line-height: 1.5rem;
+                    word-break: keep-all;
+                    transform: translateY(-20%);
+                    opacity: 0;
+                    &.animate {
+                      transform: translateY(0%);
+                      opacity: 1;
+                      transition: all 0.4s;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .scroll {
+      display: none;
+    }
+
+    .more {
+      border-top: 1px solid $lineColor;
+      height: 240px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        font-family: "Pretendard";
+        display: inline-block;
+        font-size: 1.5rem;
+        border: 1px solid $color1;
+        position: relative;
+        width: 246px;
+        height: 60px;
+        line-height: 60px;
+        transition: 0.3s;
+        text-align: center;
+        margin: 0;
+        &::after {
+          content: none;
+        }
+        &:hover {
+          background-color: $color1;
+          color: $color2;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .shop {
+    border-top: 1px solid $lineColor;
+    border-bottom: 1px solid $lineColor;
+    margin-bottom: 300px;
+    width: 100%;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    .title {
+      width: 100%;
+      border-bottom: 1px solid $lineColor;
+      .titleBlock {
+        position: relative;
+        height: 270px;
+        width: 89.06%;
+        margin: 0 auto;
+        h2 {
+          position: absolute;
+          font-size: 2.5rem;
+          bottom: 50px;
+          margin: 0;
+          font-family: "NanumSquareBold";
+        }
+      }
+    }
+    .inner {
+      margin: 0 auto;
+      width: 89.06%;
+      padding: 73px 0 70px 0;
+      .slide {
+        overflow-x: hidden;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        .list {
+          gap: 24px;
+          display: flex;
+          flex-direction: row;
+          .item {
+            width: 31.57%;
+            margin: 0 auto;
+            .block {
+              width: 100%;
+              margin: 0 auto;
+              .link {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
+                .img {
+                  width: 100%;
+                  height: 328px;
+                  text-indent: 100%;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  background-position: center;
+                  background-size: contain;
+                  background-repeat: no-repeat;
+                  transform: translateY(-10%);
+                  opacity: 0;
+                  &.animate {
+                    transform: translateY(0%);
+                    opacity: 1;
+                    transition: all 0.3s;
+                  }
+                }
+                .text {
+                  text-align: end;
+                  margin-top: 0px;
+                  width: 90.27%;
+                  h3 {
+                    font-size: 1.625rem;
+                    font-family: "Pretendard-Bold";
+                    margin: 0;
+                    word-break: keep-all;
+                    transform: translateY(-20%);
+                    opacity: 0;
+                    height: 60px;
+                    &.animate {
+                      transform: translateY(0%);
+                      opacity: 1;
+                      transition: all 0.3s;
+                    }
+                  }
+                  p {
+                    font-size: 1.375rem;
+                    font-family: "Pretendard";
+                    margin: 20px 0 0 0;
+                    line-height: 1.8125rem;
+                    word-break: keep-all;
+                    height: 128px;
+                    transform: translateY(-20%);
+                    opacity: 0;
+                    &.animate {
+                      transform: translateY(0%);
+                      opacity: 1;
+                      transition: all 0.4s;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .scroll {
+      display: none;
+    }
+
+    .more {
+      border-top: 1px solid $lineColor;
+      height: 260px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        font-family: "Pretendard-SemiBold";
+        display: inline-block;
+        font-size: 1.5rem;
+        line-height: 81px;
+        border: 1px solid $color1;
+        position: relative;
+        width: 246px;
+        height: 81px;
+        transition: 0.3s;
+        margin: 0;
+        &::after {
+          content: none;
+        }
+        &:hover {
+          background-color: $color1;
+          color: $color2;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1650px) {
+  .shop {
+    border-top: 1px solid $lineColor;
+    border-bottom: 1px solid $lineColor;
+    margin-bottom: 300px;
+    width: 100%;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    .title {
+      width: 100%;
+      border-bottom: 1px solid $lineColor;
+      .titleBlock {
+        position: relative;
+        height: 270px;
+        width: 1596px;
+        margin: 0 auto;
+        h2 {
+          position: absolute;
+          font-size: 2.5rem;
+          bottom: 50px;
+          margin: 0;
+          font-family: "NanumSquareBold";
+        }
+      }
+    }
+    .inner {
+      margin: 0 auto;
+      width: 1596px;
+      padding: 73px 0 130px 0;
+      .slide {
+        overflow-x: hidden;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        .list {
+          gap: 24px;
+          display: flex;
+          flex-direction: row;
+
+          .item {
+            width: 32.33%;
+            margin: 0 auto;
+
+            .block {
+              width: 100%;
+              margin: 0 auto;
+              .link {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
+                .img {
+                  width: 100%;
+                  height: 328px;
+                  text-indent: 100%;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  background-position: center;
+                  background-size: contain;
+                  background-repeat: no-repeat;
+                  transform: translateY(-10%);
+                  opacity: 0;
+                  &.animate {
+                    transform: translateY(0%);
+                    opacity: 1;
+                    transition: all 0.3s;
+                  }
+                }
+                .text {
+                  text-align: end;
+                  margin-top: 0px;
+                  width: 90.27%;
+                  h3 {
+                    font-size: 1.875rem;
+                    font-family: "Pretendard-Bold";
+                    margin: 0;
+                    word-break: keep-all;
+                    height: 36px;
+                    transform: translateY(-20%);
+                    opacity: 0;
+                    &.animate {
+                      transform: translateY(0%);
+                      opacity: 1;
+                      transition: all 0.3s;
+                    }
+                  }
+                  p {
+                    font-size: 1.5rem;
+                    font-family: "Pretendard";
+                    margin: 20px 0 0 0;
+                    line-height: 1.8125rem;
+                    word-break: keep-all;
+                    height: 100px;
+                    transform: translateY(-20%);
+                    opacity: 0;
+                    &.animate {
+                      transform: translateY(0%);
+                      opacity: 1;
+                      transition: all 0.4s;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .scroll {
+      display: none;
+    }
+
+    .more {
+      border-top: 1px solid $lineColor;
+      height: 260px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        font-family: "Pretendard-SemiBold";
+        display: inline-block;
+        font-size: 1.5rem;
+        border: 1px solid $color1;
+        position: relative;
+        transition: 0.3s;
+        width: 246px;
+        height: 81px;
+        line-height: 81px;
+        margin: 0;
+        &::after {
+          content: none;
+        }
+        &:hover {
+          background-color: $color1;
+          color: $color2;
+        }
+      }
+    }
+  }
+}

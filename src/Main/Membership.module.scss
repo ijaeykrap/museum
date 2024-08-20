@@ -1,0 +1,549 @@
+$lineColor: #e4e4e4;
+$color1: #000;
+$color2: #fff;
+$indicatorColor: #d8d8d8;
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
+    format("woff");
+  font-weight: Bold;
+}
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
+    format("woff");
+  font-weight: SemiBold;
+}
+@font-face {
+  font-family: "Pretendard-Light";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
+    format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: $color1;
+}
+li {
+  list-style: none;
+}
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.membership {
+  margin-bottom: 150px;
+  .membershipInner {
+    width: 100%;
+    .banner {
+      position: relative;
+      .img {
+        opacity: 0;
+        width: 100%;
+        height: 202px;
+        background-size: cover;
+        background-image: url(../../public/img/main-membership.png);
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        &.animate {
+          opacity: 1;
+          transition: opacity 0.3s;
+        }
+      }
+      .imgDarker {
+        opacity: 0;
+        width: 100%;
+        height: 202px;
+        background-color: rgba(0, 0, 0, 0.65);
+        position: absolute;
+        top: 0;
+        left: 0;
+        &.animate {
+          opacity: 1;
+          transition: all 0.3s;
+        }
+      }
+      h2 {
+        font-family: "NanumSquare";
+        text-align: center;
+        font-size: 1.25rem;
+        width: 58.133%;
+        word-break: keep-all;
+        line-height: 1.375rem;
+        font-weight: 200;
+        color: $color2;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 80%);
+        opacity: 0;
+        margin: 0;
+        &.animate {
+          opacity: 1;
+          transform: translate(-50%, -50%);
+          transition: all 0.3s;
+        }
+      }
+    }
+    .list {
+      margin: 48px 0 0 0;
+      padding: 0;
+
+      li {
+        border-top: 1px solid $lineColor;
+        height: 106px;
+        display: flex;
+        flex-direction: row;
+        transform: translateY(-10%);
+        opacity: 0;
+        &.animate {
+          opacity: 1;
+          transform: translateY(0%);
+          &:nth-child(1) {
+            transition: all 0.3s;
+          }
+          &:nth-child(2) {
+            transition: all 0.35s;
+          }
+          &:nth-child(3) {
+            transition: all 0.4s;
+          }
+        }
+
+        .itemInner {
+          width: 81.33%;
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          gap: 20%;
+          .numBox {
+            span {
+              font-size: 3.125rem;
+              font-family: "NanumSquareRegular";
+            }
+          }
+          .content {
+            p {
+              margin: 0;
+              font-size: 1.125rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .more {
+    height: 290px;
+    width: 100%;
+    border-top: 1px solid $lineColor;
+    border-bottom: 1px solid $lineColor;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    a {
+      width: 180px;
+      height: 45px;
+      border: 1px solid $color1;
+      font-size: 1.125rem;
+      font-family: "Pretendard-Light";
+      text-align: center;
+      line-height: 45px;
+      transition: 0.3s;
+      &:hover {
+        background-color: $color1;
+        color: $color2;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .membership {
+    .membershipInner {
+      width: 100%;
+      .banner {
+        position: relative;
+        .img {
+          width: 100%;
+          height: 391px;
+          background-size: cover;
+          background-image: url(../../public/img/main-membership.png);
+          text-indent: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+        .imgDarker {
+          width: 100%;
+          height: 391px;
+          background-color: rgba(0, 0, 0, 0.65);
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        h2 {
+          font-family: "NanumSquare";
+          text-align: center;
+          font-size: 1.875rem;
+          width: 42.1875%;
+          word-break: keep-all;
+          line-height: 2.3125rem;
+          font-weight: 200;
+          color: $color2;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          margin: 0;
+        }
+      }
+      .list {
+        margin: 50px 0 50px 0;
+        padding: 0;
+        border-bottom: 1px solid $lineColor;
+
+        li {
+          border-top: 1px solid $lineColor;
+          height: 173px;
+          display: flex;
+          flex-direction: row;
+          .itemInner {
+            width: 87.5%;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 20%;
+            border-left: 1px solid $lineColor;
+            border-right: 1px solid $lineColor;
+
+            .numBox {
+              height: 100%;
+              width: 22.32%;
+              border-right: 1px solid $lineColor;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              span {
+                font-size: 3.625rem;
+                font-family: "NanumSquareRegular";
+              }
+            }
+            .content {
+              p {
+                margin: 0;
+                font-size: 1.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .more {
+      height: 260px;
+      width: 100%;
+      border-top: 1px solid $lineColor;
+      border-bottom: 1px solid $lineColor;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 6.5%;
+      a {
+        width: 298px;
+        height: 80px;
+        border: 1px solid $color1;
+        font-size: 1.5rem;
+        font-family: "Pretendard-SemiBold";
+        text-align: center;
+        line-height: 80px;
+        transition: 0.3s;
+        &:hover {
+          background-color: $color1;
+          color: $color2;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .membership {
+    .membershipInner {
+      position: relative;
+      width: 100%;
+      .banner {
+        position: relative;
+        .img {
+          width: 100%;
+          height: 700px;
+          background-size: cover;
+          background-image: url(../../public/img/main-membership.png);
+          text-indent: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+        .imgDarker {
+          width: 100%;
+          height: 700px;
+          background-color: rgba(0, 0, 0, 0.65);
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        h2 {
+          font-family: "NanumSquare";
+          text-align: center;
+          font-size: 1.875rem;
+          width: 63.47%;
+          word-break: keep-all;
+          line-height: 2.3125rem;
+          font-weight: 200;
+          color: $color2;
+          position: absolute;
+          top: 10px;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          opacity: 0;
+          margin: 0;
+          &.animate {
+            top: 100px;
+            opacity: 1;
+            transition: all 0.3s;
+          }
+        }
+      }
+      .list {
+        position: absolute;
+        width: 89.06%;
+        margin: 0;
+        padding: 0;
+        border-bottom: none;
+        top: 466px;
+        left: 7.12%;
+        display: flex;
+        flex-direction: row;
+
+        li {
+          margin-right: 60px;
+          opacity: 0;
+          width: 100%;
+          border-top: none;
+          height: 204px;
+          color: $color2;
+          transform: translate(-10%, 0);
+          opacity: 0;
+          &.animate {
+            transform: translateX(0%);
+            opacity: 1;
+            .numBox {
+              border-right: none;
+              border-left: none;
+            }
+            &:first-child {
+              transition: all 0.3s;
+            }
+            &.animate:nth-child(2) {
+              transition: all 0.4s;
+            }
+            &.animate:last-child {
+              transition: all 0.5s;
+            }
+          }
+          .itemInner {
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 11px;
+            border-left: none;
+            border-right: none;
+
+            .numBox {
+              height: 96px;
+              width: 26.53%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              span {
+                font-size: 4.125rem;
+                font-family: "NanumSquareRegular";
+              }
+            }
+            .content {
+              p {
+                margin: 0;
+                font-size: 1.5rem;
+                word-break: keep-all;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+    .more {
+      height: 260px;
+      width: 100%;
+      border-top: 1px solid $lineColor;
+      border-bottom: 1px solid $lineColor;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 6.5%;
+      a {
+        width: 339px;
+        height: 80px;
+        border: 1px solid $color1;
+        font-size: 1.5rem;
+        font-family: "Pretendard-SemiBold";
+        text-align: center;
+        line-height: 80px;
+        transition: 0.3s;
+        &:hover {
+          background-color: $color1;
+          color: $color2;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1650px) {
+  .membership {
+    border-top: 1px solid $lineColor;
+    .membershipInner {
+      position: relative;
+      width: 1596px;
+      margin: 0 auto;
+      .banner {
+        position: relative;
+        .img {
+          width: 100%;
+          height: 700px;
+          background-size: cover;
+          background-image: url(../../public/img/main-membership.png);
+          text-indent: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+        .imgDarker {
+          width: 100%;
+          height: 700px;
+          background-color: rgba(0, 0, 0, 0.65);
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        h2 {
+          font-family: "NanumSquare";
+          text-align: center;
+          font-size: 1.875rem;
+          width: 63.47%;
+          word-break: keep-all;
+          line-height: 2.3125rem;
+          font-weight: 200;
+          color: $color2;
+          position: absolute;
+          top: 100px;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          margin: 0;
+        }
+      }
+      .list {
+        position: absolute;
+        width: 89.06%;
+        margin: 0;
+        padding: 0;
+        border-bottom: none;
+        top: 466px;
+        left: 7.12%;
+        display: flex;
+        flex-direction: row;
+
+        li {
+          width: 100%;
+          border-top: none;
+          height: 204px;
+          color: $color2;
+          .itemInner {
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 11px;
+
+            .numBox {
+              height: 96px;
+              width: 26.53%;
+              border-left: none;
+              border-right: none;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              span {
+                font-size: 4.125rem;
+                font-family: "NanumSquareRegular";
+              }
+            }
+            .content {
+              p {
+                margin: 0;
+                font-size: 1.5rem;
+                word-break: keep-all;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+      .more {
+        height: 260px;
+        width: 100%;
+        border-top: 1px solid $lineColor;
+        border-bottom: 1px solid $lineColor;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 6.5%;
+        a {
+          width: 37.28%;
+          height: 80px;
+          border: 1px solid $color1;
+          font-size: 1.625rem;
+          font-family: "Pretendard-SemiBold";
+          text-align: center;
+          line-height: 80px;
+          transition: 0.3s;
+          &:hover {
+            background-color: $color1;
+            color: $color2;
+          }
+        }
+      }
+    }
+  }
+}

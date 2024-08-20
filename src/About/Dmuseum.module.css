@@ -1,0 +1,613 @@
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff") format("woff");
+  font-weight: Bold;
+}
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff") format("woff");
+  font-weight: SemiBold;
+}
+@font-face {
+  font-family: "Pretendard-Light";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Pretendard";
+}
+
+.dMuseum {
+  width: 100%;
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 150px;
+  user-select: none;
+}
+.dMuseum .inner {
+  padding: 50px 0;
+  width: 81.33%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 50px;
+}
+.dMuseum .inner .slideWrapper {
+  order: 2;
+  display: flex;
+  flex-direction: column;
+}
+.dMuseum .inner .slideWrapper .slide {
+  width: 100%;
+  transform: translateY(-10%);
+  opacity: 0;
+  overflow-x: hidden;
+}
+.dMuseum .inner .slideWrapper .slide.animate {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: all 0.3s;
+}
+.dMuseum .inner .slideWrapper .slide .list {
+  width: 600%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.dMuseum .inner .slideWrapper .slide .list .item {
+  width: 16.66%;
+  display: inline-block;
+}
+.dMuseum .inner .slideWrapper .slide .list .item .block {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+}
+.dMuseum .inner .slideWrapper .slide .list .item .block .img {
+  width: 100%;
+  height: 196px;
+  margin: 0 auto;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.dMuseum .inner .slideWrapper .slide .list .item .block span {
+  font-size: 1.125rem;
+  width: 78.36%;
+  word-break: keep-all;
+  text-align: right;
+}
+.dMuseum .inner .slideWrapper .indicator {
+  width: 100%;
+  height: 4px;
+  margin: 20px auto 0 auto;
+  background-color: #d8d8d8;
+  position: relative;
+  transform: translateY(-50%);
+  opacity: 0;
+}
+.dMuseum .inner .slideWrapper .indicator.animate {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: all 0.3s;
+}
+.dMuseum .inner .slideWrapper .indicator .scroll {
+  height: 4px;
+  background-color: #000;
+  position: absolute;
+}
+.dMuseum .inner .text {
+  order: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.dMuseum .inner .text > * {
+  margin: 0;
+}
+.dMuseum .inner .text h3 {
+  font-size: 1.875rem;
+  font-family: "Pretendard";
+  margin-bottom: 10px;
+  transform: translateY(-20%);
+  opacity: 0;
+}
+.dMuseum .inner .text h3.animate {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: all 0.3s;
+}
+.dMuseum .inner .text span {
+  font-family: "NanumSquareRegular";
+  font-size: 1.625rem;
+  line-height: 2.5rem;
+  width: 84.91%;
+  word-break: keep-all;
+  transform: translateY(-20%);
+  opacity: 0;
+}
+.dMuseum .inner .text span.animate {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: all 0.4s;
+}
+.dMuseum .inner .text p {
+  font-family: "Pretendard-Light";
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  margin-top: 50px;
+  word-break: keep-all;
+  transform: translateY(-20%);
+  opacity: 0;
+}
+.dMuseum .inner .text p.animate {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+@media screen and (min-width: 768px) {
+  .dMuseum {
+    width: 100%;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 150px;
+  }
+  .dMuseum .inner {
+    padding: 50px 0;
+    width: 87.5%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 50px;
+    border-left: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+  }
+  .dMuseum .inner .slideWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 687px;
+  }
+  .dMuseum .inner .slideWrapper .slide {
+    width: 100%;
+    height: 100%;
+    transform: translateY(-10%);
+    opacity: 0;
+    overflow-y: hidden;
+  }
+  .dMuseum .inner .slideWrapper .slide.animate {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: all 0.3s;
+  }
+  .dMuseum .inner .slideWrapper .slide .list {
+    width: 100%;
+    height: 266%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.18%;
+  }
+  .dMuseum .inner .slideWrapper .slide .list .item {
+    width: 100%;
+    height: 14.84%;
+    display: inline-block;
+  }
+  .dMuseum .inner .slideWrapper .slide .list .item .block {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+  }
+  .dMuseum .inner .slideWrapper .slide .list .item .block .img {
+    order: 2;
+    width: 76.78%;
+    height: 100%;
+    margin: 0;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .dMuseum .inner .slideWrapper .slide .list .item .block span {
+    font-size: 1.125rem;
+    width: 16.22%;
+    word-break: keep-all;
+    text-align: right;
+  }
+  .dMuseum .inner .slideWrapper .indicator {
+    width: 4px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #d8d8d8;
+    position: relative;
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  .dMuseum .inner .slideWrapper .indicator.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .dMuseum .inner .slideWrapper .indicator .scroll {
+    height: 33.33%;
+    width: 4px;
+    background-color: #000;
+    position: absolute;
+  }
+  .dMuseum .inner .text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2.97%;
+  }
+  .dMuseum .inner .text > * {
+    margin: 0;
+  }
+  .dMuseum .inner .text h3 {
+    font-size: 2rem;
+    font-family: "Pretendard";
+    margin-bottom: 10px;
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  .dMuseum .inner .text h3.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .dMuseum .inner .text span {
+    font-family: "NanumSquareRegular";
+    font-size: 1.75rem;
+    width: 84.91%;
+    word-break: keep-all;
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  .dMuseum .inner .text span.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.4s;
+  }
+  .dMuseum .inner .text p {
+    font-family: "Pretendard-Light";
+    font-size: 1.375rem;
+    width: 90%;
+    line-height: 2rem;
+    margin-top: 50px;
+    word-break: keep-all;
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  .dMuseum .inner .text p.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.5s;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .dMuseum {
+    width: 100%;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 150px;
+  }
+  .dMuseum .inner {
+    padding: 80px 0;
+    width: 89.06%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+    border-left: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+  }
+  .dMuseum .inner .slideWrapper {
+    width: 40.13%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 0;
+    height: 880px;
+  }
+  .dMuseum .inner .slideWrapper .slide {
+    width: 100%;
+    height: 100%;
+    transform: translateY(-10%);
+    opacity: 0;
+    overflow-y: hidden;
+    margin-right: 5.46%;
+  }
+  .dMuseum .inner .slideWrapper .slide.animate {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: all 0.3s;
+  }
+  .dMuseum .inner .slideWrapper .slide .list {
+    width: 100%;
+    height: 208%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.18%;
+  }
+  .dMuseum .inner .slideWrapper .slide .list .item {
+    width: 100%;
+    height: 14.84%;
+    display: inline-block;
+  }
+  .dMuseum .inner .slideWrapper .slide .list .item .block {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    gap: 15px;
+  }
+  .dMuseum .inner .slideWrapper .slide .list .item .block .img {
+    order: 1;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .dMuseum .inner .slideWrapper .slide .list .item .block span {
+    order: 2;
+    font-size: 1.125rem;
+    width: 100%;
+    word-break: keep-all;
+    text-align: right;
+    padding-right: 13.66%;
+  }
+  .dMuseum .inner .slideWrapper .indicator {
+    width: 4px;
+    height: 100%;
+    margin: 0;
+    background-color: #d8d8d8;
+    position: relative;
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  .dMuseum .inner .slideWrapper .indicator.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .dMuseum .inner .slideWrapper .indicator .scroll {
+    height: 16.6%;
+    width: 4px;
+    background-color: #000;
+    position: absolute;
+  }
+  .dMuseum .inner .text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5.48%;
+  }
+  .dMuseum .inner .text > * {
+    margin: 0;
+  }
+  .dMuseum .inner .text h3 {
+    font-size: 2.125rem;
+    font-family: "Pretendard";
+    margin-bottom: 10px;
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  .dMuseum .inner .text h3.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .dMuseum .inner .text span {
+    font-family: "NanumSquareRegular";
+    font-size: 1.875rem;
+    width: 84.91%;
+    word-break: keep-all;
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  .dMuseum .inner .text span.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.4s;
+  }
+  .dMuseum .inner .text p {
+    font-family: "Pretendard-Light";
+    font-size: 1.625rem;
+    width: 90%;
+    line-height: 2.5rem;
+    margin-top: 60px;
+    word-break: keep-all;
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  .dMuseum .inner .text p.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.5s;
+  }
+}
+@media screen and (min-width: 1650px) {
+  .dMuseum {
+    width: 100%;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 300px;
+  }
+  .dMuseum .inner {
+    padding: 0;
+    width: 1596px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    border-left: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+  }
+  .dMuseum .inner .slideWrapper {
+    width: 45.92%;
+    order: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 0;
+    height: 687px;
+  }
+  .dMuseum .inner .slideWrapper .slide {
+    width: 100%;
+    height: 100%;
+    transform: translateY(-10%);
+    opacity: 0;
+    overflow-y: hidden;
+    margin-right: 5.46%;
+  }
+  .dMuseum .inner .slideWrapper .slide.animate {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: all 0.3s;
+  }
+  .dMuseum .inner .slideWrapper .slide .list {
+    width: 100%;
+    height: 266%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.18%;
+  }
+  .dMuseum .inner .slideWrapper .slide .list .item {
+    width: 100%;
+    height: 14.84%;
+    display: inline-block;
+  }
+  .dMuseum .inner .slideWrapper .slide .list .item .block {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    gap: 15px;
+  }
+  .dMuseum .inner .slideWrapper .slide .list .item .block .img {
+    order: 2;
+    width: 72.77%;
+    height: 100%;
+    margin: 0;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .dMuseum .inner .slideWrapper .slide .list .item .block span {
+    order: 1;
+    font-size: 1.125rem;
+    width: 28.2%;
+    word-break: keep-all;
+    text-align: right;
+    padding-right: 0%;
+  }
+  .dMuseum .inner .slideWrapper .indicator {
+    width: 4px;
+    height: 100%;
+    margin: 0;
+    background-color: #d8d8d8;
+    position: relative;
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  .dMuseum .inner .slideWrapper .indicator.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .dMuseum .inner .slideWrapper .indicator .scroll {
+    height: 16.6%;
+    width: 4px;
+    background-color: #000;
+    position: absolute;
+  }
+  .dMuseum .inner .text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 3.13%;
+  }
+  .dMuseum .inner .text > * {
+    margin: 0;
+  }
+  .dMuseum .inner .text h3 {
+    font-size: 2.125rem;
+    font-family: "Pretendard";
+    margin-bottom: 10px;
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  .dMuseum .inner .text h3.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .dMuseum .inner .text span {
+    font-family: "NanumSquareRegular";
+    font-size: 1.875rem;
+    width: 84.91%;
+    word-break: keep-all;
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  .dMuseum .inner .text span.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.4s;
+  }
+  .dMuseum .inner .text p {
+    font-family: "Pretendard-Light";
+    font-size: 1.625rem;
+    line-height: 2.5rem;
+    width: 90%;
+    margin-top: 60px;
+    word-break: keep-all;
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  .dMuseum .inner .text p.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.5s;
+  }
+}/*# sourceMappingURL=Dmuseum.module.css.map */

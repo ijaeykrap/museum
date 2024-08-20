@@ -1,0 +1,403 @@
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff") format("woff");
+  font-weight: Bold;
+}
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff") format("woff");
+  font-weight: SemiBold;
+}
+@font-face {
+  font-family: "Pretendard-Light";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+li {
+  list-style: none;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.about {
+  margin-top: 80px;
+  margin-bottom: 150px;
+  border-bottom: 1px solid #e4e4e4;
+}
+.about .aboutInner {
+  width: 100%;
+  position: relative;
+}
+.about .aboutInner .aboutImg {
+  opacity: 0;
+  width: 100%;
+  height: 612px;
+  background-size: cover;
+  background-position: center;
+}
+.about .aboutInner .aboutImg.animate {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+.about .aboutInner .aboutText {
+  width: 81.33%;
+  margin: 0 auto;
+  padding: 50px 0 100px 0;
+}
+.about .aboutInner .aboutText h2 {
+  font-size: 2rem;
+  color: #fff;
+  position: absolute;
+  font-family: "NanumSquareBold";
+  top: 440px;
+}
+.about .aboutInner .aboutText h2.animate {
+  top: 488px;
+  transition: all 0.5s;
+}
+.about .aboutInner .aboutText span {
+  font-size: 1.625rem;
+  color: #fff;
+  position: absolute;
+  font-family: "NanumSquareRegular";
+  top: 520px;
+}
+.about .aboutInner .aboutText span.animate {
+  top: 542px;
+  transition: all 0.5s;
+}
+.about .aboutInner .aboutText p {
+  transform: translateX(-30%);
+  opacity: 0;
+  font-family: "Pretendard-Light";
+  line-height: 1.5rem;
+  word-break: keep-all;
+  font-size: 1.125rem;
+  width: 93.77%;
+  margin: 0;
+}
+.about .aboutInner .aboutText p.animate {
+  transform: translateX(0%);
+  opacity: 1;
+  transition: all 0.5s;
+}
+.about .aboutInner a {
+  opacity: 0;
+  width: 143px;
+  height: 60px;
+  display: block;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  margin: 100px 0 0 0;
+}
+.about .aboutInner a.animate {
+  opacity: 1;
+  transition: all 0.5s;
+}
+.about .aboutInner a:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .about {
+    margin-top: 100px;
+    margin-bottom: 150px;
+    border-bottom: 1px solid #e4e4e4;
+    position: relative;
+  }
+  .about .aboutInner .aboutImg {
+    opacity: 0;
+    width: 100%;
+    height: 780px;
+    background-size: cover;
+    background-position: center;
+  }
+  .about .aboutInner .aboutImg.animate {
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+  .about .aboutInner .aboutText {
+    width: 87.5%;
+    margin: 0 auto;
+    padding: 50px 0 100px 0;
+  }
+  .about .aboutInner .aboutText h2 {
+    font-size: 2.125rem;
+    color: #fff;
+    position: absolute;
+    font-family: "NanumSquareBold";
+    top: 600px;
+  }
+  .about .aboutInner .aboutText h2.animate {
+    top: 621px;
+    transition: all 0.5s;
+  }
+  .about .aboutInner .aboutText span {
+    font-size: 1.625rem;
+    color: #fff;
+    position: absolute;
+    font-family: "NanumSquareRegular";
+    top: 650px;
+  }
+  .about .aboutInner .aboutText span.animate {
+    top: 679px;
+    transition: all 0.5s;
+  }
+  .about .aboutInner .aboutText p {
+    transform: translateX(-30%);
+    opacity: 0;
+    font-family: "Pretendard-Light";
+    line-height: 2.3125rem;
+    word-break: keep-all;
+    font-size: 1.5rem;
+    width: 89.43%;
+    margin: 0;
+  }
+  .about .aboutInner .aboutText p.animate {
+    transform: translateX(0%);
+    opacity: 1;
+    transition: all 0.5s;
+  }
+  .about .aboutInner a {
+    opacity: 0;
+    width: 260px;
+    height: 60px;
+    display: block;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin: 100px 0 0 0;
+  }
+  .about .aboutInner a.animate {
+    opacity: 1;
+    transition: all 0.5s;
+  }
+  .about .aboutInner a:hover {
+    background-color: #555;
+    color: #fff;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about {
+    margin-top: 120px;
+    margin-bottom: 300px;
+    border-bottom: 1px solid #e4e4e4;
+  }
+  .about .aboutInner {
+    position: static;
+    display: flex;
+    flex-direction: row;
+  }
+  .about .aboutInner .aboutImg {
+    opacity: 0;
+    width: 51.17%;
+    height: 780px;
+    background-size: cover;
+    background-position: center;
+    order: 2;
+  }
+  .about .aboutInner .aboutImg.animate {
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+  .about .aboutInner .aboutText {
+    order: 1;
+    width: 43.35%;
+    margin: 0;
+    padding: 80px 0 0 4.5%;
+    margin: 0 0 0 5.46%;
+    border-left: 1px solid #e4e4e4;
+  }
+  .about .aboutInner .aboutText h2 {
+    font-size: 2.125rem;
+    color: #000;
+    position: static;
+    font-family: "NanumSquareBold";
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+  .about .aboutInner .aboutText h2.animate {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: all 0.5s;
+  }
+  .about .aboutInner .aboutText span {
+    font-size: 1.625rem;
+    color: #000;
+    position: static;
+    font-family: "NanumSquareRegular";
+    margin: 10px 0 50px 0;
+    display: block;
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+  .about .aboutInner .aboutText span.animate {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: all 0.5s;
+  }
+  .about .aboutInner .aboutText p {
+    opacity: 0;
+    transform: translateY(-30%);
+    font-family: "Pretendard-Light";
+    line-height: 2.3125rem;
+    word-break: keep-all;
+    font-size: 1.5rem;
+    width: 89.43%;
+    margin: 0;
+  }
+  .about .aboutInner .aboutText p.animate {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: all 0.5s;
+  }
+  .about .aboutInner a {
+    opacity: 0;
+    width: 260px;
+    height: 60px;
+    display: block;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin: 100px 0 0 0;
+  }
+  .about .aboutInner a.animate {
+    opacity: 1;
+    transition: all 0.5s;
+  }
+  .about .aboutInner a:hover {
+    background-color: #555;
+    color: #fff;
+  }
+}
+@media screen and (min-width: 1650px) {
+  .about {
+    margin-top: 120px;
+    margin-bottom: 300px;
+    border-bottom: 1px solid #e4e4e4;
+  }
+  .about .aboutInner {
+    width: 1596px;
+    margin: 0 auto;
+    position: static;
+    display: flex;
+    flex-direction: row;
+  }
+  .about .aboutInner .aboutImg {
+    opacity: 0;
+    width: 57.7%;
+    height: 780px;
+    background-size: cover;
+    background-position: center;
+    order: 2;
+  }
+  .about .aboutInner .aboutImg.animate {
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+  .about .aboutInner .aboutText {
+    order: 1;
+    width: 42.29%;
+    margin: 0;
+    padding: 80px 0 0 7.4%;
+    margin: 0;
+    border-left: 1px solid #e4e4e4;
+  }
+  .about .aboutInner .aboutText h2 {
+    font-size: 2.25rem;
+    color: #000;
+    position: static;
+    font-family: "NanumSquareBold";
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+  .about .aboutInner .aboutText h2.animate {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: all 0.5s;
+  }
+  .about .aboutInner .aboutText span {
+    font-size: 1.875rem;
+    color: #000;
+    position: static;
+    font-family: "NanumSquareRegular";
+    margin: 10px 0 50px 0;
+    display: block;
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+  .about .aboutInner .aboutText span.animate {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: all 0.5s;
+  }
+  .about .aboutInner .aboutText p {
+    opacity: 0;
+    transform: translateY(-30%);
+    font-family: "Pretendard-Light";
+    line-height: 2.9375rem;
+    word-break: keep-all;
+    font-size: 1.625rem;
+    width: 89.43%;
+    margin: 0;
+  }
+  .about .aboutInner .aboutText p.animate {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: all 0.5s;
+  }
+  .about .aboutInner a {
+    opacity: 0;
+    width: 260px;
+    height: 60px;
+    display: block;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin: 100px 0 0 0;
+  }
+  .about .aboutInner a.animate {
+    opacity: 1;
+    transition: all 0.5s;
+  }
+  .about .aboutInner a:hover {
+    background-color: #555;
+    color: #fff;
+  }
+}/*# sourceMappingURL=About.module.css.map */

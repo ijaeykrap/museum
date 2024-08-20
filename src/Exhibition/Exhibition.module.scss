@@ -1,0 +1,454 @@
+$lineColor: #e4e4e4;
+$color1: #fff;
+$color2: #000;
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
+    format("woff");
+  font-weight: Bold;
+}
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
+    format("woff");
+  font-weight: SemiBold;
+}
+@font-face {
+  font-family: "Pretendard-Light";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
+    format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+.exhibition {
+  overflow: hidden;
+  width: 100%;
+  .list {
+    width: 100%;
+    font-family: "Pretendard";
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    .item {
+      width: 100%;
+      height: 554px;
+      cursor: pointer;
+      position: relative;
+      opacity: 0;
+      &:first-child {
+        transform: translateX(-20%);
+      }
+      &:last-child {
+        transform: translateX(20%);
+      }
+      &.animate {
+        opacity: 1;
+        transition: all 0.3s;
+        &:first-child {
+          transform: translateX(0);
+        }
+        &:last-child {
+          transform: translateX(0);
+        }
+      }
+      &:last-child .text {
+        color: $color1;
+      }
+      .img {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        .hov {
+          width: 100%;
+          height: 100%;
+          display: none;
+        }
+      }
+      .text {
+        width: 100%;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .place {
+          font-size: 1.5rem;
+          font-family: "Pretendard-SemiBold";
+        }
+        .title {
+          margin-top: 20px;
+          margin-bottom: 6px;
+          font-size: 2rem;
+          font-family: "Pretendard-SemiBold";
+        }
+        .sub {
+          font-size: 2rem;
+          margin: 0;
+          margin-bottom: 20px;
+          text-align: center;
+          font-family: "Pretendard-SemiBold";
+        }
+        .date {
+          font-family: "Pretendard";
+          font-size: 1.375rem;
+        }
+        .book {
+          margin-top: 87px;
+          padding: 19px 38px;
+          font-family: "Pretendard";
+          font-size: 1.25rem;
+        }
+      }
+      &:last-child .book {
+        color: $color1;
+        border: 1px solid $color1;
+        &:hover {
+          color: $color2;
+          background-color: $color1;
+          transition: 0.3s;
+        }
+      }
+      &:first-child .book {
+        color: $color2;
+        border: 1px solid $color2;
+        &:hover {
+          color: $color1;
+          background-color: $color2;
+          transition: 0.3s;
+        }
+      }
+      &:hover {
+        .hov {
+          display: block;
+          transition: 0.3s;
+        }
+        .text {
+          opacity: 100%;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .exhibition {
+    width: 100%;
+    .list {
+      width: 100%;
+      font-family: "Pretendard";
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      .item {
+        width: 100%;
+        height: 780px;
+        cursor: pointer;
+        position: relative;
+        opacity: 0;
+        &.animate {
+          opacity: 1;
+          transition: all 0.3s;
+        }
+        &:last-child .text {
+          color: $color1;
+        }
+        .img {
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          background-position: center;
+          .hov {
+            width: 100%;
+            height: 100%;
+            display: none;
+          }
+        }
+        .text {
+          opacity: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .place {
+            font-size: 1.625rem;
+            font-family: "Pretendard-SemiBold";
+          }
+          .title {
+            margin-top: 20px;
+            margin-bottom: 6px;
+            font-size: 2.5rem;
+            font-family: "Pretendard-SemiBold";
+          }
+          .sub {
+            font-size: 2.5rem;
+            margin: 0;
+            margin-bottom: 20px;
+            font-family: "Pretendard-SemiBold";
+          }
+          .date {
+            font-family: "Pretendard";
+            font-size: 1.5rem;
+          }
+          .book {
+            margin-top: 40px;
+            padding: 22px 49px;
+            font-family: "Pretendard";
+            font-size: 1.625rem;
+          }
+        }
+        &:last-child .book {
+          color: $color1;
+          border: 1px solid $color1;
+          &:hover {
+            color: $color2;
+            background-color: $color1;
+            transition: 0.3s;
+          }
+        }
+        &:first-child .book {
+          color: $color2;
+          border: 1px solid $color2;
+          &:hover {
+            color: $color1;
+            background-color: $color2;
+            transition: 0.3s;
+          }
+        }
+        &:hover {
+          .hov {
+            display: block;
+            transition: 0.3s;
+          }
+          .text {
+            opacity: 100%;
+            transition: 0.3s;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .exhibition {
+    width: 100%;
+    .list {
+      width: 100%;
+      font-family: "Pretendard";
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      .item {
+        width: 100%;
+        height: 780px;
+        cursor: pointer;
+        position: relative;
+        opacity: 0;
+        &.animate {
+          opacity: 1;
+          transition: all 0.3s;
+        }
+        &:last-child .text {
+          color: $color1;
+        }
+        .img {
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          background-position: center;
+          .hov {
+            width: 100%;
+            height: 100%;
+            display: none;
+          }
+        }
+        .text {
+          width: 100%;
+          opacity: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .place {
+            font-size: 1.625rem;
+            font-family: "Pretendard-SemiBold";
+          }
+          .title {
+            margin-top: 20px;
+            margin-bottom: 6px;
+            font-size: 2.5rem;
+            font-family: "Pretendard-SemiBold";
+          }
+          .sub {
+            font-size: 2.5rem;
+            margin: 0;
+            margin-bottom: 20px;
+            font-family: "Pretendard-SemiBold";
+          }
+          .date {
+            font-family: "Pretendard";
+            font-size: 1.5rem;
+          }
+          .book {
+            margin-top: 40px;
+            padding: 22px 49px;
+            font-family: "Pretendard";
+            font-size: 1.625rem;
+          }
+        }
+        &:last-child .book {
+          color: $color1;
+          border: 1px solid $color1;
+          &:hover {
+            color: $color2;
+            background-color: $color1;
+            transition: 0.3s;
+          }
+        }
+        &:first-child .book {
+          color: $color2;
+          border: 1px solid $color2;
+          &:hover {
+            color: $color1;
+            background-color: $color2;
+            transition: 0.3s;
+          }
+        }
+        &:hover {
+          .hov {
+            display: block;
+            transition: 0.3s;
+          }
+          .text {
+            opacity: 100%;
+            transition: 0.3s;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1650px) {
+  .exhibition {
+    width: 100%;
+    .list {
+      width: 100%;
+      font-family: "Pretendard";
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      .item {
+        width: 100%;
+        height: 780px;
+        cursor: pointer;
+        position: relative;
+        opacity: 0;
+        &.animate {
+          opacity: 1;
+          transition: all 0.3s;
+        }
+        &:last-child .text {
+          color: $color1;
+        }
+        .img {
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          background-position: center;
+          .hov {
+            width: 100%;
+            height: 100%;
+            display: none;
+          }
+        }
+        .text {
+          width: 100%;
+          opacity: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .place {
+            font-size: 1.625rem;
+            font-family: "Pretendard-SemiBold";
+          }
+          .title {
+            margin-top: 20px;
+            margin-bottom: 6px;
+            font-size: 2.5rem;
+            font-family: "Pretendard-SemiBold";
+          }
+          .sub {
+            font-size: 2.5rem;
+            margin: 0;
+            margin-bottom: 20px;
+            font-family: "Pretendard-SemiBold";
+          }
+          .date {
+            font-family: "Pretendard";
+            font-size: 1.5rem;
+          }
+          .book {
+            margin-top: 40px;
+            padding: 22px 49px;
+            font-family: "Pretendard";
+            font-size: 1.625rem;
+          }
+        }
+        &:last-child .book {
+          color: $color1;
+          border: 1px solid $color1;
+          &:hover {
+            color: $color2;
+            background-color: $color1;
+            transition: 0.3s;
+          }
+        }
+        &:first-child .book {
+          color: $color2;
+          border: 1px solid $color2;
+          &:hover {
+            color: $color1;
+            background-color: $color2;
+            transition: 0.3s;
+          }
+        }
+        &:hover {
+          .hov {
+            display: block;
+            transition: 0.3s;
+          }
+          .text {
+            opacity: 100%;
+            transition: 0.3s;
+          }
+        }
+      }
+    }
+  }
+}

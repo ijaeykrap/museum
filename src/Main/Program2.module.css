@@ -1,0 +1,546 @@
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff") format("woff");
+  font-weight: Bold;
+}
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff") format("woff");
+  font-weight: SemiBold;
+}
+@font-face {
+  font-family: "Pretendard-Light";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+li {
+  list-style: none;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.program2 {
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 150px;
+  width: 100%;
+}
+.program2 .inner {
+  width: 81.33%;
+  margin: 0 auto;
+}
+.program2 .inner .slide {
+  width: 100%;
+  overflow-x: hidden;
+}
+.program2 .inner .slide .list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 200%;
+  user-select: none;
+}
+.program2 .inner .slide .list .item {
+  width: 50%;
+  margin: 0 auto;
+}
+.program2 .inner .slide .list .item div {
+  width: 100%;
+  margin: 0 auto;
+}
+.program2 .inner .slide .list .item div .img {
+  width: 100%;
+  height: 216px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  margin: 0 auto;
+  transform: translateY(-10%);
+  opacity: 0;
+}
+.program2 .inner .slide .list .item div .img.animate {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: all 0.3s;
+}
+.program2 .inner .slide .list .item div .text {
+  width: 100%;
+  margin: 50px 0 65px 0;
+}
+.program2 .inner .slide .list .item div .text h3 {
+  font-family: "Pretendard-Bold";
+  font-size: 1.5rem;
+  margin: 0;
+  text-align: start;
+  transform: translateY(-10%);
+  opacity: 0;
+}
+.program2 .inner .slide .list .item div .text h3.animate {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: all 0.3s;
+}
+.program2 .inner .slide .list .item div .text p {
+  font-family: "Pretendard-Light";
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  word-break: keep-all;
+  margin: 22px 0 50px 0;
+  text-align: start;
+  transform: translateY(-10%);
+  opacity: 0;
+}
+.program2 .inner .slide .list .item div .text p.animate {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: all 0.4s;
+}
+.program2 .inner .slide .list .item div .text a {
+  width: 200px;
+  height: 50px;
+  display: block;
+  border: 1px solid #000;
+  font-size: 1.25rem;
+  line-height: 50px;
+  text-align: center;
+  margin: 50px auto 0 auto;
+  transition: all 0.3s;
+  font-family: "Pretendard";
+  cursor: pointer;
+  transform: translateY(-10%);
+  opacity: 0;
+}
+.program2 .inner .slide .list .item div .text a.animate {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: all 0.5s;
+}
+.program2 .inner .slide .list .item div .text a:hover {
+  background-color: #000;
+  color: #fff;
+}
+.program2 .inner .indicator {
+  width: 47.21%;
+  height: 4px;
+  margin: 0 auto;
+  position: relative;
+  cursor: pointer;
+  background-color: #d8d8d8;
+  transform: translateY(-10%);
+  margin-bottom: 35px;
+  opacity: 0;
+}
+.program2 .inner .indicator.animate {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: all 0.6s;
+}
+.program2 .inner .indicator div {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+}
+.program2 .inner .indicator div:first-child {
+  left: 0;
+}
+.program2 .inner .indicator div:nth-child(2) {
+  left: 50%;
+}
+.program2 .inner .indicator div.active {
+  transition: all 0.3s;
+  background-color: #000;
+}
+
+@media screen and (min-width: 768px) {
+  .program2 {
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 150px;
+    width: 100%;
+  }
+  .program2 .inner {
+    width: 87.5%;
+    margin: 0 auto;
+    padding-bottom: 35px;
+    border-left: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+  }
+  .program2 .inner .slide {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .program2 .inner .slide .list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 200%;
+    user-select: none;
+  }
+  .program2 .inner .slide .list .item {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .program2 .inner .slide .list .item div {
+    width: 87.2%;
+    margin: 0 auto;
+  }
+  .program2 .inner .slide .list .item div .img {
+    width: 100%;
+    height: 291px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  .program2 .inner .slide .list .item div .img.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .program2 .inner .slide .list .item div .text {
+    width: 100%;
+    margin: 50px 0 80px 0;
+  }
+  .program2 .inner .slide .list .item div .text h3 {
+    font-size: 1.875rem;
+    margin: 0;
+    text-align: start;
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  .program2 .inner .slide .list .item div .text h3.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .program2 .inner .slide .list .item div .text p {
+    font-family: "Pretendard-Light";
+    font-size: 1.5rem;
+    line-height: 2.3125rem;
+    word-break: keep-all;
+    margin: 22px 0 50px 0;
+    text-align: start;
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  .program2 .inner .slide .list .item div .text p.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.4s;
+  }
+  .program2 .inner .slide .list .item div .text a {
+    width: 246px;
+    height: 69px;
+    display: block;
+    border: 1px solid #000;
+    font-size: 1.5rem;
+    line-height: 69px;
+    text-align: center;
+    margin: 50px auto 0 auto;
+    transition: all 0.3s;
+    cursor: pointer;
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  .program2 .inner .slide .list .item div .text a.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.5s;
+  }
+  .program2 .inner .slide .list .item div .text a:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  .program2 .inner .indicator {
+    width: 47.32%;
+    height: 4px;
+    margin: 0 auto;
+    position: relative;
+    cursor: pointer;
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  .program2 .inner .indicator.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.6s;
+  }
+  .program2 .inner .indicator div {
+    position: absolute;
+    background-color: #d8d8d8;
+    width: 50%;
+    height: 100%;
+  }
+  .program2 .inner .indicator div:first-child {
+    left: 0;
+  }
+  .program2 .inner .indicator div:last-child {
+    left: 50%;
+  }
+  .program2 .inner .indicator div.active {
+    transition: all 0.3s;
+    background-color: #000;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .program2 {
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 150px;
+    width: 100%;
+  }
+  .program2 .inner {
+    width: 89.06%;
+    margin: 0 auto;
+    padding-bottom: 0px;
+    border-left: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+  }
+  .program2 .inner .slide {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .program2 .inner .slide .list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    user-select: none;
+  }
+  .program2 .inner .slide .list .item {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .program2 .inner .slide .list .item:first-child {
+    border-right: 1px solid #e4e4e4;
+  }
+  .program2 .inner .slide .list .item div {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .program2 .inner .slide .list .item div .img {
+    width: 100%;
+    height: 291px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  .program2 .inner .slide .list .item div .img.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .program2 .inner .slide .list .item div .text {
+    text-align: left;
+    width: 84%;
+    margin: 50px auto;
+  }
+  .program2 .inner .slide .list .item div .text h3 {
+    font-size: 1.875rem;
+    margin: 0 auto;
+    text-align: start;
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  .program2 .inner .slide .list .item div .text h3.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .program2 .inner .slide .list .item div .text p {
+    font-family: "Pretendard-Light";
+    font-size: 1.5rem;
+    line-height: 2.3125rem;
+    word-break: keep-all;
+    margin: 22px 0 0 0;
+    text-align: start;
+    height: 140px;
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  .program2 .inner .slide .list .item div .text p.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.4s;
+  }
+  .program2 .inner .slide .list .item div .text a {
+    width: 246px;
+    height: 69px;
+    display: block;
+    border: 1px solid #000;
+    font-size: 1.5rem;
+    line-height: 69px;
+    text-align: center;
+    margin: 90px auto 0 auto;
+    transition: all 0.3s;
+    cursor: pointer;
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  .program2 .inner .slide .list .item div .text a.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.5s;
+  }
+  .program2 .inner .slide .list .item div .text a:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  .program2 .inner .indicator {
+    display: none;
+  }
+}
+@media screen and (min-width: 1650px) {
+  .program2 {
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 150px;
+    width: 100%;
+  }
+  .program2 .inner {
+    width: 1596px;
+    margin: 0 auto;
+    padding-bottom: 0px;
+    border-left: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+  }
+  .program2 .inner .slide {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .program2 .inner .slide .list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    user-select: none;
+  }
+  .program2 .inner .slide .list .item {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .program2 .inner .slide .list .item:first-child {
+    border-right: 1px solid #e4e4e4;
+  }
+  .program2 .inner .slide .list .item div {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .program2 .inner .slide .list .item div .img {
+    width: 100%;
+    height: 310px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  .program2 .inner .slide .list .item div .img.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .program2 .inner .slide .list .item div .text {
+    text-align: left;
+    width: 84%;
+    margin: 50px auto 90px auto;
+  }
+  .program2 .inner .slide .list .item div .text h3 {
+    font-size: 1.875rem;
+    margin: 0 auto;
+    text-align: start;
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  .program2 .inner .slide .list .item div .text h3.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .program2 .inner .slide .list .item div .text p {
+    font-family: "Pretendard-Light";
+    font-size: 1.5rem;
+    line-height: 2.3125rem;
+    word-break: keep-all;
+    margin: 22px 0 0 0;
+    text-align: start;
+    transform: translateY(-10%);
+    opacity: 0;
+    height: auto;
+  }
+  .program2 .inner .slide .list .item div .text p.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.4s;
+  }
+  .program2 .inner .slide .list .item div .text a {
+    width: 246px;
+    height: 69px;
+    display: block;
+    border: 1px solid #000;
+    font-size: 1.5rem;
+    line-height: 69px;
+    text-align: center;
+    margin: 90px auto 0 auto;
+    transition: all 0.3s;
+    cursor: pointer;
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  .program2 .inner .slide .list .item div .text a.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.5s;
+  }
+  .program2 .inner .slide .list .item div .text a:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  .program2 .inner .indicator {
+    display: none;
+  }
+}/*# sourceMappingURL=Program2.module.css.map */
