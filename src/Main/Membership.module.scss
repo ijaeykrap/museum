@@ -159,10 +159,11 @@ li {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    a {
+    button {
       width: 180px;
       height: 45px;
       border: 1px solid $color1;
+      background-color: $color2;
       font-size: 1.125rem;
       font-family: "Pretendard-Light";
       text-align: center;
@@ -267,10 +268,11 @@ li {
       justify-content: center;
       align-items: center;
       gap: 6.5%;
-      a {
+      button {
         width: 298px;
         height: 80px;
         border: 1px solid $color1;
+        background-color: $color2;
         font-size: 1.5rem;
         font-family: "Pretendard-SemiBold";
         text-align: center;
@@ -411,10 +413,11 @@ li {
       justify-content: center;
       align-items: center;
       gap: 6.5%;
-      a {
+      button {
         width: 339px;
         height: 80px;
         border: 1px solid $color1;
+        background-color: $color2;
         font-size: 1.5rem;
         font-family: "Pretendard-SemiBold";
         text-align: center;
@@ -529,8 +532,8 @@ li {
         justify-content: center;
         align-items: center;
         gap: 6.5%;
-        a {
-          width: 37.28%;
+        button {
+          width: 339px;
           height: 80px;
           border: 1px solid $color1;
           font-size: 1.625rem;

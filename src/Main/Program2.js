@@ -98,7 +98,7 @@ export default function Program2() {
 
   //스크롤바
   const onClick = (e) => {
-    let num = e.target.id;
+    let num = Number(e.target.id);
     setSlide((prev) => ({
       ...prev,
       showing: num,
@@ -158,9 +158,11 @@ export default function Program2() {
                       <p ref={(el) => (animateRef.current[4 + index] = el)}>
                         {d.p}
                       </p>
-                      <a ref={(el) => (animateRef.current[6 + index] = el)}>
+                      <button
+                        ref={(el) => (animateRef.current[6 + index] = el)}
+                      >
                         신청하기
-                      </a>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -180,7 +182,7 @@ export default function Program2() {
                 onClick={onClick}
                 id={p.id}
                 key={index}
-                className={slide.showing == index ? style.active : null}
+                className={slide.showing === index ? style.active : null}
               ></div>
             );
           })}

@@ -121,17 +121,17 @@ export default function Shop() {
       showing: num,
     }));
     if (slideRef) {
-      if (num == 0) {
+      if (num === 0) {
         slideRef.current.scrollTo({
           left: 0,
           behavior: "smooth",
         });
-      } else if (num == 1) {
+      } else if (num === 1) {
         slideRef.current.scrollTo({
           left: possible / 2,
           behavior: "smooth",
         });
-      } else if (num == 2) {
+      } else if (num === 2) {
         slideRef.current.scrollTo({
           left: possible,
           behavior: "smooth",
@@ -211,7 +211,7 @@ export default function Shop() {
               id={index}
               key={s.img}
               onClick={onClick}
-              className={state.showing == index ? style.active : null}
+              className={state.showing === index ? style.active : null}
             ></div>
           );
         })}

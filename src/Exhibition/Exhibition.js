@@ -56,7 +56,7 @@ export default function Exhibition() {
                   <h3 className={style.title}>{n.title}</h3>
                   <h3 className={style.sub}>{n.sub}</h3>
                   <span className={style.date}>{n.date}</span>
-                  <a className={style.book}>예약하기</a>
+                  <button className={style.book}>예약하기</button>
                 </div>
               </li>
             );

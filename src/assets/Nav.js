@@ -1,4 +1,4 @@
-import { NavLink, useParams, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 import style from "../assets/Category.module.css";
 

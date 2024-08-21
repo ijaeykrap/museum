@@ -121,11 +121,12 @@ li {
   opacity: 1;
   transition: all 0.4s;
 }
-.program2 .inner .slide .list .item div .text a {
+.program2 .inner .slide .list .item div .text button {
   width: 200px;
   height: 50px;
   display: block;
   border: 1px solid #000;
+  background-color: #fff;
   font-size: 1.25rem;
   line-height: 50px;
   text-align: center;
@@ -136,12 +137,12 @@ li {
   transform: translateY(-10%);
   opacity: 0;
 }
-.program2 .inner .slide .list .item div .text a.animate {
+.program2 .inner .slide .list .item div .text button.animate {
   transform: translateY(0%);
   opacity: 1;
   transition: all 0.5s;
 }
-.program2 .inner .slide .list .item div .text a:hover {
+.program2 .inner .slide .list .item div .text button:hover {
   background-color: #000;
   color: #fff;
 }
@@ -260,11 +261,12 @@ li {
     opacity: 1;
     transition: all 0.4s;
   }
-  .program2 .inner .slide .list .item div .text a {
+  .program2 .inner .slide .list .item div .text button {
     width: 246px;
     height: 69px;
     display: block;
     border: 1px solid #000;
+    background-color: #fff;
     font-size: 1.5rem;
     line-height: 69px;
     text-align: center;
@@ -274,12 +276,12 @@ li {
     transform: translateY(-10%);
     opacity: 0;
   }
-  .program2 .inner .slide .list .item div .text a.animate {
+  .program2 .inner .slide .list .item div .text button.animate {
     transform: translateY(0%);
     opacity: 1;
     transition: all 0.5s;
   }
-  .program2 .inner .slide .list .item div .text a:hover {
+  .program2 .inner .slide .list .item div .text button:hover {
     background-color: #000;
     color: #fff;
   }
@@ -402,11 +404,12 @@ li {
     opacity: 1;
     transition: all 0.4s;
   }
-  .program2 .inner .slide .list .item div .text a {
+  .program2 .inner .slide .list .item div .text button {
     width: 246px;
     height: 69px;
     display: block;
     border: 1px solid #000;
+    background-color: #fff;
     font-size: 1.5rem;
     line-height: 69px;
     text-align: center;
@@ -416,12 +419,12 @@ li {
     transform: translateY(-10%);
     opacity: 0;
   }
-  .program2 .inner .slide .list .item div .text a.animate {
+  .program2 .inner .slide .list .item div .text button.animate {
     transform: translateY(0%);
     opacity: 1;
     transition: all 0.5s;
   }
-  .program2 .inner .slide .list .item div .text a:hover {
+  .program2 .inner .slide .list .item div .text button:hover {
     background-color: #000;
     color: #fff;
   }
@@ -517,11 +520,12 @@ li {
     opacity: 1;
     transition: all 0.4s;
   }
-  .program2 .inner .slide .list .item div .text a {
+  .program2 .inner .slide .list .item div .text button {
     width: 246px;
     height: 69px;
     display: block;
     border: 1px solid #000;
+    background-color: #fff;
     font-size: 1.5rem;
     line-height: 69px;
     text-align: center;
@@ -531,12 +535,12 @@ li {
     transform: translateY(-10%);
     opacity: 0;
   }
-  .program2 .inner .slide .list .item div .text a.animate {
+  .program2 .inner .slide .list .item div .text button.animate {
     transform: translateY(0%);
     opacity: 1;
     transition: all 0.5s;
   }
-  .program2 .inner .slide .list .item div .text a:hover {
+  .program2 .inner .slide .list .item div .text button:hover {
     background-color: #000;
     color: #fff;
   }

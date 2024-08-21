@@ -114,6 +114,7 @@ $color2: #000;
       &:last-child .book {
         color: $color1;
         border: 1px solid $color1;
+        background-color: transparent;
         &:hover {
           color: $color2;
           background-color: $color1;
@@ -123,6 +124,7 @@ $color2: #000;
       &:first-child .book {
         color: $color2;
         border: 1px solid $color2;
+        background-color: transparent;
         &:hover {
           color: $color1;
           background-color: $color2;

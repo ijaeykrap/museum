@@ -19,6 +19,11 @@
   font-weight: 300;
   font-style: light;
 }
+button {
+  border: none;
+  background-color: transparent;
+}
+
 .program {
   width: 100%;
 }
@@ -39,7 +44,7 @@
   align-items: center;
   margin-left: 20px;
 }
-.program .subj .year a {
+.program .subj .year button {
   cursor: pointer;
   display: inline-block;
   width: 14px;
@@ -48,10 +53,10 @@
   background-image: url(../../public/img/logo-right.svg);
   background-repeat: no-repeat;
 }
-.program .subj .year a:first-child {
+.program .subj .year button:first-child {
   transform: rotateY(180deg);
 }
-.program .subj .year a.blind {
+.program .subj .year button.blind {
   opacity: 0.3;
   cursor: unset;
 }
@@ -230,7 +235,7 @@
     align-items: center;
     margin-left: 20px;
   }
-  .program .subj .year a {
+  .program .subj .year button {
     cursor: pointer;
     display: inline-block;
     width: 14px;
@@ -239,10 +244,10 @@
     background-image: url(../../public/img/logo-right.svg);
     background-repeat: no-repeat;
   }
-  .program .subj .year a:first-child {
+  .program .subj .year button:first-child {
     transform: rotateY(180deg);
   }
-  .program .subj .year a.blind {
+  .program .subj .year button.blind {
     opacity: 0.3;
     cursor: unset;
   }
@@ -426,7 +431,7 @@
     align-items: center;
     margin-left: 20px;
   }
-  .program .subj .year a {
+  .program .subj .year button {
     cursor: pointer;
     display: inline-block;
     width: 14px;
@@ -435,10 +440,10 @@
     background-image: url(../../public/img/logo-right.svg);
     background-repeat: no-repeat;
   }
-  .program .subj .year a:first-child {
+  .program .subj .year button:first-child {
     transform: rotateY(180deg);
   }
-  .program .subj .year a.blind {
+  .program .subj .year button.blind {
     opacity: 0.3;
     cursor: unset;
   }
@@ -646,7 +651,7 @@
     align-items: center;
     margin-left: 0px;
   }
-  .program .subj .year a {
+  .program .subj .year button {
     cursor: pointer;
     display: inline-block;
     width: 14px;
@@ -655,10 +660,10 @@
     background-image: url(../../public/img/logo-right.svg);
     background-repeat: no-repeat;
   }
-  .program .subj .year a:first-child {
+  .program .subj .year button:first-child {
     transform: rotateY(180deg);
   }
-  .program .subj .year a.blind {
+  .program .subj .year button.blind {
     opacity: 0.3;
     cursor: unset;
   }

@@ -135,7 +135,7 @@ function PastExhibition() {
                 <li
                   key={i}
                   onClick={placeHandler}
-                  className={select.place == `${i}` ? style.pushed : undefined}
+                  className={select.place === `${i}` ? style.pushed : undefined}
                   ref={(el) => (ref.current[index] = el)}
                 >
                   {i}
@@ -194,7 +194,7 @@ function PastExhibition() {
         {/*더보기 버튼*/}
         {list.showing < filteredArr.length && (
           <div className={style.more}>
-            <a onClick={showMore}>더보기</a>
+            <button onClick={showMore}>더보기</button>
           </div>
         )}
       </section>

@@ -13,6 +13,11 @@
   font-weight: 300;
   font-style: light;
 }
+button {
+  border: none;
+  background-color: transparent;
+}
+
 .program {
   width: 100%;
 }

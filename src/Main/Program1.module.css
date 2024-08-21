@@ -24,11 +24,6 @@ body {
   padding: 0;
 }
 
-a {
-  text-decoration: none;
-  color: #000;
-}
-
 li {
   list-style: none;
 }
@@ -113,7 +108,7 @@ li {
   opacity: 1;
   transition: all 0.4s;
 }
-.program1 .content .text a {
+.program1 .content .text button {
   width: 200px;
   height: 50px;
   display: block;
@@ -130,12 +125,12 @@ li {
   transform: translateY(-30%);
   opacity: 0;
 }
-.program1 .content .text a.animate {
+.program1 .content .text button.animate {
   transform: translateY(0%);
   opacity: 1;
   transition: all 0.5s;
 }
-.program1 .content .text a:hover {
+.program1 .content .text button:hover {
   background-color: #555;
   color: #fff;
 }
@@ -194,7 +189,7 @@ li {
     margin-top: 10px;
     line-height: 2.3125rem;
   }
-  .program1 .content .text a {
+  .program1 .content .text button {
     width: 246px;
     height: 90px;
     display: block;
@@ -209,7 +204,7 @@ li {
     margin-top: 90px;
     transition: 0.3s;
   }
-  .program1 .content .text a:hover {
+  .program1 .content .text button:hover {
     background-color: #555;
     color: #fff;
   }
@@ -274,7 +269,7 @@ li {
     margin-top: 20px;
     line-height: 2.3125rem;
   }
-  .program1 .content .text a {
+  .program1 .content .text button {
     width: 246px;
     height: 84px;
     display: block;
@@ -289,7 +284,7 @@ li {
     margin-top: 70px;
     transition: 0.3s;
   }
-  .program1 .content .text a:hover {
+  .program1 .content .text button:hover {
     background-color: #555;
     color: #fff;
   }
@@ -355,7 +350,7 @@ li {
     margin-top: 24px;
     line-height: 2.3125rem;
   }
-  .program1 .content .text a {
+  .program1 .content .text button {
     width: 246px;
     height: 90px;
     display: block;
@@ -370,7 +365,7 @@ li {
     margin-top: 70px;
     transition: 0.3s;
   }
-  .program1 .content .text a:hover {
+  .program1 .content .text button:hover {
     background-color: #555;
     color: #fff;
   }

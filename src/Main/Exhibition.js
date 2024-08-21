@@ -65,12 +65,12 @@ export default function Exhibition() {
                 >
                   {e.date}
                 </p>
-                <a
+                <button
                   className={style.book}
                   ref={(el) => (myRef.current[index + 8] = el)}
                 >
                   예약하기
-                </a>
+                </button>
               </div>
             </div>
           );

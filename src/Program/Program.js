@@ -89,9 +89,9 @@ export default function Program() {
                       </div>
                     </div>
                     <p className={style.des}>{n.des}</p>
-                    <a className={style.book}>
+                    <button className={style.book}>
                       <span>신청하기</span>
-                    </a>
+                    </button>
                   </div>
                   <div
                     className={style.img}
