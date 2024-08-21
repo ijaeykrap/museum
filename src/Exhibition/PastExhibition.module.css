@@ -143,17 +143,18 @@
   height: 231px;
   width: 100%;
 }
-.content .more a {
+.content .more button {
   display: block;
   font-size: 1.125rem;
   border: 1px solid #000;
+  background-color: #fff;
   width: 201px;
   height: 51px;
   text-align: center;
   line-height: 50px;
   cursor: pointer;
 }
-.content .more a:hover {
+.content .more button:hover {
   background-color: #000;
   color: #fff;
   transition: 0.2s;
@@ -281,17 +282,18 @@
     height: 240px;
     width: 100%;
   }
-  .content .more a {
+  .content .more button {
     display: block;
     font-size: 1.375rem;
     border: 1px solid #000;
+    background-color: #fff;
     width: 260px;
     height: 60px;
     text-align: center;
     line-height: 60px;
     cursor: pointer;
   }
-  .content .more a:hover {
+  .content .more button:hover {
     background-color: #000;
     color: #fff;
     transition: 0.2s;
@@ -418,17 +420,18 @@
     height: 261px;
     width: 100%;
   }
-  .content .more a {
+  .content .more button {
     display: block;
     font-size: 1.75rem;
     border: 1px solid #000;
+    background-color: #fff;
     width: 281px;
     height: 81px;
     text-align: center;
     line-height: 81px;
     cursor: pointer;
   }
-  .content .more a:hover {
+  .content .more button:hover {
     background-color: #000;
     color: #fff;
     transition: 0.2s;
@@ -553,17 +556,18 @@
     justify-content: center;
     align-items: center;
   }
-  .content .more a {
+  .content .more button {
     display: block;
     font-size: 1.625rem;
     border: 1px solid #000;
+    background-color: #fff;
     width: 281px;
     height: 81px;
     text-align: center;
     line-height: 81px;
     cursor: pointer;
   }
-  .content .more a:hover {
+  .content .more button:hover {
     background-color: #000;
     color: #fff;
     transition: 0.2s;

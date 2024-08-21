@@ -109,6 +109,7 @@
 .exhibition .list .item:last-child .book {
   color: #fff;
   border: 1px solid #fff;
+  background-color: transparent;
 }
 .exhibition .list .item:last-child .book:hover {
   color: #000;
@@ -118,6 +119,7 @@
 .exhibition .list .item:first-child .book {
   color: #000;
   border: 1px solid #000;
+  background-color: transparent;
 }
 .exhibition .list .item:first-child .book:hover {
   color: #fff;

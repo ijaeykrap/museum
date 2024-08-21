@@ -30,7 +30,7 @@ export default function Footer() {
               {FooterInfo.link.map((l) => {
                 return (
                   <li key={l}>
-                    <a>{l}</a>
+                    <button>{l}</button>
                   </li>
                 );
               })}
@@ -42,7 +42,7 @@ export default function Footer() {
         <div className={style.inner}>
           <div className={style.anchor}>
             {FooterInfo.a.map((a) => {
-              return <a key={a}>{a}</a>;
+              return <button key={a}>{a}</button>;
             })}
           </div>
 

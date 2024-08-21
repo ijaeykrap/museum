@@ -21,6 +21,11 @@ $color2: #fff;
   font-style: light;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+}
+
 @mixin bookAfter {
   content: "";
   width: 8px;

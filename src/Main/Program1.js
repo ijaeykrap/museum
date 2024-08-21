@@ -45,7 +45,7 @@ export default function Program1() {
         <div className={style.text}>
           <h3 ref={(el) => (ref.current[1] = el)}>{Night.h3}</h3>
           <p ref={(el) => (ref.current[2] = el)}>{Night.p}</p>
-          <a ref={(el) => (ref.current[3] = el)}>자세히 보기</a>
+          <button ref={(el) => (ref.current[3] = el)}>자세히 보기</button>
         </div>
       </div>
     </section>

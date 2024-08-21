@@ -72,15 +72,15 @@ export default function PastProgram() {
         <div className={style.subj}>
           <h3>History</h3>
           <div className={style.year}>
-            <a
+            <button
               onClick={minusYear}
               className={year <= 2018 ? style.blind : null}
-            ></a>
+            ></button>
             <span>{year}</span>
-            <a
+            <button
               onClick={plusYear}
               className={year >= 2022 ? style.blind : null}
-            ></a>
+            ></button>
           </div>
         </div>
       </div>

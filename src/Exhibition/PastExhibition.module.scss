@@ -151,10 +151,11 @@ $color2: #fff;
     border-bottom: 1px solid $lineColor;
     height: 231px;
     width: 100%;
-    a {
+    button {
       display: block;
       font-size: 1.125rem;
       border: 1px solid $color1;
+      background-color: $color2;
       width: 201px;
       height: 51px;
       text-align: center;
@@ -294,10 +295,11 @@ $color2: #fff;
       border-bottom: 1px solid $lineColor;
       height: 240px;
       width: 100%;
-      a {
+      button {
         display: block;
         font-size: 1.375rem;
         border: 1px solid $color1;
+        background-color: $color2;
         width: 260px;
         height: 60px;
         text-align: center;
@@ -436,10 +438,11 @@ $color2: #fff;
       align-items: center;
       height: 261px;
       width: 100%;
-      a {
+      button {
         display: block;
         font-size: 1.75rem;
         border: 1px solid $color1;
+        background-color: $color2;
         width: 281px;
         height: 81px;
         text-align: center;
@@ -576,10 +579,11 @@ $color2: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
-      a {
+      button {
         display: block;
         font-size: 1.625rem;
         border: 1px solid $color1;
+        background-color: $color2;
         width: 281px;
         height: 81px;
         text-align: center;

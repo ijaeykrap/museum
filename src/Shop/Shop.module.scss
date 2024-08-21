@@ -35,6 +35,10 @@ $lineColor: #e4e4e4;
   margin: 0;
   padding: 0;
 }
+button {
+  border: none;
+  background-color: transparent;
+}
 
 .front {
   width: 100%;
@@ -182,7 +186,7 @@ $lineColor: #e4e4e4;
                 transition: all 0.3s;
               }
               &:first-child {
-                a {
+                button {
                   transform: rotateY(180deg);
                 }
               }
@@ -191,7 +195,7 @@ $lineColor: #e4e4e4;
                 transform: translate(20%, -50%);
                 right: 0;
               }
-              a {
+              button {
                 display: inline-block;
                 width: 20px;
                 height: 35px;
@@ -406,7 +410,7 @@ $lineColor: #e4e4e4;
                   transition: all 0.3s;
                 }
                 &:first-child {
-                  a {
+                  button {
                     transform: rotateY(180deg);
                   }
                 }
@@ -415,7 +419,7 @@ $lineColor: #e4e4e4;
                   transform: translate(20%, -50%);
                   right: 0;
                 }
-                a {
+                button {
                   display: inline-block;
                   width: 20px;
                   height: 35px;
@@ -642,7 +646,7 @@ $lineColor: #e4e4e4;
                   transition: all 0.3s;
                 }
                 &:first-child {
-                  a {
+                  button {
                     transform: rotateY(180deg);
                   }
                 }
@@ -651,7 +655,7 @@ $lineColor: #e4e4e4;
                   transform: translate(20%, -50%);
                   right: 0;
                 }
-                a {
+                button {
                   display: inline-block;
                   width: 20px;
                   height: 35px;
@@ -887,7 +891,7 @@ $lineColor: #e4e4e4;
                   transition: all 0.3s;
                 }
                 &:first-child {
-                  a {
+                  button {
                     transform: rotateY(180deg);
                   }
                 }
@@ -896,7 +900,7 @@ $lineColor: #e4e4e4;
                   transform: translate(20%, -50%);
                   right: 0;
                 }
-                a {
+                button {
                   display: inline-block;
                   width: 23px;
                   height: 41px;

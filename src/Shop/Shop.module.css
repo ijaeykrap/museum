@@ -26,6 +26,11 @@
   padding: 0;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+}
+
 .front {
   width: 100%;
 }
@@ -173,14 +178,14 @@
   opacity: 50%;
   transition: all 0.3s;
 }
-.front .list .item .inner .imgArea .btnArea .btn:first-child a {
+.front .list .item .inner .imgArea .btnArea .btn:first-child button {
   transform: rotateY(180deg);
 }
 .front .list .item .inner .imgArea .btnArea .btn:last-child {
   transform: translate(20%, -50%);
   right: 0;
 }
-.front .list .item .inner .imgArea .btnArea .btn a {
+.front .list .item .inner .imgArea .btnArea .btn button {
   display: inline-block;
   width: 20px;
   height: 35px;
@@ -388,14 +393,14 @@
     opacity: 50%;
     transition: all 0.3s;
   }
-  .front .list .item .inner .imgArea .btnArea .btn:first-child a {
+  .front .list .item .inner .imgArea .btnArea .btn:first-child button {
     transform: rotateY(180deg);
   }
   .front .list .item .inner .imgArea .btnArea .btn:last-child {
     transform: translate(20%, -50%);
     right: 0;
   }
-  .front .list .item .inner .imgArea .btnArea .btn a {
+  .front .list .item .inner .imgArea .btnArea .btn button {
     display: inline-block;
     width: 20px;
     height: 35px;
@@ -609,14 +614,14 @@
     opacity: 50%;
     transition: all 0.3s;
   }
-  .front .list .item .inner .imgArea .btnArea .btn:first-child a {
+  .front .list .item .inner .imgArea .btnArea .btn:first-child button {
     transform: rotateY(180deg);
   }
   .front .list .item .inner .imgArea .btnArea .btn:last-child {
     transform: translate(20%, -50%);
     right: 0;
   }
-  .front .list .item .inner .imgArea .btnArea .btn a {
+  .front .list .item .inner .imgArea .btnArea .btn button {
     display: inline-block;
     width: 20px;
     height: 35px;
@@ -835,14 +840,14 @@
     opacity: 50%;
     transition: all 0.3s;
   }
-  .front .list .item .inner .imgArea .btnArea .btn:first-child a {
+  .front .list .item .inner .imgArea .btnArea .btn:first-child button {
     transform: rotateY(180deg);
   }
   .front .list .item .inner .imgArea .btnArea .btn:last-child {
     transform: translate(20%, -50%);
     right: 0;
   }
-  .front .list .item .inner .imgArea .btnArea .btn a {
+  .front .list .item .inner .imgArea .btnArea .btn button {
     display: inline-block;
     width: 23px;
     height: 41px;

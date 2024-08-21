@@ -61,8 +61,8 @@ export default function Membership() {
         </ul>
       </div>
       <div className={style.more}>
-        <a href="#">가입하고 혜택받기</a>
-        <a href="#">로그인하고 혜택 누리기</a>
+        <button href="#">가입하고 혜택받기</button>
+        <button href="#">로그인하고 혜택 누리기</button>
       </div>
     </section>
   );

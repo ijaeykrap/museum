@@ -149,17 +149,18 @@ li {
   align-items: center;
   gap: 20px;
 }
-.membership .more a {
+.membership .more button {
   width: 180px;
   height: 45px;
   border: 1px solid #000;
+  background-color: #fff;
   font-size: 1.125rem;
   font-family: "Pretendard-Light";
   text-align: center;
   line-height: 45px;
   transition: 0.3s;
 }
-.membership .more a:hover {
+.membership .more button:hover {
   background-color: #000;
   color: #fff;
 }
@@ -251,17 +252,18 @@ li {
     align-items: center;
     gap: 6.5%;
   }
-  .membership .more a {
+  .membership .more button {
     width: 298px;
     height: 80px;
     border: 1px solid #000;
+    background-color: #fff;
     font-size: 1.5rem;
     font-family: "Pretendard-SemiBold";
     text-align: center;
     line-height: 80px;
     transition: 0.3s;
   }
-  .membership .more a:hover {
+  .membership .more button:hover {
     background-color: #000;
     color: #fff;
   }
@@ -388,17 +390,18 @@ li {
     align-items: center;
     gap: 6.5%;
   }
-  .membership .more a {
+  .membership .more button {
     width: 339px;
     height: 80px;
     border: 1px solid #000;
+    background-color: #fff;
     font-size: 1.5rem;
     font-family: "Pretendard-SemiBold";
     text-align: center;
     line-height: 80px;
     transition: 0.3s;
   }
-  .membership .more a:hover {
+  .membership .more button:hover {
     background-color: #000;
     color: #fff;
   }
@@ -502,8 +505,8 @@ li {
     align-items: center;
     gap: 6.5%;
   }
-  .membership .membershipInner .more a {
-    width: 37.28%;
+  .membership .membershipInner .more button {
+    width: 339px;
     height: 80px;
     border: 1px solid #000;
     font-size: 1.625rem;
@@ -512,7 +515,7 @@ li {
     line-height: 80px;
     transition: 0.3s;
   }
-  .membership .membershipInner .more a:hover {
+  .membership .membershipInner .more button:hover {
     background-color: #000;
     color: #fff;
   }

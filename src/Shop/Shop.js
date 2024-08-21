@@ -98,10 +98,10 @@ export default function Shop() {
 
                     <div className={style.btnArea} id={index}>
                       <div className={style.btn} onClick={onLeft}>
-                        <a className={style.left}></a>
+                        <button className={style.left}></button>
                       </div>
                       <div className={style.btn} onClick={onRight}>
-                        <a className={style.right}></a>
+                        <button className={style.right}></button>
                       </div>
                     </div>
                   </div>
