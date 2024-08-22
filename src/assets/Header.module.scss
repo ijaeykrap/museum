@@ -26,6 +26,9 @@ $indicatorColor: #d8d8d8;
   li {
     list-style: none;
   }
+  button {
+    -webkit-appearance: none;
+  }
   .blind {
     position: absolute;
     width: 1px;
@@ -161,6 +164,7 @@ header {
           border: none;
           background-color: transparent;
           cursor: pointer;
+          color: $color1;
           h3 {
             font-size: 1.375rem;
           }
