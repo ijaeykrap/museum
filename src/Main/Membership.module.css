@@ -150,10 +150,11 @@ li {
   gap: 20px;
 }
 .membership .more button {
-  width: 180px;
-  height: 45px;
   border: 1px solid #000;
   background-color: #fff;
+  color: #000;
+  width: 180px;
+  height: 45px;
   font-size: 1.125rem;
   font-family: "Pretendard-Light";
   text-align: center;
@@ -257,6 +258,7 @@ li {
     height: 80px;
     border: 1px solid #000;
     background-color: #fff;
+    color: #000;
     font-size: 1.5rem;
     font-family: "Pretendard-SemiBold";
     text-align: center;
@@ -395,6 +397,7 @@ li {
     height: 80px;
     border: 1px solid #000;
     background-color: #fff;
+    color: #000;
     font-size: 1.5rem;
     font-family: "Pretendard-SemiBold";
     text-align: center;
@@ -509,6 +512,8 @@ li {
     width: 339px;
     height: 80px;
     border: 1px solid #000;
+    background-color: #fff;
+    color: #000;
     font-size: 1.625rem;
     font-family: "Pretendard-SemiBold";
     text-align: center;

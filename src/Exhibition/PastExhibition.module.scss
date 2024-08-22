@@ -74,7 +74,7 @@ $color2: #fff;
         justify-content: end;
       }
       .year {
-        appearance: none;
+        -webkit-appearance: none;
         font-size: 1.125rem;
         font-family: "Pretendard";
         background: url("../../public/img/logo-triangle.svg") no-repeat right
@@ -156,6 +156,7 @@ $color2: #fff;
       font-size: 1.125rem;
       border: 1px solid $color1;
       background-color: $color2;
+      color: $color1;
       width: 201px;
       height: 51px;
       text-align: center;
@@ -214,6 +215,7 @@ $color2: #fff;
           justify-content: end;
         }
         .year {
+          color: $color1;
           appearance: none;
           font-size: 1.375rem;
           font-family: "Pretendard";
@@ -300,6 +302,7 @@ $color2: #fff;
         font-size: 1.375rem;
         border: 1px solid $color1;
         background-color: $color2;
+        color: $color1;
         width: 260px;
         height: 60px;
         text-align: center;
@@ -359,6 +362,7 @@ $color2: #fff;
           justify-content: end;
         }
         .year {
+          color: $color1;
           appearance: none;
           font-size: 1.5rem;
           font-family: "Pretendard";
@@ -443,6 +447,7 @@ $color2: #fff;
         font-size: 1.75rem;
         border: 1px solid $color1;
         background-color: $color2;
+        color: $color1;
         width: 281px;
         height: 81px;
         text-align: center;
@@ -502,6 +507,7 @@ $color2: #fff;
           justify-content: end;
         }
         .year {
+          color: $color1;
           appearance: none;
           font-size: 1.5rem;
           font-family: "Pretendard";
@@ -584,6 +590,7 @@ $color2: #fff;
         font-size: 1.625rem;
         border: 1px solid $color1;
         background-color: $color2;
+        color: $color1;
         width: 281px;
         height: 81px;
         text-align: center;

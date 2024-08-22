@@ -24,6 +24,7 @@ $color2: #fff;
 button {
   border: none;
   background-color: transparent;
+  color: $color1;
 }
 
 @mixin bookAfter {

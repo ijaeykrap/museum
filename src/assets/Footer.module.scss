@@ -28,10 +28,15 @@ $lineColor: #e4e4e4;
   font-weight: 300;
   font-style: normal;
 }
-
-li {
-  list-style: none;
+* {
+  li {
+    list-style: none;
+  }
+  button {
+    -webkit-appearance: none;
+  }
 }
+
 footer {
   @mixin innerWidth {
     width: 81.33%;

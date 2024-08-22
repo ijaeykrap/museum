@@ -23,6 +23,10 @@ li {
   list-style: none;
 }
 
+button {
+  color: #000;
+}
+
 footer .list {
   margin-top: 150px;
   border-top: 1px solid #e4e4e4;

@@ -4,29 +4,9 @@ $color2: #fff;
 $indicatorColor: #d8d8d8;
 
 @font-face {
-  font-family: "Pretendard";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
-    format("woff");
-  font-weight: normal;
-}
-@font-face {
-  font-family: "Pretendard-Bold";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
-    format("woff");
-  font-weight: Bold;
-}
-@font-face {
-  font-family: "Pretendard-SemiBold";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
-    format("woff");
-  font-weight: SemiBold;
-}
-@font-face {
   font-family: "Pretendard-Light";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
     format("woff");
-  font-weight: 300;
-  font-style: light;
 }
 
 body {
@@ -74,7 +54,6 @@ li {
       h3 {
         width: 140px;
         font-size: 1.125rem;
-        font-weight: 300;
         line-height: 1.5rem;
         word-break: keep-all;
         text-align: right;

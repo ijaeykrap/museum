@@ -156,6 +156,7 @@ header nav .content .info .infoTitle {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  color: #000;
 }
 header nav .content .info .infoTitle h3 {
   font-size: 1.375rem;

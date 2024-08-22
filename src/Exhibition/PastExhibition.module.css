@@ -70,6 +70,7 @@
   justify-content: end;
 }
 .content .list .inner .year {
+  color: #000;
   appearance: none;
   font-size: 1.125rem;
   font-family: "Pretendard";
@@ -148,6 +149,7 @@
   font-size: 1.125rem;
   border: 1px solid #000;
   background-color: #fff;
+  color: #000;
   width: 201px;
   height: 51px;
   text-align: center;
@@ -208,6 +210,7 @@
     justify-content: end;
   }
   .content .list .inner .year {
+    color: #000;
     appearance: none;
     font-size: 1.375rem;
     font-family: "Pretendard";
@@ -287,6 +290,7 @@
     font-size: 1.375rem;
     border: 1px solid #000;
     background-color: #fff;
+    color: #000;
     width: 260px;
     height: 60px;
     text-align: center;
@@ -347,6 +351,7 @@
     justify-content: end;
   }
   .content .list .inner .year {
+    color: #000;
     appearance: none;
     font-size: 1.5rem;
     font-family: "Pretendard";
@@ -425,6 +430,7 @@
     font-size: 1.75rem;
     border: 1px solid #000;
     background-color: #fff;
+    color: #000;
     width: 281px;
     height: 81px;
     text-align: center;
@@ -485,6 +491,7 @@
     justify-content: end;
   }
   .content .list .inner .year {
+    color: #000;
     appearance: none;
     font-size: 1.5rem;
     font-family: "Pretendard";
@@ -561,6 +568,7 @@
     font-size: 1.625rem;
     border: 1px solid #000;
     background-color: #fff;
+    color: #000;
     width: 281px;
     height: 81px;
     text-align: center;

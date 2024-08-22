@@ -28,23 +28,28 @@ $indicatorColor: #d8d8d8;
   font-weight: 300;
   font-style: normal;
 }
-body {
-  margin: 0;
-  padding: 0;
-}
-a {
-  text-decoration: none;
-  color: $color1;
-}
-li {
-  list-style: none;
-}
-.blind {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+* {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+    color: $color1;
+  }
+  li {
+    list-style: none;
+  }
+  button {
+    -webkit-appearance: none;
+  }
+  .blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
 }
 
 .membership {
@@ -160,10 +165,11 @@ li {
     align-items: center;
     gap: 20px;
     button {
-      width: 180px;
-      height: 45px;
       border: 1px solid $color1;
       background-color: $color2;
+      color: $color1;
+      width: 180px;
+      height: 45px;
       font-size: 1.125rem;
       font-family: "Pretendard-Light";
       text-align: center;
@@ -273,6 +279,7 @@ li {
         height: 80px;
         border: 1px solid $color1;
         background-color: $color2;
+        color: $color1;
         font-size: 1.5rem;
         font-family: "Pretendard-SemiBold";
         text-align: center;
@@ -418,6 +425,7 @@ li {
         height: 80px;
         border: 1px solid $color1;
         background-color: $color2;
+        color: $color1;
         font-size: 1.5rem;
         font-family: "Pretendard-SemiBold";
         text-align: center;
@@ -536,6 +544,8 @@ li {
           width: 339px;
           height: 80px;
           border: 1px solid $color1;
+          background-color: $color2;
+          color: $color1;
           font-size: 1.625rem;
           font-family: "Pretendard-SemiBold";
           text-align: center;
