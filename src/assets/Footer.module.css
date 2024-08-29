@@ -19,12 +19,11 @@
   font-weight: 300;
   font-style: normal;
 }
-li {
+* li {
   list-style: none;
 }
-
-button {
-  color: #000;
+* button {
+  -webkit-appearance: none;
 }
 
 footer .list {

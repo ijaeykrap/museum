@@ -13,6 +13,7 @@ export default function Shop() {
     dragDistance: 0,
   });
   const [innerWidth, setInnerWidth] = useState(window.innerWidth); //화면 크기
+  const isMouse = window.matchMedia("(hover:hover) and (pointer:fine)").matches; //포인터 감지
   const ref = useRef([]); //스크롤 애니메이션 ref
   const slideRef = useRef(); //슬라이드 ref
   const threshold = 13;
@@ -58,58 +59,141 @@ export default function Shop() {
     };
   }, [innerWidth]);
 
-  //드레그 시작 전 클릭
-  const mouseDown = (e) => {
-    if (innerWidth < 768 && slideRef) {
+  useEffect(() => {
+    const slider = slideRef.current;
+
+    //드레그 시작 전 클릭
+    const mouseDown = (e) => {
       setState((prev) => ({
         ...prev,
         isDrag: true,
         isClick: false,
         startX: e.pageX,
-        slide: slideRef.current.scrollLeft,
+        slide: slider.scrollLeft,
       }));
-    } else if (innerWidth >= 768) {
+    };
+
+    //드레그 움직이기
+    const mouseMove = (e) => {
+      if (!state.isDrag) return;
+
+      const endX = e.pageX;
+      const move = (endX - state.startX) * 1.5; //움직인 거리
+      if (slideRef) {
+        let position = state.slide - move;
+        slider.scrollLeft = position; //스크롤 이동
+        const dragDistance = Math.abs(endX - state.startX);
+        setState((prev) => ({
+          ...prev,
+          dragDistance: dragDistance,
+          isClick: dragDistance < threshold,
+          //이동거리가 threshold보다 높으면 false -> 클릭 방지
+          //이동거리가 threshold보다 낮으면 true -> 클릭 가능
+        }));
+      }
+    };
+
+    const mouseUp = () => {
+      const possible = slider.scrollWidth - slider.clientWidth; //전체 스크롤 가능 거리
+      const current = slider.scrollLeft; //현재 스크롤 위치
+      const section = possible / 2; //전체 스크롤 3등분
+      const nearest = Math.round(current / section) * section;
+      slider.scrollTo({ left: nearest, behavior: "smooth" }); //스크롤 위치 딱 붙도록
+      setState((prev) => ({
+        ...prev,
+        showing: Math.round(current / section),
+        isDrag: false,
+      }));
+    };
+
+    const touchStart = (e) => {
+      setState((prev) => ({
+        ...prev,
+        isDrag: true,
+        isClick: false,
+        startX: e.touches[0].pageX,
+        slide: slider.scrollLeft,
+      }));
+    };
+
+    //드레그 움직이기
+    const touchMove = (e) => {
+      if (!state.isDrag) return;
+      const endX = e.touches[0].pageX;
+      const move = (endX - state.startX) * 1.5; //움직인 거리
+      if (slideRef) {
+        let position = state.slide - move;
+        slider.scrollLeft = position; //스크롤 이동
+        const dragDistance = Math.abs(endX - state.startX);
+        setState((prev) => ({
+          ...prev,
+          dragDistance: dragDistance,
+          isClick: dragDistance < threshold,
+          //이동거리가 threshold보다 높으면 false -> 클릭 방지
+          //이동거리가 threshold보다 낮으면 true -> 클릭 가능
+        }));
+      }
+    };
+
+    const touchEnd = () => {
+      const possible = slider.scrollWidth - slider.clientWidth; //전체 스크롤 가능 거리
+      const current = slider.scrollLeft; //현재 스크롤 위치
+      const section = possible / 2; //전체 스크롤 3등분
+      const nearest = Math.round(current / section) * section;
+      slider.scrollTo({ left: nearest, behavior: "smooth" }); //스크롤 위치 딱 붙도록
+      setState((prev) => ({
+        ...prev,
+        showing: Math.round(current / section),
+        isDrag: false,
+      }));
+    };
+
+    const stopScroll = () => {
       setState((prev) => ({
         ...prev,
         isDrag: false,
         isClick: true,
       }));
-    }
-  };
+    };
 
-  //드레그 움직이기
-  const mouseMove = (e) => {
-    if (!state.isDrag) return;
+    const slideHandler = () => {
+      if (innerWidth < 768) {
+        if (isMouse) {
+          //마우스 사용
+          slider.addEventListener("mousedown", mouseDown, {
+            passive: true,
+          });
+          slider.addEventListener("mousemove", mouseMove, {
+            passive: true,
+          });
+          slider.addEventListener("mouseup", mouseUp);
+          slider.addEventListener("mouseleave", stopScroll);
+        } else {
+          //터치
+          slider.addEventListener("touchstart", touchStart, {
+            passive: true,
+          });
+          slider.addEventListener("touchmove", touchMove, {
+            passive: true,
+          });
+          slider.addEventListener("touchend", touchEnd);
+        }
+      }
+    };
 
-    const endX = e.pageX;
-    const move = (endX - state.startX) * 1.5; //움직인 거리
-    if (slideRef) {
-      let position = state.slide - move;
-      slideRef.current.scrollLeft = position; //스크롤 이동
-      const dragDistance = Math.abs(endX - state.startX);
-      setState((prev) => ({
-        ...prev,
-        dragDistance: dragDistance,
-        isClick: dragDistance < threshold,
-        //이동거리가 threshold보다 높으면 false -> 클릭 방지
-        //이동거리가 threshold보다 낮으면 true -> 클릭 가능
-      }));
-    }
-  };
+    slideHandler();
 
-  const mouseUp = () => {
-    const possible =
-      slideRef.current.scrollWidth - slideRef.current.clientWidth; //전체 스크롤 가능 거리
-    const current = slideRef.current.scrollLeft; //현재 스크롤 위치
-    const section = possible / 2; //전체 스크롤 3등분
-    const nearest = Math.round(current / section) * section;
-    slideRef.current.scrollTo({ left: nearest, behavior: "smooth" }); //스크롤 위치 딱 붙도록
-    setState((prev) => ({
-      ...prev,
-      showing: Math.round(current / section),
-      isDrag: false,
-    }));
-  };
+    return () => {
+      slider.removeEventListener("mousedown", mouseDown, {
+        passive: true,
+      });
+      slider.removeEventListener("mousemove", mouseMove, {
+        passive: true,
+      });
+      slider.removeEventListener("mouseup", mouseUp);
+      slider.removeEventListener("mouseleave", stopScroll);
+    };
+  }, [innerWidth, isMouse, state]);
 
   //스크롤바 클릭시 내용 넘어감
   const onClick = (e) => {
@@ -140,10 +224,11 @@ export default function Shop() {
     }
   };
 
+  //스크롤 이동 시에 페이지 링크 되는 것 방지
   const linkHandler = (e) => {
     if (!state.isClick) e.preventDefault();
-    //스크롤 이동 시에 페이지 링크 되는 것 방지
   };
+
   return (
     <section className={style.shop}>
       <div className={style.title}>
@@ -155,16 +240,6 @@ export default function Shop() {
         <div
           className={style.slide}
           ref={slideRef}
-          onMouseDown={mouseDown}
-          onMouseLeave={() => {
-            setState((prev) => ({
-              ...prev,
-              isDrag: false,
-              link: true,
-            }));
-          }}
-          onMouseUp={mouseUp}
-          onMouseMove={mouseMove}
           style={state.isDrag ? { cursor: "grab" } : { cursor: "unset" }}
         >
           <div className={style.list}>

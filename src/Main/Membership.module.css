@@ -19,21 +19,21 @@
   font-weight: 300;
   font-style: normal;
 }
-body {
+* body {
   margin: 0;
   padding: 0;
 }
-
-a {
+* a {
   text-decoration: none;
   color: #000;
 }
-
-li {
+* li {
   list-style: none;
 }
-
-.blind {
+* button {
+  -webkit-appearance: none;
+}
+* .blind {
   position: absolute;
   width: 1px;
   height: 1px;
