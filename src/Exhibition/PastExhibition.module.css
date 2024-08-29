@@ -70,14 +70,14 @@
   justify-content: end;
 }
 .content .list .inner .year {
-  color: #000;
-  appearance: none;
+  -webkit-appearance: none;
   font-size: 1.125rem;
   font-family: "Pretendard";
   background: url("../../public/img/logo-triangle.svg") no-repeat right 12px center;
   padding: 6px 10px;
   width: 182px;
   height: 33px;
+  border: 1px solid #000;
 }
 .content .list .inner ul {
   padding: 0;
@@ -218,6 +218,7 @@
     padding: 8px 16px;
     width: 223px;
     height: 41px;
+    border: 1px solid #000;
   }
   .content .list .inner ul {
     padding: 0;
@@ -359,6 +360,7 @@
     padding: 19px 21px;
     width: 255px;
     height: 66px;
+    border: 1px solid #000;
   }
   .content .list .inner ul {
     padding: 0;
@@ -499,6 +501,7 @@
     padding: 6px 10px;
     width: 255px;
     height: 66px;
+    border: 1px solid #000;
   }
   .content .list .inner ul {
     padding: 0;

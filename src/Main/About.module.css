@@ -1,23 +1,18 @@
 @font-face {
   font-family: "Pretendard";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
-  font-weight: normal;
-}
-@font-face {
-  font-family: "Pretendard-Bold";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff") format("woff");
-  font-weight: Bold;
-}
-@font-face {
-  font-family: "Pretendard-SemiBold";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff") format("woff");
-  font-weight: SemiBold;
 }
 @font-face {
   font-family: "Pretendard-Light";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
+}
+@font-face {
+  font-family: "NanumSquareBold";
+  src: url("../../public/font/NanumSquareB.ttf") format("ttf");
+}
+@font-face {
+  font-family: "NanumSquareRegular";
+  src: url("../../public/font/NanumSquareR.ttf") format("ttf");
 }
 body {
   margin: 0;
@@ -104,6 +99,7 @@ li {
   transition: all 0.5s;
 }
 .about .aboutInner a {
+  font-family: "Pretendard";
   opacity: 0;
   width: 143px;
   height: 60px;
@@ -186,6 +182,7 @@ li {
     transition: all 0.5s;
   }
   .about .aboutInner a {
+    font-family: "Pretendard";
     opacity: 0;
     width: 260px;
     height: 60px;
@@ -282,6 +279,7 @@ li {
     transition: all 0.5s;
   }
   .about .aboutInner a {
+    font-family: "Pretendard";
     opacity: 0;
     width: 260px;
     height: 60px;
@@ -380,6 +378,7 @@ li {
     transition: all 0.5s;
   }
   .about .aboutInner a {
+    font-family: "Pretendard";
     opacity: 0;
     width: 260px;
     height: 60px;

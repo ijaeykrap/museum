@@ -3,8 +3,9 @@ import { useState, useRef, useEffect } from "react";
 import { ProgramList } from "./data";
 
 export default function Program2() {
-  const [innerWidth, setInnerWidth] = useState(window.innerWidth);
-  //화면 크기 감지용
+  const [width, setWidth] = useState(window.innerWidth); //화면 크기
+  const isMouse = window.matchMedia("(hover:hover) and (pointer:fine)").matches; //포인터 감지
+  //슬라이드
   const [slide, setSlide] = useState({
     isDrag: false, //드래그 활성화
     startX: 0, //처음 클릭한 지점
@@ -45,7 +46,7 @@ export default function Program2() {
   //화면 크기 감지
   useEffect(() => {
     const handleResize = () => {
-      setInnerWidth(window.innerWidth);
+      setWidth(window.innerWidth);
     };
     window.addEventListener("resize", handleResize);
 
@@ -56,45 +57,7 @@ export default function Program2() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [innerWidth]);
-
-  //드래그 하기 전 클릭
-  const mouseDown = (e) => {
-    if (innerWidth < 1024 && slideRef) {
-      setSlide((prev) => ({
-        ...prev,
-        isDrag: true,
-        startX: e.pageX,
-        scroll: slideRef.current.scrollLeft,
-      }));
-    } else if (innerWidth >= 1024) {
-      setSlide((prev) => ({
-        ...prev,
-        isDrag: false,
-      }));
-    }
-  };
-
-  //드래그 움직이기
-  const mouseMove = (e) => {
-    const endX = e.pageX;
-    const move = (endX - slide.startX) * 1.5; //움직일 거리
-    if (!slide.isDrag) return;
-    if (slideRef) {
-      let position = slide.scroll - move;
-      slideRef.current.scrollLeft = position;
-      const possible =
-        slideRef.current.scrollWidth - slideRef.current.clientWidth; //전체 스크롤 가능 거리
-      const current = slideRef.current.scrollLeft; //현재 스크롤 위치
-      const section = possible; //전체 스크롤 3등분
-      const nearest = Math.round(current / section) * section;
-      slideRef.current.scrollTo({ left: nearest, behavior: "smooth" });
-      setSlide((prev) => ({
-        ...prev,
-        showing: Math.round(current / section),
-      }));
-    }
-  };
+  }, [width]);
 
   //스크롤바
   const onClick = (e) => {
@@ -111,31 +74,124 @@ export default function Program2() {
     }
   };
 
+  useEffect(() => {
+    const slider = slideRef.current;
+
+    //클릭 시작
+    const mouseDown = (e) => {
+      setSlide((prev) => ({
+        ...prev,
+        isDrag: true,
+        startX: e.pageX,
+        scroll: slideRef.current.scrollLeft,
+      }));
+    };
+
+    //드래그
+    const mouseMove = (e) => {
+      const endX = e.pageX;
+      const move = (endX - slide.startX) * 1.5; //움직일 거리
+      if (!slide.isDrag) return;
+      if (slider) {
+        let position = slide.scroll - move;
+        slider.scrollLeft = position;
+        const possible = slider.scrollWidth - slider.clientWidth; //전체 스크롤 가능 거리
+        const current = slider.scrollLeft; //현재 스크롤 위치
+        const section = possible; //전체 스크롤 3등분
+        const nearest = Math.round(current / section) * section;
+        slider.scrollTo({ left: nearest, behavior: "smooth" });
+        setSlide((prev) => ({
+          ...prev,
+          showing: Math.round(current / section),
+        }));
+      }
+    };
+
+    //드래그 멈추기
+    const stopScroll = () => {
+      setSlide((prev) => ({
+        ...prev,
+        isDrag: false,
+      }));
+    };
+
+    //터치 시작
+    const touchStart = (e) => {
+      setSlide((prev) => ({
+        ...prev,
+        isDrag: true,
+        startX: e.touches[0].pageX,
+        scroll: slider.scrollLeft,
+      }));
+    };
+
+    //터치로 움직이기
+    const touchMove = (e) => {
+      const endX = e.touches[0].pageX;
+      const move = (endX - slide.startX) * 1.5; //움직일 거리
+      if (!slide.isDrag) return;
+      if (slider) {
+        let position = slide.scroll - move;
+        slider.scrollLeft = position;
+        const possible = slider.scrollWidth - slider.clientWidth; //전체 스크롤 가능 거리
+        const current = slider.scrollLeft; //현재 스크롤 위치
+        const section = possible; //전체 스크롤 3등분
+        const nearest = Math.round(current / section) * section;
+        slider.scrollTo({ left: nearest, behavior: "smooth" });
+        setSlide((prev) => ({
+          ...prev,
+          showing: Math.round(current / section),
+        }));
+      }
+    };
+
+    const slideHandler = () => {
+      //화면 크기가 1024 이하
+      if (width < 1024) {
+        if (isMouse) {
+          //마우스 사용
+          slider.addEventListener("mousedown", mouseDown, {
+            passive: true,
+          });
+          slider.addEventListener("mousemove", mouseMove, {
+            passive: true,
+          });
+          slider.addEventListener("mouseup", stopScroll);
+          slider.addEventListener("mouseleave", stopScroll);
+        } else {
+          //터치
+          slider.addEventListener("touchstart", touchStart, {
+            passive: true,
+          });
+          slider.addEventListener("touchmove", touchMove, {
+            passive: true,
+          });
+          slider.addEventListener("touchend", stopScroll);
+        }
+      }
+    };
+
+    slideHandler();
+
+    return () => {
+      slider.removeEventListener("mousedown", mouseDown);
+      slider.removeEventListener("mousemove", mouseMove);
+      slider.removeEventListener("mouseup", stopScroll);
+      slider.removeEventListener("mouseleave", stopScroll);
+      slider.removeEventListener("touchstart", touchStart);
+      slider.removeEventListener("touchmove", touchMove);
+      slider.removeEventListener("touchend", stopScroll);
+    };
+  }, [width, isMouse, slide]);
+
   return (
     <section className={style.program2}>
       <div className={style.inner}>
-        <div
-          className={style.slide}
-          ref={slideRef}
-          onMouseDown={mouseDown}
-          onMouseLeave={() =>
-            setSlide((prev) => ({
-              ...prev,
-              isDrag: false,
-            }))
-          }
-          onMouseUp={() =>
-            setSlide((prev) => ({
-              ...prev,
-              isDrag: false,
-            }))
-          }
-          onMouseMove={mouseMove}
-        >
+        <div className={style.slide} ref={slideRef}>
           <div
             className={style.list}
             style={
-              slide.isDrag && innerWidth < 768
+              slide.isDrag && width < 768
                 ? { cursor: "grabbing" }
                 : { cursor: "unset" }
             }

@@ -8,6 +8,7 @@ export default function PastProgram() {
   const [disabled, setDisabled] = useState([]); //펼쳐졌다가 닫힌 애들의 index관리
   const ref = useRef([]); //스크롤 애니메이션
 
+  console.log(active);
   //스크롤 애니메이션
   useEffect(() => {
     if (!ref) return;

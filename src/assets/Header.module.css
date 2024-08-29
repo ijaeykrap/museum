@@ -20,6 +20,9 @@
 * li {
   list-style: none;
 }
+* button {
+  -webkit-appearance: none;
+}
 * .blind {
   position: absolute;
   width: 1px;
