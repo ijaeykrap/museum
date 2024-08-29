@@ -14,6 +14,7 @@ const Dealim = React.forwardRef((props, ref) => {
     per: 16.66, //한 번 슬라이드 할 때 스크롤바 얼만큼 움직일지
   });
   const [width, setWidth] = useState(window.innerWidth); //화면 크기
+  const isMouse = window.matchMedia("(hover:hover) and (pointer:fine)").matches;
 
   useEffect(() => {
     const handleResize = () => {
@@ -73,55 +74,141 @@ const Dealim = React.forwardRef((props, ref) => {
     };
   }, []);
 
-  //드래그 하려고 맨 처음 클릭
-  const mouseDown = (e) => {
-    setSlide((prev) => ({
-      ...prev,
-      isDrag: true,
-    }));
-    if (scrollRef.current) {
+  useEffect(() => {
+    const scroller = scrollRef.current;
+
+    //드래그 하려고 맨 처음 클릭
+    const mouseDown = (e) => {
       setSlide((prev) => ({
         ...prev,
-        startX: e.pageX,
-        scroll: scrollRef.current.scrollLeft,
+        isDrag: true,
       }));
-    }
-  };
-
-  const mouseMove = (e) => {
-    const move = (e.pageX - slide.startX) * 1.5;
-    //움직인 거리 = 움직이다가 드래그 땐 곳(e.pageX) - 처음 시작점(startX)
-    if (!slide.isDrag) return;
-    //isDrag가 true일 때만 움직이겠다
-    if (scrollRef.current) {
-      let position = slide.scroll - move;
-      scrollRef.current.scrollLeft = position;
-      //멈춘 지점 - 움직인 거리만큼 스크롤 보내겠다
-      //scrollRef의 스크롤 지점 지정
-      const possible =
-        scrollRef.current.scrollWidth - scrollRef.current.clientWidth;
-      let section;
-      if (width < 768) {
-        section = possible / 5;
-        // 전체 스크롤 거리를 6등분 (5개의 구간으로 나누기)
-      } else if (width >= 768 && width < 1024) {
-        section = possible / 3;
-        //전체 스크롤 거리 4등분
-      } else if (width >= 1024 && width < 1650) {
-        section = possible / 2;
-      } else if (width >= 1650) {
-        section = possible;
+      if (scrollRef.current) {
+        setSlide((prev) => ({
+          ...prev,
+          startX: e.pageX,
+          scroll: scroller.scrollLeft,
+        }));
       }
+    };
 
-      const currentScroll = scrollRef.current.scrollLeft;
-      const nearest = Math.round(currentScroll / section) * section;
-      scrollRef.current.scrollTo({ left: nearest, behavior: "smooth" });
+    const mouseMove = (e) => {
+      const move = (e.pageX - slide.startX) * 1.5;
+      //움직인 거리 = 움직이다가 드래그 땐 곳(e.pageX) - 처음 시작점(startX)
+      if (!slide.isDrag) return;
+      //isDrag가 true일 때만 움직이겠다
+      if (scroller) {
+        let position = slide.scroll - move;
+        scroller.scrollLeft = position;
+        //멈춘 지점 - 움직인 거리만큼 스크롤 보내겠다
+        //scrollRef의 스크롤 지점 지정
+        const possible = scroller.scrollWidth - scroller.clientWidth;
+        let section;
+        if (width < 768) {
+          section = possible / 5;
+          // 전체 스크롤 거리를 6등분 (5개의 구간으로 나누기)
+        } else if (width >= 768 && width < 1024) {
+          section = possible / 3;
+          //전체 스크롤 거리 4등분
+        } else if (width >= 1024 && width < 1650) {
+          section = possible / 2;
+        } else if (width >= 1650) {
+          section = possible;
+        }
+
+        const currentScroll = scroller.scrollLeft;
+        const nearest = Math.round(currentScroll / section) * section;
+        scroller.scrollTo({ left: nearest, behavior: "smooth" });
+        setSlide((prev) => ({
+          ...prev,
+          bar: Math.round(currentScroll / section) + 1,
+        }));
+      }
+    };
+
+    //터치 시작
+    const touchStart = (e) => {
       setSlide((prev) => ({
         ...prev,
-        bar: Math.round(currentScroll / section) + 1,
+        isDrag: true,
       }));
-    }
-  };
+      if (scrollRef.current) {
+        setSlide((prev) => ({
+          ...prev,
+          startX: e.touches[0].pageX,
+          scroll: scroller.scrollLeft,
+        }));
+      }
+    };
+
+    //터치 드래그
+    const touchMove = (e) => {
+      const move = (e.touches[0].pageX - slide.startX) * 1.5;
+      //움직인 거리 = 움직이다가 드래그 땐 곳(e.pageX) - 처음 시작점(startX)
+      if (!slide.isDrag) return;
+      //isDrag가 true일 때만 움직이겠다
+      if (scroller) {
+        let position = slide.scroll - move;
+        scroller.scrollLeft = position;
+        //멈춘 지점 - 움직인 거리만큼 스크롤 보내겠다
+        //scrollRef의 스크롤 지점 지정
+        const possible = scroller.scrollWidth - scroller.clientWidth;
+        let section;
+        if (width < 768) {
+          section = possible / 5;
+          // 전체 스크롤 거리를 6등분 (5개의 구간으로 나누기)
+        } else if (width >= 768 && width < 1024) {
+          section = possible / 3;
+          //전체 스크롤 거리 4등분
+        } else if (width >= 1024 && width < 1650) {
+          section = possible / 2;
+        } else if (width >= 1650) {
+          section = possible;
+        }
+
+        const currentScroll = scroller.scrollLeft;
+        const nearest = Math.round(currentScroll / section) * section;
+        scroller.scrollTo({ left: nearest, behavior: "smooth" });
+        setSlide((prev) => ({
+          ...prev,
+          bar: Math.round(currentScroll / section) + 1,
+        }));
+      }
+    };
+
+    const stopScroll = () => {
+      setSlide((prev) => ({
+        ...prev,
+        isDrag: false,
+      }));
+    };
+
+    const scrollHander = () => {
+      if (isMouse) {
+        scroller.addEventListener("mousedown", mouseDown, { passive: true });
+        scroller.addEventListener("mousemove", mouseMove, { passive: true });
+        scroller.addEventListener("mouseup", stopScroll);
+        scroller.addEventListener("mouseleave", stopScroll);
+      } else {
+        scroller.addEventListener("touchstart", touchStart, { passive: true });
+        scroller.addEventListener("touchmove", touchMove, { passive: true });
+        scroller.addEventListener("touchend", stopScroll);
+      }
+    };
+
+    scrollHander();
+
+    return () => {
+      scroller.removeEventListener("mousedown", mouseDown);
+      scroller.removeEventListener("mousemove", mouseMove);
+      scroller.removeEventListener("mouseup", stopScroll);
+      scroller.removeEventListener("mouseleave", stopScroll);
+      scroller.removeEventListener("touchstart", touchStart);
+      scroller.removeEventListener("touchmove", touchMove);
+      scroller.removeEventListener("touchend", stopScroll);
+    };
+  }, [width, isMouse, slide]);
+
   return (
     <div className={style.dealim} ref={ref}>
       <div className={style.inner}>
@@ -141,21 +228,7 @@ const Dealim = React.forwardRef((props, ref) => {
               animateRef.current[4] = el;
               scrollRef.current = el;
             }}
-            onMouseDown={mouseDown}
-            onMouseLeave={() => {
-              setSlide((prev) => ({
-                ...prev,
-                isDrag: false,
-              }));
-            }}
-            onMouseUp={() => {
-              setSlide((prev) => ({
-                ...prev,
-                isDrag: false,
-              }));
-            }}
-            onMouseMove={mouseMove}
-            style={slide.isDrag ? { cursor: "grab" } : { cursor: "unset" }}
+            style={slide.isDrag ? { cursor: "grabbing" } : { cursor: "unset" }}
           >
             <div className={style.list}>
               {a.img.map((i, index) => {
