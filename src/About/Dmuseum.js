@@ -7,6 +7,7 @@ const Dmuseum = React.forwardRef((props, ref) => {
   const animateRef = useRef([]); //스크롤 애니메이션
   const scrollRef = useRef(); //이미지 슬라이드
   const [width, setWidth] = useState(window.innerWidth); //화면크기
+  const isMouse = window.matchMedia("(hover:hover) and (pointer:fine)").matches;
   const [slide, setSlide] = useState({
     isDrag: false, //슬라이드 드래그 활성화?
     start: 0, //슬라이드 드래그 시작 지점
@@ -54,64 +55,158 @@ const Dmuseum = React.forwardRef((props, ref) => {
     };
   }, []);
 
-  //드래그 하려고 맨 처음 클릭
-  const mouseDown = (e) => {
-    setSlide((prev) => ({
-      ...prev,
-      isDrag: true,
-    }));
-    if (scrollRef.current) {
-      if (width < 768) {
-        setSlide((prev) => ({
-          ...prev,
-          start: e.pageX,
-          scroll: scrollRef.current.scrollLeft,
-        }));
-      } else if (width >= 768) {
-        setSlide((prev) => ({
-          ...prev,
-          start: e.pageY,
-          scroll: scrollRef.current.scrollTop,
-        }));
-      }
-    }
-  };
-  const mouseMove = (e) => {
-    if (!slide.isDrag) return;
-    //isDrag가 true일 때만 움직이겠다
-    if (scrollRef.current) {
-      let section;
-      let move;
-      if (width < 768) {
-        move = (e.pageX - slide.start) * 1.5;
-        scrollRef.current.scrollLeft = slide.scroll - move;
-        const possible =
-          scrollRef.current.scrollWidth - scrollRef.current.clientWidth;
-        section = possible / 5;
-        const current = scrollRef.current.scrollLeft;
-        const nearest = Math.round(current / section) * section;
-        scrollRef.current.scrollTo({ left: nearest, behavior: "smooth" });
+  useEffect(() => {
+    const scroller = scrollRef.current;
 
-        setSlide((prev) => ({
-          ...prev,
-          mark: Math.round(current / section) + 1,
-        }));
-      } else if (width >= 768) {
-        move = (e.pageY - slide.start) * 1.5;
-        scrollRef.current.scrollTop = slide.scroll - move;
-        const possible =
-          scrollRef.current.scrollHeight - scrollRef.current.clientHeight;
-        section = possible / 2;
-        const current = scrollRef.current.scrollTop;
-        const nearest = Math.round(current / section) * section;
-        scrollRef.current.scrollTo({ top: nearest, behavior: "smooth" });
-        setSlide((prev) => ({
-          ...prev,
-          mark: Math.round(current / section) + 1,
-        }));
+    //클릭 - 드래그 시작
+    const mouseDown = (e) => {
+      setSlide((prev) => ({
+        ...prev,
+        isDrag: true,
+      }));
+      if (scroller) {
+        if (width < 768) {
+          setSlide((prev) => ({
+            ...prev,
+            start: e.pageX,
+            scroll: scroller.scrollLeft,
+          }));
+        } else if (width >= 768) {
+          setSlide((prev) => ({
+            ...prev,
+            start: e.pageY,
+            scroll: scroller.scrollTop,
+          }));
+        }
       }
-    }
-  };
+    };
+
+    //클릭 - 드래그 움직이기
+    const mouseMove = (e) => {
+      if (!slide.isDrag) return;
+      //isDrag가 true일 때만 움직이겠다
+      if (scroller) {
+        let section;
+        let move;
+        if (width < 768) {
+          move = (e.pageX - slide.start) * 1.5;
+          scroller.scrollLeft = slide.scroll - move;
+          const possible = scroller.scrollWidth - scroller.clientWidth;
+          section = possible / 5;
+          const current = scroller.scrollLeft;
+          const nearest = Math.round(current / section) * section;
+          scrollRef.current.scrollTo({ left: nearest, behavior: "smooth" });
+
+          setSlide((prev) => ({
+            ...prev,
+            mark: Math.round(current / section) + 1,
+          }));
+        } else if (width >= 768) {
+          move = (e.pageY - slide.start) * 1.5;
+          scroller.scrollTop = slide.scroll - move;
+          const possible = scroller.scrollHeight - scroller.clientHeight;
+          section = possible / 2;
+          const current = scroller.scrollTop;
+          const nearest = Math.round(current / section) * section;
+          scrollRef.current.scrollTo({ top: nearest, behavior: "smooth" });
+          setSlide((prev) => ({
+            ...prev,
+            mark: Math.round(current / section) + 1,
+          }));
+        }
+      }
+    };
+
+    //스크롤 멈추기
+    const stopScroll = () => {
+      setSlide((prev) => ({
+        ...prev,
+        isDrag: false,
+      }));
+    };
+
+    const touchStart = (e) => {
+      setSlide((prev) => ({
+        ...prev,
+        isDrag: true,
+      }));
+      if (scroller) {
+        if (width < 768) {
+          setSlide((prev) => ({
+            ...prev,
+            start: e.touches[0].pageX,
+            scroll: scroller.scrollLeft,
+          }));
+        } else if (width >= 768) {
+          setSlide((prev) => ({
+            ...prev,
+            start: e.touches[0].pageY,
+            scroll: scroller.scrollTop,
+          }));
+        }
+      }
+    };
+
+    const touchMove = (e) => {
+      if (!slide.isDrag) return;
+      //isDrag가 true일 때만 움직이겠다
+      if (scroller) {
+        let section;
+        let move;
+        if (width < 768) {
+          move = (e.touches[0].pageX - slide.start) * 1.5;
+          scroller.scrollLeft = slide.scroll - move;
+          const possible = scroller.scrollWidth - scroller.clientWidth;
+          section = possible / 5;
+          const current = scroller.scrollLeft;
+          const nearest = Math.round(current / section) * section;
+          scrollRef.current.scrollTo({ left: nearest, behavior: "smooth" });
+
+          setSlide((prev) => ({
+            ...prev,
+            mark: Math.round(current / section) + 1,
+          }));
+        } else if (width >= 768) {
+          move = (e.touches[0].pageY - slide.start) * 1.5;
+          scroller.scrollTop = slide.scroll - move;
+          const possible = scroller.scrollHeight - scroller.clientHeight;
+          section = possible / 2;
+          const current = scroller.scrollTop;
+          const nearest = Math.round(current / section) * section;
+          scrollRef.current.scrollTo({ top: nearest, behavior: "smooth" });
+          setSlide((prev) => ({
+            ...prev,
+            mark: Math.round(current / section) + 1,
+          }));
+        }
+      }
+    };
+
+    const slideHandler = () => {
+      if (isMouse) {
+        scroller.addEventListener("mousedown", mouseDown, { passive: true });
+        scroller.addEventListener("mousemove", mouseMove, { passive: true });
+        scroller.addEventListener("mouseup", stopScroll);
+        scroller.addEventListener("mouseleave", stopScroll);
+      } else {
+        scroller.addEventListener("touchstart", touchStart, { passive: true });
+        scroller.addEventListener("touchmove", touchMove, { passive: true });
+        scroller.addEventListener("touchend", stopScroll);
+      }
+    };
+
+    slideHandler();
+
+    return () => {
+      scroller.removeEventListener("mousedown", mouseDown, { passive: true });
+      scroller.removeEventListener("mousemove", mouseMove, { passive: true });
+      scroller.removeEventListener("mouseup", stopScroll);
+      scroller.removeEventListener("mouseleave", stopScroll);
+      scroller.removeEventListener("touchstart", touchStart, { passive: true });
+      scroller.removeEventListener("touchmove", touchMove, { passive: true });
+      scroller.removeEventListener("touchend", stopScroll);
+    };
+  }, [width, isMouse, slide]);
 
   return (
     <div className={style.dMuseum} ref={ref} draggable={false}>
@@ -128,20 +223,7 @@ const Dmuseum = React.forwardRef((props, ref) => {
               animateRef.current[4] = el;
               scrollRef.current = el;
             }}
-            onMouseDown={mouseDown}
-            onMouseLeave={() => {
-              setSlide((prev) => ({
-                ...prev,
-                isDrag: false,
-              }));
-            }}
-            onMouseUp={() => {
-              setSlide((prev) => ({
-                ...prev,
-                isDrag: false,
-              }));
-            }}
-            onMouseMove={mouseMove}
+            style={slide.isDrag ? { cursor: "grabbing" } : { cursor: "unset" }}
           >
             <div className={style.list}>
               {a.img.map((i, index) => {
