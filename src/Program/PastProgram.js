@@ -3,12 +3,13 @@ import { Past } from "./data";
 import style from "./PastProgram.module.css";
 
 export default function PastProgram() {
-  const [year, setYear] = useState(2022); //연도 설정
-  const [active, setActive] = useState(null); //펼쳐서 보여줄 메뉴의 index 관리
-  const [disabled, setDisabled] = useState([]); //펼쳐졌다가 닫힌 애들의 index관리
-  const ref = useRef([]); //스크롤 애니메이션
+  const [state, setState] = useState({
+    year: 2022,
+    active: null,
+    inactive: [],
+  });
+  const ref = useRef([]); //메뉴 펼치기
 
-  console.log(active);
   //스크롤 애니메이션
   useEffect(() => {
     if (!ref) return;
@@ -30,42 +31,75 @@ export default function PastProgram() {
     return () => {
       io.disconnect();
     };
-  }, []);
+  }, [state.year]);
 
   //연도 변경
   const minusYear = () => {
-    if (year <= 2018) {
-      setYear(2018);
+    if (state.year <= 2018) {
+      setState((prev) => ({
+        ...prev,
+        year: 2018,
+      }));
     } else {
-      setYear((prev) => prev - 1);
+      setState((prev) => ({
+        ...prev,
+        year: prev.year - 1,
+        active: null,
+        inactive: [],
+      }));
     }
   };
   const plusYear = () => {
-    if (year >= 2022) {
-      setYear(2022);
+    if (state.year >= 2022) {
+      setState((prev) => ({
+        ...prev,
+        year: 2022,
+      }));
     } else {
-      setYear((prev) => prev + 1);
+      setState((prev) => ({
+        ...prev,
+        year: prev.year + 1,
+        active: null,
+        inactive: [],
+      }));
     }
   };
 
   //해당 연도 인덱스 번호 가져오기
-  let indexNum = Past.findIndex((obj) => obj.year === year);
+  let indexNum = Past.findIndex((obj) => obj.year === state.year);
   //useState로 관리된 연도와 일치하는 배열의 index를 가져옴
   //그 index로 화면에 뿌려줌
 
-  //마우스 올리면 메뉴 펼치기
-  const hovering = (index) => {
-    setActive(index);
-    //active에 이름 올림
+  const contentHandler = (index) => {
+    setState((prev) => {
+      //!active 처음 누를 경우
+      if (!state.active) {
+        return {
+          ...prev,
+          active: index,
+          inactive: prev.inactive.filter((i) => i !== index),
+        };
+      } else if (state.active === index) {
+        return {
+          ...prev,
+          active: null,
+          inactive: [...prev.inactive, index],
+        };
+      } else if (state.active !== index) {
+        const exindex = state.active;
+        return {
+          ...prev,
+          active: index,
+          inactive: prev.inactive.filter((i) => i !== index).concat(exindex),
+        };
+      }
+      //active === index 한 번 더 눌러서 닫기
+      //active !== index 다른거 클릭하기
+    });
   };
 
-  //마우스 뗐을 때
-  const hovered = (index) => {
-    setDisabled([index, ...disabled]);
-    setActive(null);
-    //disabled배열에 이름 올림
-    //active에서 이름 뺌
-  };
+  console.log("active : ", state.active);
+  console.log("inactive : ", state.inactive);
 
   return (
     <section className={style.program}>
@@ -75,12 +109,12 @@ export default function PastProgram() {
           <div className={style.year}>
             <button
               onClick={minusYear}
-              className={year <= 2018 ? style.blind : null}
+              className={state.year <= 2018 ? style.blind : null}
             ></button>
-            <span>{year}</span>
+            <span>{state.year}</span>
             <button
               onClick={plusYear}
-              className={year >= 2022 ? style.blind : null}
+              className={state.year >= 2022 ? style.blind : null}
             ></button>
           </div>
         </div>
@@ -104,23 +138,13 @@ export default function PastProgram() {
                   ref={(el) => (ref.current[index] = el)}
                   key={index}
                   className={
-                    active === index.toString()
+                    state.active === index.toString()
                       ? style.active
-                      : //active에 올려진 이름과 index가 같다면
-                      //active라는 클래스명 부여
-                      disabled.includes(index.toString())
-                      ? //disabled 배열에 index 값이 포함되었다면
-                        //item이라는 클래스명 부여
-                        style.item
+                      : state.inactive.includes(index.toString())
+                      ? style.inactive
                       : null
-                    //null -> opacity:0 인데 스크롤 애니메이션 때문에 animate로 opacity:1
                   }
-                  onMouseOver={() => {
-                    hovering(index.toString());
-                  }}
-                  onMouseOut={() => {
-                    hovered(index.toString());
-                  }}
+                  onClick={() => contentHandler(index.toString())}
                 >
                   <div className={style.inner}>
                     <div className={style.text}>

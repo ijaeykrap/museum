@@ -20,13 +20,15 @@
   overflow: hidden;
   cursor: pointer;
 }
-.btnContainer > *:hover {
-  filter: invert(80%);
-}
 .btnContainer .bottom {
   transform: rotateX(180deg);
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .btnContainer button:hover {
+    filter: invert(80%);
+  }
+}
 @media screen and (min-width: 1024px) {
   .btnContainer {
     position: fixed;

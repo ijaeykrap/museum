@@ -75,7 +75,7 @@ button {
 }
 .program .content .list li {
   opacity: 0;
-  transform: translateY(-10%);
+  transform: translateY(-15%);
   border-bottom: 1px solid #e4e4e4;
   cursor: pointer;
   width: 100%;
@@ -120,10 +120,6 @@ button {
 }
 .program .content .list li .inner .sign .minus {
   background-image: url(../../public/img/logo-minus.svg);
-}
-.program .content .list li.item {
-  transform: translateY(0%);
-  opacity: 1;
 }
 .program .content .list li.active {
   transform: translateY(0%);
@@ -189,6 +185,14 @@ button {
   word-break: keep-all;
   margin-bottom: 20px;
 }
+.program .content .list li.inactive {
+  transform: translateY(0%);
+  opacity: 1;
+}
+.program .content .list li.animate {
+  transform: translateY(0%);
+  opacity: 1;
+}
 .program .content .list li:first-child {
   transition: all 0.3s;
 }
@@ -200,10 +204,6 @@ button {
 }
 .program .content .list li:nth-child(4) {
   transition: all 0.65s;
-}
-.program .content .list li.animate {
-  transform: translateY(0%);
-  opacity: 1;
 }
 .program .content .list .not {
   width: 81.03%;

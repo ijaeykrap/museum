@@ -6,6 +6,7 @@ export default function ScrollBtn() {
   const toBottom = () => {
     window.scrollTo(0, document.body.scrollHeight, { behavior: "smooth" });
   };
+
   return (
     <div className={btn.btnContainer}>
       <button className={btn.top} onClick={toTop}>

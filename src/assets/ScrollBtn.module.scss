@@ -18,13 +18,18 @@
     white-space: nowrap;
     overflow: hidden;
     cursor: pointer;
-    &:hover {
-      filter: invert(80%);
-    }
   }
 
   .bottom {
     transform: rotateX(180deg);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btnContainer {
+    button:hover {
+      filter: invert(80%);
+    }
   }
 }
 
