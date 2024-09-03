@@ -176,11 +176,17 @@ const Dealim = React.forwardRef((props, ref) => {
       }
     };
 
+    //슬라이드 드래그 멈추기
     const stopScroll = () => {
       setSlide((prev) => ({
         ...prev,
         isDrag: false,
       }));
+    };
+
+    const stopVertical = () => {
+      if (slide.isDrag) document.body.style.overflow = "hidden";
+      else document.body.style.overflow = "auto";
     };
 
     const scrollHander = () => {
@@ -193,6 +199,7 @@ const Dealim = React.forwardRef((props, ref) => {
         scroller.addEventListener("touchstart", touchStart, { passive: true });
         scroller.addEventListener("touchmove", touchMove, { passive: true });
         scroller.addEventListener("touchend", stopScroll);
+        stopVertical();
       }
     };
 

@@ -64,6 +64,7 @@ const Dmuseum = React.forwardRef((props, ref) => {
         ...prev,
         isDrag: true,
       }));
+      stopVertical();
       if (scroller) {
         if (width < 768) {
           setSlide((prev) => ({
@@ -117,12 +118,17 @@ const Dmuseum = React.forwardRef((props, ref) => {
       }
     };
 
-    //스크롤 멈추기
+    //슬라이드 스크롤 멈추기
     const stopScroll = () => {
       setSlide((prev) => ({
         ...prev,
         isDrag: false,
       }));
+    };
+
+    const stopVertical = () => {
+      if (slide.isDrag) document.body.style.overflow = "hidden";
+      else document.body.style.overflow = "auto";
     };
 
     const touchStart = (e) => {
@@ -192,6 +198,7 @@ const Dmuseum = React.forwardRef((props, ref) => {
         scroller.addEventListener("touchstart", touchStart, { passive: true });
         scroller.addEventListener("touchmove", touchMove, { passive: true });
         scroller.addEventListener("touchend", stopScroll);
+        stopVertical();
       }
     };
 

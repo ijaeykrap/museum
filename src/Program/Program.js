@@ -4,9 +4,10 @@ import style from "./Program.module.css";
 
 export default function Program() {
   const [active, setActive] = useState(null);
-  const [disabled, setDisabled] = useState([]);
+  const [inactive, setInactive] = useState([]);
   const ref = useRef([]);
 
+  //스크롤 애니메이션
   useEffect(() => {
     if (!ref) return;
     function callback(es) {
@@ -29,16 +30,23 @@ export default function Program() {
     };
   }, []);
 
-  //마우스 올리면 메뉴 펼치기
-  const hovering = (id) => {
-    setActive(id);
-    //active에 호버된 요소의 id 집어넣음
-  };
-  const hovered = (id) => {
-    setDisabled([id, ...disabled]);
-    //disabled 배열에 id 값 포함시킴
-    setActive();
-    //active를 null로 만듦
+  const contentHandler = (index) => {
+    setInactive((prevInactive) => {
+      if (!active) {
+        //초기 상태, 열린거 한 번 더 눌러서 닫은 후에 클릭할 때
+        setActive(index);
+        return prevInactive.filter((i) => i !== index);
+      } else if (active === index) {
+        //같은거 클릭 (열려있는거 한 번 더 클릭) -> 닫힘
+        setActive(null);
+        return [...prevInactive, index];
+      } else if (active !== index) {
+        //열려있는거 말고 다른거 클릭해서 열기
+        const exindex = active;
+        setActive(index);
+        return prevInactive.filter((i) => i !== index).concat(exindex);
+      }
+    });
   };
 
   return (
@@ -60,24 +68,16 @@ export default function Program() {
                 ref={(el) => (ref.current[index] = el)}
                 key={index}
                 id={index}
-                onMouseOver={() => {
-                  hovering(index.toString());
-                  //hovering 함수에 문자열이 된 index 집어넣음
-                }}
-                onMouseOut={() => {
-                  hovered(index.toString());
-                }}
                 className={
                   active === index.toString()
                     ? style.active
-                    : //active와 index가 같다면 호버 시켜라
-                    disabled.includes(index.toString())
-                    ? //disabled 배열에 index 값이 포함되었다면
-                      //className에 item 줘라
-                      style.item
+                    : inactive.includes(index.toString())
+                    ? style.inactive
                     : null
                 }
-                //className={style.active}
+                onClick={() => {
+                  contentHandler(index.toString());
+                }}
               >
                 <div className={style.inner}>
                   <div className={style.text}>

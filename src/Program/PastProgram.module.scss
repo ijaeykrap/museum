@@ -84,7 +84,7 @@ button {
       border-top: 1px solid $lineColor;
       li {
         opacity: 0;
-        transform: translateY(-10%);
+        transform: translateY(-15%);
         border-bottom: 1px solid $lineColor;
         cursor: pointer;
         width: 100%;
@@ -128,10 +128,6 @@ button {
               background-image: url(../../public/img/logo-minus.svg);
             }
           }
-        }
-        &.item {
-          transform: translateY(0%);
-          opacity: 1;
         }
         &.active {
           transform: translateY(0%);
@@ -197,6 +193,14 @@ button {
             }
           }
         }
+        &.inactive {
+          transform: translateY(0%);
+          opacity: 1;
+        }
+        &.animate {
+          transform: translateY(0%);
+          opacity: 1;
+        }
         &:first-child {
           transition: all 0.3s;
         }
@@ -208,10 +212,6 @@ button {
         }
         &:nth-child(4) {
           transition: all 0.65s;
-        }
-        &.animate {
-          transform: translateY(0%);
-          opacity: 1;
         }
       }
       .not {

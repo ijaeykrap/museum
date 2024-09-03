@@ -49,9 +49,7 @@ $lineColor: #e4e4e4;
       height: 100%;
       display: flex;
       flex-direction: column;
-      &:hover .text {
-        background-color: $color5;
-      }
+
       .img {
         width: 100%;
         height: 204px;
@@ -162,9 +160,7 @@ $lineColor: #e4e4e4;
         height: 100%;
         display: flex;
         flex-direction: column;
-        &:hover .text {
-          background-color: $color5;
-        }
+
         .img {
           width: 100%;
           height: 324px;
@@ -275,9 +271,7 @@ $lineColor: #e4e4e4;
         height: 100%;
         display: flex;
         flex-direction: column;
-        &:hover .text {
-          background-color: $color5;
-        }
+
         .img {
           width: 100%;
           height: 440px;
@@ -387,9 +381,7 @@ $lineColor: #e4e4e4;
         height: 100%;
         display: flex;
         flex-direction: column;
-        &:hover .text {
-          background-color: $color5;
-        }
+
         .img {
           width: 100%;
           height: 516px;
@@ -468,6 +460,16 @@ $lineColor: #e4e4e4;
           background-color: $color3;
           color: $color4;
         }
+      }
+    }
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .item {
+    li:hover {
+      .text {
+        background-color: $color5;
       }
     }
   }
