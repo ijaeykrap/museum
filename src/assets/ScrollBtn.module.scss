@@ -54,9 +54,6 @@
       white-space: nowrap;
       overflow: hidden;
       cursor: pointer;
-      &:hover {
-        filter: invert(80%);
-      }
     }
 
     .bottom {

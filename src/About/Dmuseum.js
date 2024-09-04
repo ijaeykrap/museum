@@ -8,6 +8,9 @@ const Dmuseum = React.forwardRef((props, ref) => {
   const scrollRef = useRef(); //이미지 슬라이드
   const [width, setWidth] = useState(window.innerWidth); //화면크기
   const isMouse = window.matchMedia("(hover:hover) and (pointer:fine)").matches;
+  const iphone = navigator.userAgent.toLowerCase().indexOf("iphone");
+  const ipad = navigator.userAgent.toLowerCase().indexOf("ipad");
+  const macintosh = navigator.userAgent.toLowerCase().indexOf("macintosh");
   const [slide, setSlide] = useState({
     isDrag: false, //슬라이드 드래그 활성화?
     start: 0, //슬라이드 드래그 시작 지점
@@ -127,8 +130,20 @@ const Dmuseum = React.forwardRef((props, ref) => {
     };
 
     const stopVertical = () => {
-      if (slide.isDrag) document.body.style.overflow = "hidden";
-      else document.body.style.overflow = "auto";
+      const scroll = window.pageYOffset;
+      if (iphone > -1 || ipad > -1 || macintosh > -1) {
+        if (slide.isDrag) {
+          document.body.style.position = "fixed";
+          document.body.style.top = `-${scroll}px`;
+        } else {
+        }
+        document.body.style.position = "static";
+        window.scrollTo(0, scroll);
+      } else {
+        if (slide.isDrag) {
+          document.body.style.overflow = "hidden";
+        } else document.body.style.overflow = "auto";
+      }
     };
 
     const touchStart = (e) => {
@@ -213,7 +228,7 @@ const Dmuseum = React.forwardRef((props, ref) => {
       scroller.removeEventListener("touchmove", touchMove, { passive: true });
       scroller.removeEventListener("touchend", stopScroll);
     };
-  }, [width, isMouse, slide]);
+  }, [width, isMouse, slide, iphone, ipad, macintosh]);
 
   return (
     <div className={style.dMuseum} ref={ref} draggable={false}>

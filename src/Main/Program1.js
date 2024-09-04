@@ -12,8 +12,6 @@ export default function Program1() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add(style.animate);
-        } else {
-          entry.target.classList.remove(style.animate);
         }
       });
     }

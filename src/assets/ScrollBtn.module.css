@@ -52,9 +52,6 @@
     overflow: hidden;
     cursor: pointer;
   }
-  .btnContainer > *:hover {
-    filter: invert(80%);
-  }
   .btnContainer .bottom {
     transform: rotateX(180deg);
   }

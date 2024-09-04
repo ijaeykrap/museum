@@ -12,8 +12,6 @@ const Dproject = React.forwardRef((props, ref) => {
       es.forEach((e) => {
         if (e.isIntersecting) {
           e.target.classList.add(style.animate);
-        } else {
-          e.target.classList.remove(style.animate);
         }
       });
     }

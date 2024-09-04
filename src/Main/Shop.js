@@ -116,7 +116,7 @@ export default function Shop() {
       }));
     };
 
-    //드레그 움직이기
+    //터치 - 움직이기
     const touchMove = (e) => {
       if (!state.isDrag) return;
       const endX = e.touches[0].pageX;
@@ -145,6 +145,7 @@ export default function Shop() {
         ...prev,
         showing: Math.round(current / section),
         isDrag: false,
+        isClick: true,
       }));
     };
 
@@ -228,6 +229,8 @@ export default function Shop() {
   const linkHandler = (e) => {
     if (!state.isClick) e.preventDefault();
   };
+
+  console.log(state.isClick);
 
   return (
     <section className={style.shop}>

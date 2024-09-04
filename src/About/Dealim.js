@@ -185,8 +185,9 @@ const Dealim = React.forwardRef((props, ref) => {
     };
 
     const stopVertical = () => {
-      if (slide.isDrag) document.body.style.overflow = "hidden";
-      else document.body.style.overflow = "auto";
+      if (slide.isDrag) {
+        document.body.style.overflow = "hidden";
+      } else document.body.style.overflow = "auto";
     };
 
     const scrollHander = () => {
