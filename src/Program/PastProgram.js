@@ -98,9 +98,6 @@ export default function PastProgram() {
     });
   };
 
-  console.log("active : ", state.active);
-  console.log("inactive : ", state.inactive);
-
   return (
     <section className={style.program}>
       <div className={style.inner}>

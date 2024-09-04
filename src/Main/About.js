@@ -13,8 +13,6 @@ export default function About() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add(style.animate);
-        } else {
-          entry.target.classList.remove(style.animate);
         }
       });
     }
