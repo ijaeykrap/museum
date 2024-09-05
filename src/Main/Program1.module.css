@@ -3,22 +3,6 @@
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
   font-weight: normal;
 }
-@font-face {
-  font-family: "Pretendard-Bold";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff") format("woff");
-  font-weight: Bold;
-}
-@font-face {
-  font-family: "Pretendard-SemiBold";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff") format("woff");
-  font-weight: SemiBold;
-}
-@font-face {
-  font-family: "Pretendard-Light";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
 body {
   margin: 0;
   padding: 0;
@@ -70,11 +54,14 @@ li {
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
+  transform: translateY(-30%);
   opacity: 0;
 }
 .program1 .content .img.animate {
+  transform: translateY(0%);
   opacity: 1;
-  transition: opacity 0.3s;
+  transition: all 0.3s;
+  transition: all 0.3s;
 }
 .program1 .content .text {
   width: 100%;
@@ -93,6 +80,7 @@ li {
   transform: translateY(0%);
   opacity: 1;
   transition: all 0.3s;
+  transition: all 0.45s;
 }
 .program1 .content .text p {
   font-size: 1.125rem;
@@ -106,7 +94,8 @@ li {
 .program1 .content .text p.animate {
   transform: translateY(0%);
   opacity: 1;
-  transition: all 0.4s;
+  transition: all 0.3s;
+  transition: all 0.6s;
 }
 .program1 .content .text button {
   width: 200px;
@@ -121,14 +110,14 @@ li {
   align-items: center;
   margin: 0 auto;
   margin-top: 50px;
-  transition: 0.3s;
   transform: translateY(-30%);
   opacity: 0;
 }
 .program1 .content .text button.animate {
   transform: translateY(0%);
   opacity: 1;
-  transition: all 0.5s;
+  transition: all 0.3s;
+  transition: all 0.75s;
 }
 .program1 .content .text button:hover {
   background-color: #555;
@@ -170,6 +159,13 @@ li {
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  .program1 .content .img.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.3s;
   }
   .program1 .content .text {
     width: 100%;
@@ -181,6 +177,13 @@ li {
   .program1 .content .text h3 {
     font-size: 1.875rem;
     font-weight: bold;
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  .program1 .content .text h3.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.45s;
   }
   .program1 .content .text p {
     font-size: 1.5rem;
@@ -188,6 +191,13 @@ li {
     word-break: keep-all;
     margin-top: 10px;
     line-height: 2.3125rem;
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  .program1 .content .text p.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.6s;
   }
   .program1 .content .text button {
     width: 246px;
@@ -203,6 +213,13 @@ li {
     margin: 0 auto;
     margin-top: 90px;
     transition: 0.3s;
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  .program1 .content .text button.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.7s;
   }
   .program1 .content .text button:hover {
     background-color: #555;
@@ -245,6 +262,13 @@ li {
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  .program1 .content .img.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.3s;
   }
   .program1 .content .text {
     width: 43.55%;
@@ -261,6 +285,13 @@ li {
   .program1 .content .text h3 {
     font-size: 1.875rem;
     font-weight: bold;
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  .program1 .content .text h3.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.3s;
   }
   .program1 .content .text p {
     font-size: 1.5rem;
@@ -268,6 +299,13 @@ li {
     word-break: keep-all;
     margin-top: 20px;
     line-height: 2.3125rem;
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  .program1 .content .text p.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.45s;
   }
   .program1 .content .text button {
     width: 246px;
@@ -282,7 +320,13 @@ li {
     align-items: center;
     margin: 0 auto;
     margin-top: 70px;
-    transition: 0.3s;
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  .program1 .content .text button.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.6s;
   }
   .program1 .content .text button:hover {
     background-color: #555;
@@ -327,6 +371,13 @@ li {
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  .program1 .content .img.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.3s;
   }
   .program1 .content .text {
     height: 700px;
@@ -342,6 +393,13 @@ li {
   .program1 .content .text h3 {
     font-size: 1.875rem;
     font-weight: bold;
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  .program1 .content .text h3.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.3s;
   }
   .program1 .content .text p {
     font-size: 1.5rem;
@@ -349,6 +407,13 @@ li {
     word-break: keep-all;
     margin-top: 24px;
     line-height: 2.3125rem;
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  .program1 .content .text p.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.45s;
   }
   .program1 .content .text button {
     width: 246px;
@@ -363,10 +428,15 @@ li {
     align-items: center;
     margin: 0 auto;
     margin-top: 70px;
-    transition: 0.3s;
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  .program1 .content .text button.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.6s;
   }
   .program1 .content .text button:hover {
-    background-color: #555;
-    color: #fff;
+    @morehover;
   }
 }/*# sourceMappingURL=Program1.module.css.map */

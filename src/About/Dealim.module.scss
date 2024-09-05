@@ -8,30 +8,29 @@ $indicatorColor: #d8d8d8;
   font-family: "Pretendard";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
     format("woff");
-  font-weight: normal;
 }
 @font-face {
   font-family: "Pretendard-Bold";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
     format("woff");
-  font-weight: Bold;
 }
 @font-face {
   font-family: "Pretendard-SemiBold";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
     format("woff");
-  font-weight: SemiBold;
 }
 @font-face {
   font-family: "Pretendard-Light";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
     format("woff");
-  font-weight: 300;
-  font-style: normal;
 }
 * {
   box-sizing: border-box;
   font-family: "Pretendard";
+}
+@mixin animate {
+  transform: translateY(0%);
+  opacity: 1;
 }
 
 .dealim {
@@ -43,6 +42,7 @@ $indicatorColor: #d8d8d8;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
   .inner {
     width: 81.33%;
     margin: 0 auto;
@@ -60,8 +60,7 @@ $indicatorColor: #d8d8d8;
       transform: translateY(-50%);
       opacity: 0;
       &.animate {
-        transform: translateY(0%);
-        opacity: 1;
+        @include animate;
         transition: all 0.3s;
       }
       .scroll {
@@ -76,8 +75,7 @@ $indicatorColor: #d8d8d8;
       opacity: 0;
       overflow-x: hidden;
       &.animate {
-        opacity: 1;
-        transform: translateY(0%);
+        @include animate;
         transition: all 0.3s;
       }
 
@@ -164,8 +162,7 @@ $indicatorColor: #d8d8d8;
         transform: translateY(-20%);
         opacity: 0;
         &.animate {
-          transform: translateY(0%);
-          opacity: 1;
+          @include animate;
           transition: all 0.3s;
         }
       }
@@ -177,8 +174,7 @@ $indicatorColor: #d8d8d8;
         transform: translateY(-20%);
         opacity: 0;
         &.animate {
-          transform: translateY(0%);
-          opacity: 1;
+          @include animate;
           transition: all 0.4s;
         }
       }
@@ -192,8 +188,7 @@ $indicatorColor: #d8d8d8;
         transform: translateY(-20%);
         opacity: 0;
         &.animate {
-          transform: translateY(0%);
-          opacity: 1;
+          @include animate;
           transition: all 0.5s;
         }
       }
@@ -227,8 +222,7 @@ $indicatorColor: #d8d8d8;
         transform: translateY(-50%);
         opacity: 0;
         &.animate {
-          transform: translateY(0%);
-          opacity: 1;
+          @include animate;
           transition: all 0.3s;
         }
         .scroll {
@@ -243,8 +237,7 @@ $indicatorColor: #d8d8d8;
         opacity: 0;
         overflow-x: hidden;
         &.animate {
-          opacity: 1;
-          transform: translateY(0%);
+          @include animate;
           transition: all 0.3s;
         }
         .list {
@@ -332,8 +325,7 @@ $indicatorColor: #d8d8d8;
           transform: translateY(-20%);
           opacity: 0;
           &.animate {
-            transform: translateY(0%);
-            opacity: 1;
+            @include animate;
             transition: all 0.3s;
           }
         }
@@ -345,8 +337,7 @@ $indicatorColor: #d8d8d8;
           transform: translateY(-20%);
           opacity: 0;
           &.animate {
-            transform: translateY(0%);
-            opacity: 1;
+            @include animate;
             transition: all 0.4s;
           }
         }
@@ -360,8 +351,7 @@ $indicatorColor: #d8d8d8;
           transform: translateY(-20%);
           opacity: 0;
           &.animate {
-            transform: translateY(0%);
-            opacity: 1;
+            @include animate;
             transition: all 0.5s;
           }
         }
@@ -395,8 +385,7 @@ $indicatorColor: #d8d8d8;
         transform: translateY(-50%);
         opacity: 0;
         &.animate {
-          transform: translateY(0%);
-          opacity: 1;
+          @include animate;
           transition: all 0.3s;
         }
         .scroll {
@@ -411,8 +400,7 @@ $indicatorColor: #d8d8d8;
         opacity: 0;
         overflow-x: hidden;
         &.animate {
-          opacity: 1;
-          transform: translateY(0%);
+          @include animate;
           transition: all 0.3s;
         }
 
@@ -501,8 +489,7 @@ $indicatorColor: #d8d8d8;
           transform: translateY(-20%);
           opacity: 0;
           &.animate {
-            transform: translateY(0%);
-            opacity: 1;
+            @include animate;
             transition: all 0.3s;
           }
         }
@@ -514,8 +501,7 @@ $indicatorColor: #d8d8d8;
           transform: translateY(-20%);
           opacity: 0;
           &.animate {
-            transform: translateY(0%);
-            opacity: 1;
+            @include animate;
             transition: all 0.4s;
           }
         }
@@ -529,8 +515,7 @@ $indicatorColor: #d8d8d8;
           transform: translateY(-20%);
           opacity: 0;
           &.animate {
-            transform: translateY(0%);
-            opacity: 1;
+            @include animate;
             transition: all 0.5s;
           }
         }
@@ -564,8 +549,7 @@ $indicatorColor: #d8d8d8;
         transform: translateY(-50%);
         opacity: 0;
         &.animate {
-          transform: translateY(0%);
-          opacity: 1;
+          @include animate;
           transition: all 0.3s;
         }
         .scroll {
@@ -580,8 +564,7 @@ $indicatorColor: #d8d8d8;
         opacity: 0;
         overflow-x: hidden;
         &.animate {
-          opacity: 1;
-          transform: translateY(0%);
+          @include animate;
           transition: all 0.3s;
         }
 
@@ -670,8 +653,7 @@ $indicatorColor: #d8d8d8;
           transform: translateY(-20%);
           opacity: 0;
           &.animate {
-            transform: translateY(0%);
-            opacity: 1;
+            @include animate;
             transition: all 0.3s;
           }
         }
@@ -683,8 +665,7 @@ $indicatorColor: #d8d8d8;
           transform: translateY(-20%);
           opacity: 0;
           &.animate {
-            transform: translateY(0%);
-            opacity: 1;
+            @include animate;
             transition: all 0.4s;
           }
         }
@@ -698,8 +679,7 @@ $indicatorColor: #d8d8d8;
           transform: translateY(-20%);
           opacity: 0;
           &.animate {
-            transform: translateY(0%);
-            opacity: 1;
+            @include animate;
             transition: all 0.5s;
           }
         }

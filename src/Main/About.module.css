@@ -6,14 +6,6 @@
   font-family: "Pretendard-Light";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
 }
-@font-face {
-  font-family: "NanumSquareBold";
-  src: url("../../public/font/NanumSquareB.ttf") format("ttf");
-}
-@font-face {
-  font-family: "NanumSquareRegular";
-  src: url("../../public/font/NanumSquareR.ttf") format("ttf");
-}
 body {
   margin: 0;
   padding: 0;
@@ -98,25 +90,26 @@ li {
   opacity: 1;
   transition: all 0.5s;
 }
-.about .aboutInner a {
-  font-family: "Pretendard";
+.about .aboutInner .aboutText a {
+  transform: translateX(-30%);
   opacity: 0;
+  font-family: "Pretendard";
   width: 143px;
   height: 60px;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #000;
   color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 1.25rem;
   margin: 100px 0 0 0;
 }
-.about .aboutInner a.animate {
+.about .aboutInner .aboutText a.animate {
+  transform: translateX(0%);
   opacity: 1;
   transition: all 0.5s;
 }
-.about .aboutInner a:hover {
+.about .aboutInner .aboutText a:hover {
   background-color: #555;
   color: #fff;
 }
@@ -181,9 +174,10 @@ li {
     opacity: 1;
     transition: all 0.5s;
   }
-  .about .aboutInner a {
-    font-family: "Pretendard";
+  .about .aboutInner .aboutText a {
+    transform: translateX(-30%);
     opacity: 0;
+    font-family: "Pretendard";
     width: 260px;
     height: 60px;
     display: block;
@@ -195,11 +189,12 @@ li {
     font-size: 1.5rem;
     margin: 100px 0 0 0;
   }
-  .about .aboutInner a.animate {
+  .about .aboutInner .aboutText a.animate {
+    transform: translateX(0%);
     opacity: 1;
     transition: all 0.5s;
   }
-  .about .aboutInner a:hover {
+  .about .aboutInner .aboutText a:hover {
     background-color: #555;
     color: #fff;
   }
@@ -225,7 +220,7 @@ li {
   }
   .about .aboutInner .aboutImg.animate {
     opacity: 1;
-    transition: opacity 0.3s;
+    transition: all 0.3s;
   }
   .about .aboutInner .aboutText {
     order: 1;
@@ -241,11 +236,11 @@ li {
     position: static;
     font-family: "NanumSquareBold";
     opacity: 0;
-    transform: translateY(-30%);
+    transform: translateX(-30%);
   }
   .about .aboutInner .aboutText h2.animate {
     opacity: 1;
-    transform: translateY(0%);
+    transform: translateX(0%);
     transition: all 0.5s;
   }
   .about .aboutInner .aboutText span {
@@ -256,16 +251,16 @@ li {
     margin: 10px 0 50px 0;
     display: block;
     opacity: 0;
-    transform: translateY(-30%);
+    transform: translateX(-30%);
   }
   .about .aboutInner .aboutText span.animate {
     opacity: 1;
-    transform: translateY(0%);
+    transform: translateX(0%);
     transition: all 0.5s;
   }
   .about .aboutInner .aboutText p {
     opacity: 0;
-    transform: translateY(-30%);
+    transform: translateX(-30%);
     font-family: "Pretendard-Light";
     line-height: 2.3125rem;
     word-break: keep-all;
@@ -275,15 +270,15 @@ li {
   }
   .about .aboutInner .aboutText p.animate {
     opacity: 1;
-    transform: translateY(0%);
+    transform: translateX(0%);
     transition: all 0.5s;
   }
-  .about .aboutInner a {
-    font-family: "Pretendard";
+  .about .aboutInner .aboutText a {
     opacity: 0;
+    transform: translateX(-30%);
+    font-family: "Pretendard";
     width: 260px;
     height: 60px;
-    display: block;
     background-color: #000;
     color: #fff;
     display: flex;
@@ -292,11 +287,12 @@ li {
     font-size: 1.5rem;
     margin: 100px 0 0 0;
   }
-  .about .aboutInner a.animate {
+  .about .aboutInner .aboutText a.animate {
     opacity: 1;
+    transform: translateX(0%);
     transition: all 0.5s;
   }
-  .about .aboutInner a:hover {
+  .about .aboutInner .aboutText a:hover {
     background-color: #555;
     color: #fff;
   }
@@ -340,11 +336,11 @@ li {
     position: static;
     font-family: "NanumSquareBold";
     opacity: 0;
-    transform: translateY(-30%);
+    transform: translateX(-30%);
   }
   .about .aboutInner .aboutText h2.animate {
     opacity: 1;
-    transform: translateY(0%);
+    transform: translateX(0%);
     transition: all 0.5s;
   }
   .about .aboutInner .aboutText span {
@@ -355,16 +351,16 @@ li {
     margin: 10px 0 50px 0;
     display: block;
     opacity: 0;
-    transform: translateY(-30%);
+    transform: translateX(-30%);
   }
   .about .aboutInner .aboutText span.animate {
     opacity: 1;
-    transform: translateY(0%);
+    transform: translateX(0%);
     transition: all 0.5s;
   }
   .about .aboutInner .aboutText p {
     opacity: 0;
-    transform: translateY(-30%);
+    transform: translateX(-30%);
     font-family: "Pretendard-Light";
     line-height: 2.9375rem;
     word-break: keep-all;
@@ -374,15 +370,16 @@ li {
   }
   .about .aboutInner .aboutText p.animate {
     opacity: 1;
-    transform: translateY(0%);
+    transform: translateX(0%);
     transition: all 0.5s;
   }
-  .about .aboutInner a {
+  .about .aboutInner .aboutText a {
+    opacity: 0;
+    transform: translateX(-30%);
     font-family: "Pretendard";
     opacity: 0;
     width: 260px;
     height: 60px;
-    display: block;
     background-color: #000;
     color: #fff;
     display: flex;
@@ -391,11 +388,12 @@ li {
     font-size: 1.5rem;
     margin: 100px 0 0 0;
   }
-  .about .aboutInner a.animate {
+  .about .aboutInner .aboutText a.animate {
     opacity: 1;
+    transform: translateX(0%);
     transition: all 0.5s;
   }
-  .about .aboutInner a:hover {
+  .about .aboutInner .aboutText a:hover {
     background-color: #555;
     color: #fff;
   }

@@ -1,23 +1,18 @@
 @font-face {
   font-family: "Pretendard";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
-  font-weight: normal;
 }
 @font-face {
   font-family: "Pretendard-Bold";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff") format("woff");
-  font-weight: Bold;
 }
 @font-face {
   font-family: "Pretendard-SemiBold";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff") format("woff");
-  font-weight: SemiBold;
 }
 @font-face {
   font-family: "Pretendard-Light";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
 }
 * {
   box-sizing: border-box;
@@ -65,8 +60,8 @@
   overflow-x: hidden;
 }
 .dealim .inner .slide.animate {
-  opacity: 1;
   transform: translateY(0%);
+  opacity: 1;
   transition: all 0.3s;
 }
 .dealim .inner .slide .list {
@@ -216,8 +211,8 @@
     overflow-x: hidden;
   }
   .dealim .inner .slide.animate {
-    opacity: 1;
     transform: translateY(0%);
+    opacity: 1;
     transition: all 0.3s;
   }
   .dealim .inner .slide .list {
@@ -369,8 +364,8 @@
     overflow-x: hidden;
   }
   .dealim .inner .slide.animate {
-    opacity: 1;
     transform: translateY(0%);
+    opacity: 1;
     transition: all 0.3s;
   }
   .dealim .inner .slide .list {
@@ -522,8 +517,8 @@
     overflow-x: hidden;
   }
   .dealim .inner .slide.animate {
-    opacity: 1;
     transform: translateY(0%);
+    opacity: 1;
     transition: all 0.3s;
   }
   .dealim .inner .slide .list {

@@ -6,26 +6,17 @@ $color2: #000;
   font-family: "Pretendard";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
     format("woff");
-  font-weight: normal;
 }
-@font-face {
-  font-family: "Pretendard-Bold";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
-    format("woff");
-  font-weight: Bold;
-}
+
 @font-face {
   font-family: "Pretendard-SemiBold";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
     format("woff");
-  font-weight: SemiBold;
 }
 @font-face {
   font-family: "Pretendard-Light";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
     format("woff");
-  font-weight: 300;
-  font-style: normal;
 }
 .exhibition {
   overflow: hidden;
@@ -52,9 +43,7 @@ $color2: #000;
       &.animate {
         opacity: 1;
         transition: all 0.3s;
-        &:first-child {
-          transform: translateX(0);
-        }
+        &:first-child,
         &:last-child {
           transform: translateX(0);
         }
@@ -161,9 +150,19 @@ $color2: #000;
         cursor: pointer;
         position: relative;
         opacity: 0;
+        &:first-child {
+          transform: translateX(-20%);
+        }
+        &:last-child {
+          transform: translateX(20%);
+        }
         &.animate {
           opacity: 1;
           transition: all 0.3s;
+          &:first-child,
+          &:last-child {
+            transform: translateX(0);
+          }
         }
         &:last-child .text {
           color: $color1;
@@ -264,9 +263,19 @@ $color2: #000;
         cursor: pointer;
         position: relative;
         opacity: 0;
+        &:first-child {
+          transform: translateX(-20%);
+        }
+        &:last-child {
+          transform: translateX(20%);
+        }
         &.animate {
           opacity: 1;
           transition: all 0.3s;
+          &:first-child,
+          &:last-child {
+            transform: translateX(0);
+          }
         }
         &:last-child .text {
           color: $color1;

@@ -13,14 +13,6 @@ $indicatorColor: #d8d8d8;
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
     format("woff");
 }
-@font-face {
-  font-family: "NanumSquareBold";
-  src: url("../../public/font/NanumSquareB.ttf") format("ttf");
-}
-@font-face {
-  font-family: "NanumSquareRegular";
-  src: url("../../public/font/NanumSquareR.ttf") format("ttf");
-}
 
 body {
   margin: 0;
@@ -32,6 +24,10 @@ a {
 }
 li {
   list-style: none;
+}
+@mixin moreHover {
+  background-color: #555;
+  color: $color2;
 }
 .blind {
   position: absolute;
@@ -45,6 +41,7 @@ li {
   margin-top: 80px;
   margin-bottom: 150px;
   border-bottom: 1px solid $lineColor;
+
   .aboutInner {
     width: 100%;
     position: relative;
@@ -63,7 +60,15 @@ li {
       width: 81.33%;
       margin: 0 auto;
       padding: 50px 0 100px 0;
+      @mixin before {
+        transform: translateX(-30%);
+        opacity: 0;
+      }
 
+      @mixin after {
+        transform: translateX(0%);
+        opacity: 1;
+      }
       h2 {
         font-size: 2rem;
         color: $color2;
@@ -87,8 +92,7 @@ li {
         }
       }
       p {
-        transform: translateX(-30%);
-        opacity: 0;
+        @include before;
         font-family: "Pretendard-Light";
         line-height: 1.5rem;
         word-break: keep-all;
@@ -96,32 +100,29 @@ li {
         width: 93.77%;
         margin: 0;
         &.animate {
-          transform: translateX(0%);
-          opacity: 1;
+          @include after;
           transition: all 0.5s;
         }
       }
-    }
-    a {
-      font-family: "Pretendard";
-      opacity: 0;
-      width: 143px;
-      height: 60px;
-      display: block;
-      background-color: $color1;
-      color: $color2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.25rem;
-      margin: 100px 0 0 0;
-      &.animate {
-        opacity: 1;
-        transition: all 0.5s;
-      }
-      &:hover {
-        background-color: #555;
+      a {
+        @include before;
+        font-family: "Pretendard";
+        width: 143px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $color1;
         color: $color2;
+        font-size: 1.25rem;
+        margin: 100px 0 0 0;
+        &.animate {
+          @include after;
+          transition: all 0.5s;
+        }
+        &:hover {
+          @include moreHover;
+        }
       }
     }
   }
@@ -150,6 +151,16 @@ li {
         margin: 0 auto;
         padding: 50px 0 100px 0;
 
+        @mixin before {
+          transform: translateX(-30%);
+          opacity: 0;
+        }
+
+        @mixin after {
+          transform: translateX(0%);
+          opacity: 1;
+        }
+
         h2 {
           font-size: 2.125rem;
           color: $color2;
@@ -173,8 +184,7 @@ li {
           }
         }
         p {
-          transform: translateX(-30%);
-          opacity: 0;
+          @include before;
           font-family: "Pretendard-Light";
           line-height: 2.3125rem;
           word-break: keep-all;
@@ -182,32 +192,30 @@ li {
           width: 89.43%;
           margin: 0;
           &.animate {
-            transform: translateX(0%);
-            opacity: 1;
+            @include after;
             transition: all 0.5s;
           }
         }
-      }
-      a {
-        font-family: "Pretendard";
-        opacity: 0;
-        width: 260px;
-        height: 60px;
-        display: block;
-        background-color: $color1;
-        color: $color2;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.5rem;
-        margin: 100px 0 0 0;
-        &.animate {
-          opacity: 1;
-          transition: all 0.5s;
-        }
-        &:hover {
-          background-color: #555;
+        a {
+          @include before;
+          font-family: "Pretendard";
+          width: 260px;
+          height: 60px;
+          display: block;
+          background-color: $color1;
           color: $color2;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.5rem;
+          margin: 100px 0 0 0;
+          &.animate {
+            @include after;
+            transition: all 0.5s;
+          }
+          &:hover {
+            @include moreHover;
+          }
         }
       }
     }
@@ -223,7 +231,6 @@ li {
       position: static;
       display: flex;
       flex-direction: row;
-
       .aboutImg {
         opacity: 0;
         width: 51.17%;
@@ -233,7 +240,7 @@ li {
         order: 2;
         &.animate {
           opacity: 1;
-          transition: opacity 0.3s;
+          transition: all 0.3s;
         }
       }
       .aboutText {
@@ -245,11 +252,11 @@ li {
         border-left: 1px solid $lineColor;
         @mixin before {
           opacity: 0;
-          transform: translateY(-30%);
+          transform: translateX(-30%);
         }
         @mixin after {
           opacity: 1;
-          transform: translateY(0%);
+          transform: translateX(0%);
         }
 
         h2 {
@@ -289,27 +296,26 @@ li {
             transition: all 0.5s;
           }
         }
-      }
-      a {
-        font-family: "Pretendard";
-        opacity: 0;
-        width: 260px;
-        height: 60px;
-        display: block;
-        background-color: $color1;
-        color: $color2;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.5rem;
-        margin: 100px 0 0 0;
-        &.animate {
-          opacity: 1;
-          transition: all 0.5s;
-        }
-        &:hover {
-          background-color: #555;
+        a {
+          @include before;
+          font-family: "Pretendard";
+          width: 260px;
+          height: 60px;
+          background-color: $color1;
           color: $color2;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.5rem;
+          margin: 100px 0 0 0;
+          &.animate {
+            @include after;
+            transition: all 0.5s;
+          }
+          &:hover {
+            background-color: #555;
+            color: $color2;
+          }
         }
       }
     }
@@ -349,11 +355,11 @@ li {
         border-left: 1px solid $lineColor;
         @mixin before {
           opacity: 0;
-          transform: translateY(-30%);
+          transform: translateX(-30%);
         }
         @mixin after {
           opacity: 1;
-          transform: translateY(0%);
+          transform: translateX(0%);
         }
 
         h2 {
@@ -393,27 +399,27 @@ li {
             transition: all 0.5s;
           }
         }
-      }
-      a {
-        font-family: "Pretendard";
-        opacity: 0;
-        width: 260px;
-        height: 60px;
-        display: block;
-        background-color: $color1;
-        color: $color2;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.5rem;
-        margin: 100px 0 0 0;
-        &.animate {
-          opacity: 1;
-          transition: all 0.5s;
-        }
-        &:hover {
-          background-color: #555;
+        a {
+          @include before;
+          font-family: "Pretendard";
+          opacity: 0;
+          width: 260px;
+          height: 60px;
+          background-color: $color1;
           color: $color2;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.5rem;
+          margin: 100px 0 0 0;
+          &.animate {
+            @include after;
+            transition: all 0.5s;
+          }
+          &:hover {
+            background-color: #555;
+            color: $color2;
+          }
         }
       }
     }

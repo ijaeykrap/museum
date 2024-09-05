@@ -7,26 +7,17 @@ $indicatorColor: #d8d8d8;
   font-family: "Pretendard";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
     format("woff");
-  font-weight: normal;
 }
 @font-face {
   font-family: "Pretendard-Bold";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
     format("woff");
-  font-weight: Bold;
 }
-@font-face {
-  font-family: "Pretendard-SemiBold";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
-    format("woff");
-  font-weight: SemiBold;
-}
+
 @font-face {
   font-family: "Pretendard-Light";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
     format("woff");
-  font-weight: 300;
-  font-style: normal;
 }
 * {
   body {
@@ -51,6 +42,11 @@ $indicatorColor: #d8d8d8;
     overflow: hidden;
   }
 }
+@mixin moreHover {
+  background-color: $color1;
+  color: $color2;
+  transition: all 0.3s;
+}
 
 .program2 {
   border-top: 1px solid $lineColor;
@@ -60,6 +56,14 @@ $indicatorColor: #d8d8d8;
   .inner {
     width: 81.33%;
     margin: 0 auto;
+    @mixin before {
+      transform: translateY(-20%);
+      opacity: 0;
+    }
+    @mixin after {
+      transform: translateY(0%);
+      opacity: 1;
+    }
     .slide {
       width: 100%;
       overflow-x: hidden;
@@ -86,11 +90,9 @@ $indicatorColor: #d8d8d8;
               overflow: hidden;
               display: block;
               margin: 0 auto;
-              transform: translateY(-10%);
-              opacity: 0;
+              @include before;
               &.animate {
-                transform: translateY(0%);
-                opacity: 1;
+                @include after;
                 transition: all 0.3s;
               }
             }
@@ -102,12 +104,10 @@ $indicatorColor: #d8d8d8;
                 font-size: 1.5rem;
                 margin: 0;
                 text-align: start;
-                transform: translateY(-10%);
-                opacity: 0;
+                @include before;
                 &.animate {
-                  transform: translateY(0%);
-                  opacity: 1;
-                  transition: all 0.3s;
+                  @include after;
+                  transition: all 0.45s;
                 }
               }
               p {
@@ -117,12 +117,10 @@ $indicatorColor: #d8d8d8;
                 word-break: keep-all;
                 margin: 22px 0 50px 0;
                 text-align: start;
-                transform: translateY(-10%);
-                opacity: 0;
+                @include before;
                 &.animate {
-                  transform: translateY(0%);
-                  opacity: 1;
-                  transition: all 0.4s;
+                  @include after;
+                  transition: all 0.6s;
                 }
               }
               button {
@@ -136,19 +134,15 @@ $indicatorColor: #d8d8d8;
                 line-height: 50px;
                 text-align: center;
                 margin: 50px auto 0 auto;
-                transition: all 0.3s;
                 font-family: "Pretendard";
                 cursor: pointer;
-                transform: translateY(-10%);
-                opacity: 0;
+                @include before;
                 &.animate {
-                  transform: translateY(0%);
-                  opacity: 1;
-                  transition: all 0.5s;
+                  @include after;
+                  transition: all 0.7s;
                 }
                 &:hover {
-                  background-color: $color1;
-                  color: $color2;
+                  @include moreHover;
                 }
               }
             }
@@ -163,7 +157,7 @@ $indicatorColor: #d8d8d8;
       position: relative;
       cursor: pointer;
       background-color: $indicatorColor;
-      transform: translateY(-10%);
+      transform: translateY(-500%);
       margin-bottom: 35px;
       opacity: 0;
       &.animate {
@@ -202,6 +196,14 @@ $indicatorColor: #d8d8d8;
       padding-bottom: 35px;
       border-left: 1px solid $lineColor;
       border-right: 1px solid $lineColor;
+      @mixin before {
+        transform: translateY(-20%);
+        opacity: 0;
+      }
+      @mixin after {
+        transform: translateY(0%);
+        opacity: 1;
+      }
       .slide {
         width: 100%;
         overflow-x: hidden;
@@ -228,11 +230,9 @@ $indicatorColor: #d8d8d8;
                 overflow: hidden;
                 display: block;
                 margin: 0 auto;
-                transform: translateY(-10%);
-                opacity: 0;
+                @include before;
                 &.animate {
-                  transform: translateY(0%);
-                  opacity: 1;
+                  @include after;
                   transition: all 0.3s;
                 }
               }
@@ -243,12 +243,10 @@ $indicatorColor: #d8d8d8;
                   font-size: 1.875rem;
                   margin: 0;
                   text-align: start;
-                  transform: translateY(-10%);
-                  opacity: 0;
+                  @include before;
                   &.animate {
-                    transform: translateY(0%);
-                    opacity: 1;
-                    transition: all 0.3s;
+                    @include after;
+                    transition: all 0.45s;
                   }
                 }
                 p {
@@ -258,12 +256,10 @@ $indicatorColor: #d8d8d8;
                   word-break: keep-all;
                   margin: 22px 0 50px 0;
                   text-align: start;
-                  transform: translateY(-10%);
-                  opacity: 0;
+                  @include before;
                   &.animate {
-                    transform: translateY(0%);
-                    opacity: 1;
-                    transition: all 0.4s;
+                    @include after;
+                    transition: all 0.6s;
                   }
                 }
                 button {
@@ -277,18 +273,14 @@ $indicatorColor: #d8d8d8;
                   line-height: 69px;
                   text-align: center;
                   margin: 50px auto 0 auto;
-                  transition: all 0.3s;
                   cursor: pointer;
-                  transform: translateY(-10%);
-                  opacity: 0;
+                  @include before;
                   &.animate {
-                    transform: translateY(0%);
-                    opacity: 1;
-                    transition: all 0.5s;
+                    @include after;
+                    transition: all 0.75s;
                   }
                   &:hover {
-                    background-color: $color1;
-                    color: $color2;
+                    @include moreHover;
                   }
                 }
               }
@@ -302,7 +294,7 @@ $indicatorColor: #d8d8d8;
         margin: 0 auto;
         position: relative;
         cursor: pointer;
-        transform: translateY(-10%);
+        transform: translateY(-500%);
         opacity: 0;
         &.animate {
           transform: translateY(0%);
@@ -341,6 +333,14 @@ $indicatorColor: #d8d8d8;
       padding-bottom: 0px;
       border-left: 1px solid $lineColor;
       border-right: 1px solid $lineColor;
+      @mixin before {
+        transform: translateY(-20%);
+        opacity: 0;
+      }
+      @mixin after {
+        transform: translateY(0%);
+        opacity: 1;
+      }
       .slide {
         width: 100%;
         overflow-x: hidden;
@@ -370,11 +370,9 @@ $indicatorColor: #d8d8d8;
                 overflow: hidden;
                 display: block;
                 margin: 0 auto;
-                transform: translateY(-10%);
-                opacity: 0;
+                @include before;
                 &.animate {
-                  transform: translateY(0%);
-                  opacity: 1;
+                  @include after;
                   transition: all 0.3s;
                 }
               }
@@ -386,12 +384,10 @@ $indicatorColor: #d8d8d8;
                   font-size: 1.875rem;
                   margin: 0 auto;
                   text-align: start;
-                  transform: translateY(-10%);
-                  opacity: 0;
+                  @include before;
                   &.animate {
-                    transform: translateY(0%);
-                    opacity: 1;
-                    transition: all 0.3s;
+                    @include after;
+                    transition: all 0.45s;
                   }
                 }
                 p {
@@ -402,12 +398,10 @@ $indicatorColor: #d8d8d8;
                   margin: 22px 0 0 0;
                   text-align: start;
                   height: 140px;
-                  transform: translateY(-10%);
-                  opacity: 0;
+                  @include before;
                   &.animate {
-                    transform: translateY(0%);
-                    opacity: 1;
-                    transition: all 0.4s;
+                    @include after;
+                    transition: all 0.6s;
                   }
                 }
                 button {
@@ -421,18 +415,14 @@ $indicatorColor: #d8d8d8;
                   line-height: 69px;
                   text-align: center;
                   margin: 90px auto 0 auto;
-                  transition: all 0.3s;
                   cursor: pointer;
-                  transform: translateY(-10%);
-                  opacity: 0;
+                  @include before;
                   &.animate {
-                    transform: translateY(0%);
-                    opacity: 1;
-                    transition: all 0.5s;
+                    @include after;
+                    transition: all 0.7s;
                   }
                   &:hover {
-                    background-color: $color1;
-                    color: $color2;
+                    @include moreHover;
                   }
                 }
               }
@@ -458,6 +448,14 @@ $indicatorColor: #d8d8d8;
       padding-bottom: 0px;
       border-left: 1px solid $lineColor;
       border-right: 1px solid $lineColor;
+      @mixin before {
+        transform: translateY(-20%);
+        opacity: 0;
+      }
+      @mixin after {
+        transform: translateY(0%);
+        opacity: 1;
+      }
       .slide {
         width: 100%;
         overflow-x: hidden;
@@ -487,11 +485,9 @@ $indicatorColor: #d8d8d8;
                 overflow: hidden;
                 display: block;
                 margin: 0 auto;
-                transform: translateY(-10%);
-                opacity: 0;
+                @include before;
                 &.animate {
-                  transform: translateY(0%);
-                  opacity: 1;
+                  @include after;
                   transition: all 0.3s;
                 }
               }
@@ -503,12 +499,10 @@ $indicatorColor: #d8d8d8;
                   font-size: 1.875rem;
                   margin: 0 auto;
                   text-align: start;
-                  transform: translateY(-10%);
-                  opacity: 0;
+                  @include before;
                   &.animate {
-                    transform: translateY(0%);
-                    opacity: 1;
-                    transition: all 0.3s;
+                    @include after;
+                    transition: all 0.45s;
                   }
                 }
                 p {
@@ -518,13 +512,11 @@ $indicatorColor: #d8d8d8;
                   word-break: keep-all;
                   margin: 22px 0 0 0;
                   text-align: start;
-                  transform: translateY(-10%);
-                  opacity: 0;
                   height: auto;
+                  @include before;
                   &.animate {
-                    transform: translateY(0%);
-                    opacity: 1;
-                    transition: all 0.4s;
+                    @include after;
+                    transition: all 0.6s;
                   }
                 }
                 button {
@@ -538,18 +530,14 @@ $indicatorColor: #d8d8d8;
                   line-height: 69px;
                   text-align: center;
                   margin: 90px auto 0 auto;
-                  transition: all 0.3s;
                   cursor: pointer;
-                  transform: translateY(-10%);
-                  opacity: 0;
+                  @include before;
                   &.animate {
-                    transform: translateY(0%);
-                    opacity: 1;
-                    transition: all 0.5s;
+                    @include after;
+                    transition: all 0.7s;
                   }
                   &:hover {
-                    background-color: $color1;
-                    color: $color2;
+                    @include moreHover;
                   }
                 }
               }

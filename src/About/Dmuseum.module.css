@@ -1,27 +1,13 @@
 @font-face {
   font-family: "Pretendard";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
-  font-weight: normal;
-}
-@font-face {
-  font-family: "Pretendard-Bold";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff") format("woff");
-  font-weight: Bold;
-}
-@font-face {
-  font-family: "Pretendard-SemiBold";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff") format("woff");
-  font-weight: SemiBold;
 }
 @font-face {
   font-family: "Pretendard-Light";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
 }
 * {
   box-sizing: border-box;
-  font-family: "Pretendard";
 }
 
 .dMuseum {
@@ -102,8 +88,8 @@
   opacity: 0;
 }
 .dMuseum .inner .slideWrapper .indicator.animate {
-  transform: translateY(0%);
   opacity: 1;
+  transform: translateY(0%);
   transition: all 0.3s;
 }
 .dMuseum .inner .slideWrapper .indicator .scroll {
@@ -128,8 +114,8 @@
   opacity: 0;
 }
 .dMuseum .inner .text h3.animate {
-  transform: translateY(0%);
   opacity: 1;
+  transform: translateY(0%);
   transition: all 0.3s;
 }
 .dMuseum .inner .text span {
@@ -142,8 +128,8 @@
   opacity: 0;
 }
 .dMuseum .inner .text span.animate {
-  transform: translateY(0%);
   opacity: 1;
+  transform: translateY(0%);
   transition: all 0.4s;
 }
 .dMuseum .inner .text p {
@@ -156,8 +142,8 @@
   opacity: 0;
 }
 .dMuseum .inner .text p.animate {
-  transform: translateY(0%);
   opacity: 1;
+  transform: translateY(0%);
   transition: all 0.5s;
 }
 
@@ -247,9 +233,9 @@
     opacity: 0;
   }
   .dMuseum .inner .slideWrapper .indicator.animate {
-    transform: translateY(0%);
     opacity: 1;
-    transition: all 0.3s;
+    transform: translateY(0%);
+    transition: all 0.45s;
   }
   .dMuseum .inner .slideWrapper .indicator .scroll {
     height: 33.33%;
@@ -274,8 +260,8 @@
     opacity: 0;
   }
   .dMuseum .inner .text h3.animate {
-    transform: translateY(0%);
     opacity: 1;
+    transform: translateY(0%);
     transition: all 0.3s;
   }
   .dMuseum .inner .text span {
@@ -287,8 +273,8 @@
     opacity: 0;
   }
   .dMuseum .inner .text span.animate {
-    transform: translateY(0%);
     opacity: 1;
+    transform: translateY(0%);
     transition: all 0.4s;
   }
   .dMuseum .inner .text p {
@@ -302,8 +288,8 @@
     opacity: 0;
   }
   .dMuseum .inner .text p.animate {
-    transform: translateY(0%);
     opacity: 1;
+    transform: translateY(0%);
     transition: all 0.5s;
   }
 }
@@ -344,7 +330,7 @@
   .dMuseum .inner .slideWrapper .slide.animate {
     opacity: 1;
     transform: translateY(0%);
-    transition: all 0.3s;
+    transition: all 0.45s;
   }
   .dMuseum .inner .slideWrapper .slide .list {
     width: 100%;
@@ -398,8 +384,8 @@
     opacity: 0;
   }
   .dMuseum .inner .slideWrapper .indicator.animate {
-    transform: translateY(0%);
     opacity: 1;
+    transform: translateY(0%);
     transition: all 0.3s;
   }
   .dMuseum .inner .slideWrapper .indicator .scroll {
@@ -425,8 +411,8 @@
     opacity: 0;
   }
   .dMuseum .inner .text h3.animate {
-    transform: translateY(0%);
     opacity: 1;
+    transform: translateY(0%);
     transition: all 0.3s;
   }
   .dMuseum .inner .text span {
@@ -438,8 +424,8 @@
     opacity: 0;
   }
   .dMuseum .inner .text span.animate {
-    transform: translateY(0%);
     opacity: 1;
+    transform: translateY(0%);
     transition: all 0.4s;
   }
   .dMuseum .inner .text p {
@@ -453,8 +439,8 @@
     opacity: 0;
   }
   .dMuseum .inner .text p.animate {
-    transform: translateY(0%);
     opacity: 1;
+    transform: translateY(0%);
     transition: all 0.5s;
   }
 }
@@ -551,9 +537,9 @@
     opacity: 0;
   }
   .dMuseum .inner .slideWrapper .indicator.animate {
-    transform: translateY(0%);
     opacity: 1;
-    transition: all 0.3s;
+    transform: translateY(0%);
+    transition: all 0.45s;
   }
   .dMuseum .inner .slideWrapper .indicator .scroll {
     height: 16.6%;
@@ -578,8 +564,8 @@
     opacity: 0;
   }
   .dMuseum .inner .text h3.animate {
-    transform: translateY(0%);
     opacity: 1;
+    transform: translateY(0%);
     transition: all 0.3s;
   }
   .dMuseum .inner .text span {
@@ -591,8 +577,8 @@
     opacity: 0;
   }
   .dMuseum .inner .text span.animate {
-    transform: translateY(0%);
     opacity: 1;
+    transform: translateY(0%);
     transition: all 0.4s;
   }
   .dMuseum .inner .text p {
@@ -606,8 +592,8 @@
     opacity: 0;
   }
   .dMuseum .inner .text p.animate {
-    transform: translateY(0%);
     opacity: 1;
+    transform: translateY(0%);
     transition: all 0.5s;
   }
 }/*# sourceMappingURL=Dmuseum.module.css.map */

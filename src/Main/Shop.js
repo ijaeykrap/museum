@@ -229,9 +229,6 @@ export default function Shop() {
   const linkHandler = (e) => {
     if (!state.isClick) e.preventDefault();
   };
-
-  console.log(state.isClick);
-
   return (
     <section className={style.shop}>
       <div className={style.title}>

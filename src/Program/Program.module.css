@@ -1,7 +1,6 @@
 @font-face {
   font-family: "Pretendard";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
-  font-weight: normal;
 }
 @font-face {
   font-family: "Pretendard-SemiBold";
@@ -10,8 +9,6 @@
 @font-face {
   font-family: "Pretendard-Light";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: light;
 }
 button {
   border: none;
@@ -236,7 +233,7 @@ button {
   }
   .program .content .list li {
     opacity: 0;
-    transform: translateY(-10%);
+    transform: translateY(-15%);
     border-bottom: 1px solid #e4e4e4;
     cursor: pointer;
     width: 100%;
@@ -283,8 +280,8 @@ button {
     background-image: url(../../public/img/logo-minus.svg);
   }
   .program .content .list li.active {
-    transform: translateY(0%);
     opacity: 1;
+    transform: translateY(0);
     border-bottom: 1px solid #e4e4e4;
   }
   .program .content .list li.active .inner {
@@ -435,7 +432,7 @@ button {
   }
   .program .content .list li {
     opacity: 0;
-    transform: translateY(-10%);
+    transform: translateY(-15%);
     border-bottom: 1px solid #e4e4e4;
     cursor: pointer;
     width: 100%;
@@ -487,8 +484,8 @@ button {
     background-size: cover;
   }
   .program .content .list li.active {
-    transform: translateY(0%);
     opacity: 1;
+    transform: translateY(0);
     border-bottom: 1px solid #e4e4e4;
   }
   .program .content .list li.active .inner {
@@ -674,7 +671,7 @@ button {
   }
   .program .content .list li {
     opacity: 0;
-    transform: translateY(-10%);
+    transform: translateY(-15%);
     border-bottom: 1px solid #e4e4e4;
     cursor: pointer;
     width: 100%;
@@ -742,8 +739,8 @@ button {
     background-size: cover;
   }
   .program .content .list li.active {
-    transform: translateY(0%);
     opacity: 1;
+    transform: translateY(0);
     border-bottom: 1px solid #e4e4e4;
     height: 300px;
   }

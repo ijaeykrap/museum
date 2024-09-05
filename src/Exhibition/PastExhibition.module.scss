@@ -26,8 +26,10 @@ $color2: #fff;
     format("woff");
   font-style: normal;
 }
-* {
-  font-family: "Pretendard";
+@mixin moreHover {
+  background-color: $color1;
+  color: $color2;
+  transition: 0.3s;
 }
 .content {
   width: 100%;
@@ -75,6 +77,8 @@ $color2: #fff;
       }
       .year {
         -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
         font-size: 1.125rem;
         font-family: "Pretendard";
         background: url("../../public/img/logo-triangle.svg") no-repeat right
@@ -164,9 +168,7 @@ $color2: #fff;
       line-height: 50px;
       cursor: pointer;
       &:hover {
-        background-color: $color1;
-        color: $color2;
-        transition: 0.2s;
+        @include moreHover;
       }
     }
   }
@@ -216,7 +218,8 @@ $color2: #fff;
           justify-content: end;
         }
         .year {
-          color: $color1;
+          -webkit-appearance: none;
+          -moz-appearance: none;
           appearance: none;
           font-size: 1.375rem;
           font-family: "Pretendard";
@@ -311,9 +314,7 @@ $color2: #fff;
         line-height: 60px;
         cursor: pointer;
         &:hover {
-          background-color: $color1;
-          color: $color2;
-          transition: 0.2s;
+          @include moreHover;
         }
       }
     }
@@ -364,7 +365,8 @@ $color2: #fff;
           justify-content: end;
         }
         .year {
-          color: $color1;
+          -webkit-appearance: none;
+          -moz-appearance: none;
           appearance: none;
           font-size: 1.5rem;
           font-family: "Pretendard";
@@ -457,9 +459,7 @@ $color2: #fff;
         line-height: 81px;
         cursor: pointer;
         &:hover {
-          background-color: $color1;
-          color: $color2;
-          transition: 0.2s;
+          @include moreHover;
         }
       }
     }
@@ -510,7 +510,8 @@ $color2: #fff;
           justify-content: end;
         }
         .year {
-          color: $color1;
+          -webkit-appearance: none;
+          -moz-appearance: none;
           appearance: none;
           font-size: 1.5rem;
           font-family: "Pretendard";
@@ -601,9 +602,7 @@ $color2: #fff;
         line-height: 81px;
         cursor: pointer;
         &:hover {
-          background-color: $color1;
-          color: $color2;
-          transition: 0.2s;
+          @include moreHover;
         }
       }
     }

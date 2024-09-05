@@ -7,26 +7,25 @@ $indicatorColor: #d8d8d8;
   font-family: "Pretendard";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
     format("woff");
-  font-weight: normal;
 }
 @font-face {
   font-family: "Pretendard-Bold";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
     format("woff");
-  font-weight: Bold;
 }
 @font-face {
   font-family: "Pretendard-SemiBold";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
     format("woff");
-  font-weight: SemiBold;
 }
-@font-face {
-  font-family: "Pretendard-Light";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
-    format("woff");
-  font-weight: 300;
-  font-style: normal;
+
+@mixin before {
+  transform: translateY(-20%);
+  opacity: 0;
+}
+@mixin after {
+  transform: translateY(0%);
+  opacity: 1;
 }
 
 .shop {
@@ -61,7 +60,6 @@ $indicatorColor: #d8d8d8;
     width: 81.33%;
     margin: 0 auto;
     padding: 30px 0 50px 0;
-
     .slide {
       overflow-x: hidden;
       .list {
@@ -91,11 +89,9 @@ $indicatorColor: #d8d8d8;
                 background-position: center;
                 background-size: contain;
                 background-repeat: no-repeat;
-                transform: translateY(-10%);
-                opacity: 0;
+                @include before;
                 &.animate {
-                  transform: translateY(0%);
-                  opacity: 1;
+                  @include after;
                   transition: all 0.3s;
                 }
               }
@@ -104,12 +100,10 @@ $indicatorColor: #d8d8d8;
                   font-size: 1.5rem;
                   font-family: "Pretendard-Bold";
                   margin: 0;
-                  transform: translateY(-20%);
-                  opacity: 0;
+                  @include before;
                   &.animate {
-                    transform: translateY(0%);
-                    opacity: 1;
-                    transition: all 0.3s;
+                    @include after;
+                    transition: all 0.45s;
                   }
                 }
                 p {
@@ -118,12 +112,10 @@ $indicatorColor: #d8d8d8;
                   font-family: "Pretendard";
                   margin: 12px 0 0 0;
                   word-break: keep-all;
-                  transform: translateY(-20%);
-                  opacity: 0;
+                  @include before;
                   &.animate {
-                    transform: translateY(0%);
-                    opacity: 1;
-                    transition: all 0.4s;
+                    @include after;
+                    transition: all 0.6s;
                   }
                 }
               }
@@ -146,12 +138,12 @@ $indicatorColor: #d8d8d8;
     margin: 0 auto 50px auto;
     position: relative;
     cursor: pointer;
-    transform: translateY(-20%);
+    transform: translateY(-500%);
     opacity: 0;
     &.animate {
       transform: translateY(0%);
       opacity: 1;
-      transition: all 0.5s;
+      transition: all 0.45s;
     }
     div {
       width: 33.3%;
@@ -268,11 +260,9 @@ $indicatorColor: #d8d8d8;
                   background-position: center;
                   background-size: contain;
                   background-repeat: no-repeat;
-                  transform: translateY(-10%);
-                  opacity: 0;
+                  @include before;
                   &.animate {
-                    transform: translateY(0%);
-                    opacity: 1;
+                    @include after;
                     transition: all 0.3s;
                   }
                 }
@@ -284,11 +274,9 @@ $indicatorColor: #d8d8d8;
                     font-family: "Pretendard-Bold";
                     margin: 0;
                     word-break: keep-all;
-                    transform: translateY(-20%);
-                    opacity: 0;
+                    @include before;
                     &.animate {
-                      transform: translateY(0%);
-                      opacity: 1;
+                      @include after;
                       transition: all 0.3s;
                     }
                   }
@@ -298,12 +286,10 @@ $indicatorColor: #d8d8d8;
                     margin: 20px 0 0 0;
                     line-height: 1.5rem;
                     word-break: keep-all;
-                    transform: translateY(-20%);
-                    opacity: 0;
+                    @include before;
                     &.animate {
-                      transform: translateY(0%);
-                      opacity: 1;
-                      transition: all 0.4s;
+                      @include after;
+                      transition: all 0.45s;
                     }
                   }
                 }
@@ -411,11 +397,9 @@ $indicatorColor: #d8d8d8;
                   background-position: center;
                   background-size: contain;
                   background-repeat: no-repeat;
-                  transform: translateY(-10%);
-                  opacity: 0;
+                  @include before;
                   &.animate {
-                    transform: translateY(0%);
-                    opacity: 1;
+                    @include after;
                     transition: all 0.3s;
                   }
                 }
@@ -428,12 +412,10 @@ $indicatorColor: #d8d8d8;
                     font-family: "Pretendard-Bold";
                     margin: 0;
                     word-break: keep-all;
-                    transform: translateY(-20%);
-                    opacity: 0;
                     height: 60px;
+                    @include before;
                     &.animate {
-                      transform: translateY(0%);
-                      opacity: 1;
+                      @include after;
                       transition: all 0.3s;
                     }
                   }
@@ -444,12 +426,10 @@ $indicatorColor: #d8d8d8;
                     line-height: 1.8125rem;
                     word-break: keep-all;
                     height: 128px;
-                    transform: translateY(-20%);
-                    opacity: 0;
+                    @include before;
                     &.animate {
-                      transform: translateY(0%);
-                      opacity: 1;
-                      transition: all 0.4s;
+                      @include after;
+                      transition: all 0.45s;
                     }
                   }
                 }
@@ -559,11 +539,9 @@ $indicatorColor: #d8d8d8;
                   background-position: center;
                   background-size: contain;
                   background-repeat: no-repeat;
-                  transform: translateY(-10%);
-                  opacity: 0;
+                  @include before;
                   &.animate {
-                    transform: translateY(0%);
-                    opacity: 1;
+                    @include after;
                     transition: all 0.3s;
                   }
                 }
@@ -577,11 +555,9 @@ $indicatorColor: #d8d8d8;
                     margin: 0;
                     word-break: keep-all;
                     height: 36px;
-                    transform: translateY(-20%);
-                    opacity: 0;
+                    @include before;
                     &.animate {
-                      transform: translateY(0%);
-                      opacity: 1;
+                      @include after;
                       transition: all 0.3s;
                     }
                   }
@@ -592,12 +568,10 @@ $indicatorColor: #d8d8d8;
                     line-height: 1.8125rem;
                     word-break: keep-all;
                     height: 100px;
-                    transform: translateY(-20%);
-                    opacity: 0;
+                    @include before;
                     &.animate {
-                      transform: translateY(0%);
-                      opacity: 1;
-                      transition: all 0.4s;
+                      @include after;
+                      transition: all 0.45s;
                     }
                   }
                 }

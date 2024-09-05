@@ -6,7 +6,6 @@ $color2: #fff;
   font-family: "Pretendard";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
     format("woff");
-  font-weight: normal;
 }
 @font-face {
   font-family: "Pretendard-SemiBold";
@@ -17,8 +16,6 @@ $color2: #fff;
   font-family: "Pretendard-Light";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
     format("woff");
-  font-weight: 300;
-  font-style: light;
 }
 
 button {
@@ -43,6 +40,16 @@ button {
   transition: all 0.3s;
 }
 
+@mixin show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@mixin before {
+  opacity: 0;
+  transform: translateY(-15%);
+}
+
 .program {
   width: 100%;
   .subj {
@@ -63,8 +70,7 @@ button {
       padding: 0;
       border-top: 1px solid $lineColor;
       li {
-        opacity: 0;
-        transform: translateY(-15%);
+        @include before;
         border-bottom: 1px solid $lineColor;
         cursor: pointer;
         width: 100%;
@@ -110,8 +116,7 @@ button {
           }
         }
         &.active {
-          opacity: 1;
-          transform: translateY(0);
+          @include show;
           border-bottom: 1px solid $lineColor;
           .inner {
             display: flex;
@@ -190,12 +195,10 @@ button {
           }
         }
         &.inactive {
-          opacity: 1;
-          transform: translateY(0);
+          @include show;
         }
         &.animate {
-          opacity: 1;
-          transform: translateY(0);
+          @include show;
         }
         &:first-child {
           transition: all 0.3s;
@@ -248,8 +251,7 @@ button {
         border-top: 1px solid $lineColor;
         padding: 0;
         li {
-          opacity: 0;
-          transform: translateY(-10%);
+          @include before;
           border-bottom: 1px solid $lineColor;
           cursor: pointer;
           width: 100%;
@@ -300,8 +302,7 @@ button {
           }
 
           &.active {
-            transform: translateY(0%);
-            opacity: 1;
+            @include show;
             border-bottom: 1px solid $lineColor;
             .inner {
               display: flex;
@@ -385,12 +386,10 @@ button {
             }
           }
           &.inactive {
-            opacity: 1;
-            transform: translateY(0);
+            @include show;
           }
           &.animate {
-            opacity: 1;
-            transform: translateY(0);
+            @include show;
           }
           &:first-child {
             transition: all 0.3s;
@@ -441,8 +440,7 @@ button {
         margin: 0;
         padding: 0;
         li {
-          opacity: 0;
-          transform: translateY(-10%);
+          @include before;
           border-bottom: 1px solid $lineColor;
           cursor: pointer;
           width: 100%;
@@ -497,8 +495,7 @@ button {
             }
           }
           &.active {
-            transform: translateY(0%);
-            opacity: 1;
+            @include show;
             border-bottom: 1px solid $lineColor;
             .inner {
               height: 100%;
@@ -597,12 +594,10 @@ button {
             }
           }
           &.inactive {
-            opacity: 1;
-            transform: translateY(0);
+            @include show;
           }
           &.animate {
-            opacity: 1;
-            transform: translateY(0);
+            @include show;
           }
           &:first-child {
             transition: all 0.3s;
@@ -670,8 +665,7 @@ button {
         margin-top: 0;
         padding: 0;
         li {
-          opacity: 0;
-          transform: translateY(-10%);
+          @include before;
           border-bottom: 1px solid $lineColor;
           cursor: pointer;
           width: 100%;
@@ -739,8 +733,7 @@ button {
             }
           }
           &.active {
-            transform: translateY(0%);
-            opacity: 1;
+            @include show;
             border-bottom: 1px solid $lineColor;
             height: 300px;
             .inner {
@@ -858,12 +851,10 @@ button {
             }
           }
           &.inactive {
-            opacity: 1;
-            transform: translateY(0);
+            @include show;
           }
           &.animate {
-            opacity: 1;
-            transform: translateY(0);
+            @include show;
           }
           &:first-child {
             transition: all 0.3s;

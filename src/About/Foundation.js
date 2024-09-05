@@ -35,13 +35,12 @@ const Foundation = React.forwardRef((props, ref) => {
         <span ref={(el) => (animateRef.current[1] = el)}>{a.sub}</span>
         <p ref={(el) => (animateRef.current[2] = el)}>{a.p}</p>
       </div>
-      <div className={style.imgArea}>
+      <div className={style.imgArea} ref={(el) => (animateRef.current[3] = el)}>
         {a.img.map((i, index) => {
           return (
             <div
               key={index}
               className={style.img}
-              ref={(el) => (animateRef.current[3] = el)}
               style={{
                 backgroundImage: `url(${i.src})`,
               }}

@@ -1,13 +1,10 @@
 @font-face {
   font-family: "Pretendard";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
-  font-weight: normal;
 }
 @font-face {
   font-family: "Pretendard-Light";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
 }
 * {
   box-sizing: border-box;
@@ -117,6 +114,7 @@
 .item .more button:hover {
   background-color: #000;
   color: #fff;
+  transition: all 0.3s;
 }
 
 @media screen and (min-width: 768px) {
@@ -223,6 +221,7 @@
   .item .more button:hover {
     background-color: #000;
     color: #fff;
+    transition: all 0.3s;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -328,6 +327,7 @@
   .item .more button:hover {
     background-color: #000;
     color: #fff;
+    transition: all 0.3s;
   }
 }
 @media screen and (min-width: 1650px) {
@@ -432,6 +432,7 @@
   .item .more button:hover {
     background-color: #000;
     color: #fff;
+    transition: all 0.3s;
   }
 }
 @media (hover: hover) and (pointer: fine) {

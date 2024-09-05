@@ -9,25 +9,6 @@ $indicatorColor: #d8d8d8;
     format("woff");
   font-weight: normal;
 }
-@font-face {
-  font-family: "Pretendard-Bold";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
-    format("woff");
-  font-weight: Bold;
-}
-@font-face {
-  font-family: "Pretendard-SemiBold";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
-    format("woff");
-  font-weight: SemiBold;
-}
-@font-face {
-  font-family: "Pretendard-Light";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
-    format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
 
 body {
   margin: 0;
@@ -43,6 +24,10 @@ li {
   height: 1px;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+@mixin moreHover {
+  background-color: #555;
+  color: $color2;
 }
 
 .program1 {
@@ -70,6 +55,16 @@ li {
   .content {
     width: 81.33%;
     margin: 0 auto;
+    @mixin before {
+      transform: translateY(-30%);
+      opacity: 0;
+    }
+    @mixin after {
+      transform: translateY(0%);
+      opacity: 1;
+      transition: all 0.3s;
+    }
+
     .img {
       background-size: cover;
       width: 100%;
@@ -78,10 +73,10 @@ li {
       text-indent: 100%;
       white-space: nowrap;
       overflow: hidden;
-      opacity: 0;
+      @include before;
       &.animate {
-        opacity: 1;
-        transition: opacity 0.3s;
+        @include after;
+        transition: all 0.3s;
       }
     }
     .text {
@@ -93,12 +88,10 @@ li {
       h3 {
         font-size: 1.5rem;
         font-weight: bold;
-        transform: translateY(-30%);
-        opacity: 0;
+        @include before;
         &.animate {
-          transform: translateY(0%);
-          opacity: 1;
-          transition: all 0.3s;
+          @include after;
+          transition: all 0.45s;
         }
       }
       p {
@@ -107,12 +100,10 @@ li {
         word-break: keep-all;
         margin-top: 12px;
         line-height: 1.5rem;
-        transform: translateY(-30%);
-        opacity: 0;
+        @include before;
         &.animate {
-          transform: translateY(0%);
-          opacity: 1;
-          transition: all 0.4s;
+          @include after;
+          transition: all 0.6s;
         }
       }
       button {
@@ -128,17 +119,13 @@ li {
         align-items: center;
         margin: 0 auto;
         margin-top: 50px;
-        transition: 0.3s;
-        transform: translateY(-30%);
-        opacity: 0;
+        @include before;
         &.animate {
-          transform: translateY(0%);
-          opacity: 1;
-          transition: all 0.5s;
+          @include after;
+          transition: all 0.75s;
         }
         &:hover {
-          background-color: #555;
-          color: $color2;
+          @include moreHover;
         }
       }
     }
@@ -170,6 +157,14 @@ li {
     .content {
       width: 87.5%;
       margin: 0 auto;
+      @mixin before {
+        transform: translateY(-30%);
+        opacity: 0;
+      }
+      @mixin after {
+        transform: translateY(0%);
+        opacity: 1;
+      }
       .img {
         background-size: cover;
         width: 100%;
@@ -178,7 +173,13 @@ li {
         text-indent: 100%;
         white-space: nowrap;
         overflow: hidden;
+        @include before;
+        &.animate {
+          @include after;
+          transition: all 0.3s;
+        }
       }
+
       .text {
         width: 100%;
         margin: 66px auto 90px auto;
@@ -188,6 +189,11 @@ li {
         h3 {
           font-size: 1.875rem;
           font-weight: bold;
+          @include before;
+          &.animate {
+            @include after;
+            transition: all 0.45s;
+          }
         }
         p {
           font-size: 1.5rem;
@@ -195,6 +201,11 @@ li {
           word-break: keep-all;
           margin-top: 10px;
           line-height: 2.3125rem;
+          @include before;
+          &.animate {
+            @include after;
+            transition: all 0.6s;
+          }
         }
         button {
           width: 246px;
@@ -210,9 +221,13 @@ li {
           margin: 0 auto;
           margin-top: 90px;
           transition: 0.3s;
+          @include before;
+          &.animate {
+            @include after;
+            transition: all 0.7s;
+          }
           &:hover {
-            background-color: #555;
-            color: $color2;
+            @include moreHover;
           }
         }
       }
@@ -245,6 +260,14 @@ li {
       width: 100%;
       margin: 0 auto;
       display: flex;
+      @mixin before {
+        transform: translateY(-30%);
+        opacity: 0;
+      }
+      @mixin after {
+        transform: translateY(0%);
+        opacity: 1;
+      }
       .img {
         background-size: cover;
         width: 56.44%;
@@ -253,6 +276,11 @@ li {
         text-indent: 100%;
         white-space: nowrap;
         overflow: hidden;
+        @include before;
+        &.animate {
+          @include after;
+          transition: all 0.3s;
+        }
       }
       .text {
         width: 43.55%;
@@ -268,6 +296,11 @@ li {
         h3 {
           font-size: 1.875rem;
           font-weight: bold;
+          @include before;
+          &.animate {
+            @include after;
+            transition: all 0.3s;
+          }
         }
         p {
           font-size: 1.5rem;
@@ -275,6 +308,11 @@ li {
           word-break: keep-all;
           margin-top: 20px;
           line-height: 2.3125rem;
+          @include before;
+          &.animate {
+            @include after;
+            transition: all 0.45s;
+          }
         }
         button {
           width: 246px;
@@ -289,10 +327,13 @@ li {
           align-items: center;
           margin: 0 auto;
           margin-top: 70px;
-          transition: 0.3s;
+          @include before;
+          &.animate {
+            @include after;
+            transition: all 0.6s;
+          }
           &:hover {
-            background-color: #555;
-            color: $color2;
+            @include moreHover;
           }
         }
       }
@@ -327,7 +368,14 @@ li {
       display: flex;
       gap: 5.2%;
       border-right: 1px solid $lineColor;
-
+      @mixin before {
+        transform: translateY(-30%);
+        opacity: 0;
+      }
+      @mixin after {
+        transform: translateY(0%);
+        opacity: 1;
+      }
       .img {
         background-size: cover;
         width: 56.44%;
@@ -336,6 +384,11 @@ li {
         text-indent: 100%;
         white-space: nowrap;
         overflow: hidden;
+        @include before;
+        &.animate {
+          @include after;
+          transition: all 0.3s;
+        }
       }
       .text {
         height: 700px;
@@ -350,6 +403,11 @@ li {
         h3 {
           font-size: 1.875rem;
           font-weight: bold;
+          @include before;
+          &.animate {
+            @include after;
+            transition: all 0.3s;
+          }
         }
         p {
           font-size: 1.5rem;
@@ -357,6 +415,11 @@ li {
           word-break: keep-all;
           margin-top: 24px;
           line-height: 2.3125rem;
+          @include before;
+          &.animate {
+            @include after;
+            transition: all 0.45s;
+          }
         }
         button {
           width: 246px;
@@ -371,10 +434,13 @@ li {
           align-items: center;
           margin: 0 auto;
           margin-top: 70px;
-          transition: 0.3s;
+          @include before;
+          &.animate {
+            @include after;
+            transition: all 0.6s;
+          }
           &:hover {
-            background-color: #555;
-            color: $color2;
+            @include morehover;
           }
         }
       }
