@@ -7,26 +7,34 @@ $lineColor: #e4e4e4;
   font-family: "Pretendard";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
     format("woff");
-  font-weight: normal;
 }
 @font-face {
   font-family: "Pretendard-Bold";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
     format("woff");
-  font-weight: Bold;
 }
 @font-face {
   font-family: "Pretendard-SemiBold";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
     format("woff");
-  font-weight: SemiBold;
 }
-@font-face {
-  font-family: "Pretendard-Light";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
-    format("woff");
-  font-weight: 300;
-  font-style: normal;
+
+@mixin pbefore {
+  transform: scaleX(0.8);
+  opacity: 0;
+}
+@mixin pafter {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+@mixin before {
+  transform: translateY(-10%);
+  opacity: 0;
+}
+@mixin after {
+  transform: translateY(0%);
+  opacity: 1;
 }
 
 * {
@@ -49,11 +57,9 @@ button {
     background-image: url("../../public/img/shop-main-mb.png");
     background-size: cover;
     background-position: center;
-    transform: scaleX(0.8);
-    opacity: 0;
+    @include pbefore;
     &.animate {
-      transform: scaleX(1);
-      opacity: 1;
+      @include pafter;
       transition: all 0.3s;
     }
   }
@@ -80,11 +86,9 @@ button {
           flex-direction: column;
           align-items: flex-start;
           margin: 0 0 50px 0;
-          transform: translateY(-10%);
-          opacity: 0;
+          @include before;
           &.animate {
-            transform: translateY(0%);
-            opacity: 1;
+            @include after;
             transition: all 0.4s;
           }
           & > * {
@@ -142,25 +146,15 @@ button {
           width: 100%;
           height: 210px;
           position: relative;
-          opacity: 0;
-          transform: translateY(-10%);
+          @include before;
           &.animate {
-            transform: translateY(0%);
-            opacity: 1;
+            @include after;
             transition: all 0.3s;
           }
           &:hover {
             .btnArea {
               opacity: 1;
               transition: all 0.3s;
-              .btn {
-                &:first-child {
-                  transform: translate(0, -50%);
-                }
-                &:last-child {
-                  transform: translate(0, -50%);
-                }
-              }
             }
           }
           .btnArea {
@@ -172,6 +166,7 @@ button {
             display: flex;
             justify-content: space-between;
             top: 50%;
+            transform: translateY(-50%);
             .btn {
               cursor: pointer;
               width: 46px;
@@ -180,21 +175,16 @@ button {
               display: flex;
               justify-content: center;
               align-items: center;
-
-              &:hover {
-                opacity: 50%;
-                transition: all 0.3s;
-              }
               &:first-child {
                 button {
                   transform: rotateY(180deg);
                 }
               }
-
-              &:last-child {
-                transform: translate(20%, -50%);
-                right: 0;
+              &:hover {
+                opacity: 50%;
+                transition: all 0.3s;
               }
+
               button {
                 display: inline-block;
                 width: 20px;
@@ -272,11 +262,9 @@ button {
       background-image: url("../../public/img/shop-main-mb.png");
       background-size: cover;
       background-position: center;
-      transform: scaleX(0.8);
-      opacity: 0;
+      @include pbefore;
       &.animate {
-        transform: scaleX(1);
-        opacity: 1;
+        @include pafter;
         transition: all 0.3s;
       }
     }
@@ -304,12 +292,10 @@ button {
             flex-direction: column;
             align-items: flex-start;
             margin: 0 auto 50px auto;
-            transform: translateY(-10%);
-            opacity: 0;
+            @include before;
             &.animate {
-              transform: translateY(0%);
-              opacity: 1;
-              transition: all 0.4s;
+              @include after;
+              transition: all 0.45s;
             }
             & > * {
               margin: 0;
@@ -366,25 +352,15 @@ button {
             width: 100%;
             height: 400px;
             position: relative;
-            opacity: 0;
-            transform: translateY(-10%);
+            @include before;
             &.animate {
-              transform: translateY(0%);
-              opacity: 1;
+              @include after;
               transition: all 0.3s;
             }
             &:hover {
               .btnArea {
                 opacity: 1;
                 transition: all 0.3s;
-                .btn {
-                  &:first-child {
-                    transform: translate(0, -50%);
-                  }
-                  &:last-child {
-                    transform: translate(0, -50%);
-                  }
-                }
               }
             }
             .btnArea {
@@ -396,6 +372,7 @@ button {
               display: flex;
               justify-content: space-between;
               top: 50%;
+              transform: translateY(-50%);
               .btn {
                 cursor: pointer;
                 width: 63px;
@@ -404,21 +381,16 @@ button {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-
-                &:hover {
-                  opacity: 50%;
-                  transition: all 0.3s;
-                }
                 &:first-child {
                   button {
                     transform: rotateY(180deg);
                   }
                 }
-
-                &:last-child {
-                  transform: translate(20%, -50%);
-                  right: 0;
+                &:hover {
+                  opacity: 50%;
+                  transition: all 0.3s;
                 }
+
                 button {
                   display: inline-block;
                   width: 20px;
@@ -497,11 +469,9 @@ button {
       background-image: url("../../public/img/shop-main-mb.png");
       background-size: cover;
       background-position: center;
-      transform: scaleX(0.8);
-      opacity: 0;
+      @include pbefore;
       &.animate {
-        transform: scaleX(1);
-        opacity: 1;
+        @include pafter;
         transition: all 0.3s;
       }
     }
@@ -512,17 +482,30 @@ button {
       display: flex;
       flex-direction: column;
       gap: 100px;
+      overflow: hidden;
       .item {
         width: 100%;
         border-top: 1px solid $lineColor;
         border-bottom: 1px solid $lineColor;
+        &:first-child {
+          .inner {
+            .text {
+              transform: translateX(50%);
+            }
+            .imgArea {
+              transform: translateX(-50%);
+            }
+          }
+        }
         &:last-child {
           .inner {
             .text {
               order: 1;
+              transform: translateX(-50%);
             }
             .imgArea {
               order: 2;
+              transform: translateX(50%);
             }
           }
         }
@@ -540,12 +523,11 @@ button {
             flex-direction: column;
             align-items: flex-start;
             margin: 0 auto;
-            transform: translateY(-10%);
             opacity: 0;
             &.animate {
-              transform: translateY(0%);
               opacity: 1;
-              transition: all 0.4s;
+              transform: translateX(0);
+              transition: all 0.3s;
             }
             & > * {
               margin: 0;
@@ -603,9 +585,9 @@ button {
             height: 550px;
             position: relative;
             opacity: 0;
-            transform: translateY(-10%);
+
             &.animate {
-              transform: translateY(0%);
+              transform: translateX(0%);
               opacity: 1;
               transition: all 0.3s;
             }
@@ -613,14 +595,6 @@ button {
               .btnArea {
                 opacity: 1;
                 transition: all 0.3s;
-                .btn {
-                  &:first-child {
-                    transform: translate(0, -50%);
-                  }
-                  &:last-child {
-                    transform: translate(0, -50%);
-                  }
-                }
               }
             }
             .btnArea {
@@ -649,11 +623,6 @@ button {
                   button {
                     transform: rotateY(180deg);
                   }
-                }
-
-                &:last-child {
-                  transform: translate(20%, -50%);
-                  right: 0;
                 }
                 button {
                   display: inline-block;
@@ -733,11 +702,9 @@ button {
       background-image: url("../../public/img/shop-main-mb.png");
       background-size: cover;
       background-position: center;
-      transform: scaleX(0.8);
-      opacity: 0;
+      @include pbefore;
       &.animate {
-        transform: scaleX(1);
-        opacity: 1;
+        @include pafter;
         transition: all 0.3s;
       }
     }
@@ -757,9 +724,11 @@ button {
             .text {
               order: 1;
               margin: 0 0 0 80px;
+              transform: translateX(-50%);
             }
             .imgArea {
               order: 2;
+              transform: translateX(50%);
             }
           }
         }
@@ -767,6 +736,10 @@ button {
           .inner {
             .text {
               margin: 0 80px 0 0;
+              transform: translateX(50%);
+            }
+            .imgArea {
+              transform: translateX(-50%);
             }
           }
         }
@@ -785,12 +758,11 @@ button {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            transform: translateY(-10%);
             opacity: 0;
             &.animate {
-              transform: translateY(0%);
+              transform: translateX(0%);
               opacity: 1;
-              transition: all 0.4s;
+              transition: all 0.3s;
             }
             & > * {
               margin: 0;
@@ -848,9 +820,8 @@ button {
             height: 550px;
             position: relative;
             opacity: 0;
-            transform: translateY(-10%);
             &.animate {
-              transform: translateY(0%);
+              transform: translateX(0%);
               opacity: 1;
               transition: all 0.3s;
             }
@@ -858,14 +829,6 @@ button {
               .btnArea {
                 opacity: 1;
                 transition: all 0.3s;
-                .btn {
-                  &:first-child {
-                    transform: translate(0, -50%);
-                  }
-                  &:last-child {
-                    transform: translate(0, -50%);
-                  }
-                }
               }
             }
             .btnArea {
@@ -877,6 +840,7 @@ button {
               display: flex;
               justify-content: space-between;
               top: 50%;
+              transform: translateY(-50%);
               .btn {
                 cursor: pointer;
                 width: 111px;
@@ -896,10 +860,6 @@ button {
                   }
                 }
 
-                &:last-child {
-                  transform: translate(20%, -50%);
-                  right: 0;
-                }
                 button {
                   display: inline-block;
                   width: 23px;

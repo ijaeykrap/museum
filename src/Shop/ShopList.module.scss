@@ -10,18 +10,29 @@ $lineColor: #e4e4e4;
   font-family: "Pretendard";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
     format("woff");
-  font-weight: normal;
 }
 @font-face {
   font-family: "Pretendard-Light";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
     format("woff");
-  font-weight: 300;
-  font-style: normal;
 }
 
 * {
   box-sizing: border-box;
+}
+@mixin moreHover {
+  background-color: $color3;
+  color: $color4;
+  transition: all 0.3s;
+}
+
+@mixin img {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .item {
   margin-top: 150px;
@@ -53,12 +64,7 @@ $lineColor: #e4e4e4;
       .img {
         width: 100%;
         height: 204px;
-        background-size: auto 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        text-indent: 100%;
-        white-space: nowrap;
-        overflow: hidden;
+        @include img;
       }
       .text {
         display: flex;
@@ -127,8 +133,7 @@ $lineColor: #e4e4e4;
       background-color: transparent;
       cursor: pointer;
       &:hover {
-        background-color: $color3;
-        color: $color4;
+        @include moreHover;
       }
     }
   }
@@ -164,12 +169,7 @@ $lineColor: #e4e4e4;
         .img {
           width: 100%;
           height: 324px;
-          background-size: auto 100%;
-          background-position: center;
-          background-repeat: no-repeat;
-          text-indent: 100%;
-          white-space: nowrap;
-          overflow: hidden;
+          @include img;
         }
         .text {
           display: flex;
@@ -237,8 +237,7 @@ $lineColor: #e4e4e4;
         text-align: center;
         cursor: pointer;
         &:hover {
-          background-color: $color3;
-          color: $color4;
+          @include moreHover;
         }
       }
     }
@@ -275,12 +274,7 @@ $lineColor: #e4e4e4;
         .img {
           width: 100%;
           height: 440px;
-          background-size: auto 100%;
-          background-position: center;
-          background-repeat: no-repeat;
-          text-indent: 100%;
-          white-space: nowrap;
-          overflow: hidden;
+          @include img;
         }
         .text {
           display: flex;
@@ -347,8 +341,7 @@ $lineColor: #e4e4e4;
         text-align: center;
         cursor: pointer;
         &:hover {
-          background-color: $color3;
-          color: $color4;
+          @include moreHover;
         }
       }
     }
@@ -385,12 +378,7 @@ $lineColor: #e4e4e4;
         .img {
           width: 100%;
           height: 516px;
-          background-size: auto 100%;
-          background-position: center;
-          background-repeat: no-repeat;
-          text-indent: 100%;
-          white-space: nowrap;
-          overflow: hidden;
+          @include img;
         }
         .text {
           display: flex;
@@ -457,8 +445,7 @@ $lineColor: #e4e4e4;
         text-align: center;
         cursor: pointer;
         &:hover {
-          background-color: $color3;
-          color: $color4;
+          @include moreHover;
         }
       }
     }

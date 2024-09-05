@@ -1,12 +1,4 @@
 @font-face {
-  font-family: "NanumSquareBold";
-  src: url("../../public/font/NanumSquareB.ttf") format("ttf");
-}
-@font-face {
-  font-family: "NanumSquareRegular";
-  src: url("../../public/font/NanumSquareR.ttf") format("ttf");
-}
-@font-face {
   font-family: "Pretendard-SemiBold";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff") format("woff");
 }
@@ -18,10 +10,6 @@
   font-family: "Pretendard";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
 }
-* {
-  font-family: "Pretendard";
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -81,15 +69,28 @@ li {
   transform: translateX(-50%);
   opacity: 0%;
 }
+.exhibition .list .item:first-child .text {
+  transform: translateX(50%);
+  opacity: 0%;
+}
 .exhibition .list .item:last-child .img {
   background-image: url("../../public/img/main-exhibit-pc-02.png");
   transform: translateX(50%);
+  opacity: 0%;
+}
+.exhibition .list .item:last-child .text {
+  transform: translateX(-50%);
   opacity: 0%;
 }
 .exhibition .list .item.animate .img {
   transform: translateX(0%);
   opacity: 1;
   transition: all 0.3s;
+}
+.exhibition .list .item.animate .text {
+  transform: translateX(0%);
+  opacity: 1;
+  transition: all 0.45s;
 }
 .exhibition .list .item .text {
   width: 81.33%;
@@ -213,9 +214,27 @@ li {
   }
   .exhibition .list .item:first-child .img {
     background-image: url("../../public/img/main-exhibit-pc-01.jpg");
+    transform: translateX(-50%);
+  }
+  .exhibition .list .item:first-child .text {
+    transform: translateX(50%);
   }
   .exhibition .list .item:last-child .img {
     background-image: url("../../public/img/main-exhibit-pc-02.png");
+    transform: translateX(50%);
+  }
+  .exhibition .list .item:last-child .text {
+    transform: translateX(-50%);
+  }
+  .exhibition .list .item.animate .img {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .exhibition .list .item.animate .text {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 0.3s;
   }
   .exhibition .list .item .img {
     height: 436px;
@@ -225,8 +244,10 @@ li {
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
+    opacity: 0;
   }
   .exhibition .list .item .text {
+    opacity: 0;
     border-left: 1px solid #e4e4e4;
     border-right: 1px solid #e4e4e4;
     width: 87.5%;
@@ -303,7 +324,7 @@ li {
     top: 50%;
     left: 105%;
     transform: translateY(-50%);
-    transition: 0.3s;
+    transition: all 0.3s;
   }
   .exhibition .more a:hover::after {
     left: 115%;
@@ -336,6 +357,7 @@ li {
     background-image: url("../../public/img/main-exhibit-1024-01.jpg");
     width: 48.82%;
     float: left;
+    transform: translateX(-50%);
   }
   .exhibition .list .item:first-child .text {
     border-right: 1px solid #e4e4e4;
@@ -344,6 +366,7 @@ li {
     margin-right: 5.46%;
     padding-right: 5.27%;
     align-items: flex-end;
+    transform: translateX(50%);
   }
   .exhibition .list .item:first-child .text h3 {
     text-align: right;
@@ -352,6 +375,7 @@ li {
     background-image: url("../../public/img/main-exhibit-1024-02.png");
     width: 51.17%;
     float: right;
+    transform: translateX(50%);
   }
   .exhibition .list .item:last-child .text {
     border-left: 1px solid #e4e4e4;
@@ -360,11 +384,23 @@ li {
     margin-left: 5.46%;
     align-items: flex-start;
     padding-left: 5.27%;
+    transform: translateX(-50%);
   }
   .exhibition .list .item:last-child .text h3 {
     text-align: left;
   }
+  .exhibition .list .item.animate .img {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .exhibition .list .item.animate .text {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 0.3s;
+  }
   .exhibition .list .item .img {
+    opacity: 0;
     height: 436px;
     background-position: center;
     background-size: cover;
@@ -373,6 +409,7 @@ li {
     overflow: hidden;
   }
   .exhibition .list .item .text {
+    opacity: 0;
     height: 436px;
     margin: 0 auto;
     display: flex;
@@ -446,7 +483,7 @@ li {
     top: 50%;
     left: 105%;
     transform: translateY(-50%);
-    transition: 0.3s;
+    transition: all 0.3s;
   }
   .exhibition .more a:hover::after {
     left: 115%;
@@ -482,6 +519,7 @@ li {
     background-image: url("../../public/img/main-exhibit-pc-01.jpg");
     width: 49.37%;
     float: left;
+    transform: translateX(-50%);
   }
   .exhibition .list .item:first-child .text {
     border-right: 1px solid #e4e4e4;
@@ -490,6 +528,7 @@ li {
     margin-right: auto;
     padding-right: 134px;
     align-items: flex-end;
+    transform: translateX(50%);
   }
   .exhibition .list .item:first-child .text h3 {
     text-align: right;
@@ -498,6 +537,7 @@ li {
     background-image: url("../../public/img/main-exhibit-pc-02.png");
     width: 50.62%;
     float: right;
+    transform: translateX(50%);
   }
   .exhibition .list .item:last-child .text {
     border-left: 1px solid #e4e4e4;
@@ -506,9 +546,20 @@ li {
     margin-left: auto;
     align-items: flex-start;
     padding-left: 134px;
+    transform: translateX(-50%);
   }
   .exhibition .list .item:last-child .text h3 {
     text-align: left;
+  }
+  .exhibition .list .item.animate .img {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .exhibition .list .item.animate .text {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 0.3s;
   }
   .exhibition .list .item .img {
     height: 436px;
@@ -517,12 +568,14 @@ li {
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
+    opacity: 0;
   }
   .exhibition .list .item .text {
     height: 436px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    opacity: 0;
   }
   .exhibition .list .item .text > * {
     display: block;
@@ -591,7 +644,7 @@ li {
     top: 50%;
     left: 105%;
     transform: translateY(-50%);
-    transition: 0.3s;
+    transition: all 0.3s;
   }
   .exhibition .more a:hover::after {
     left: 115%;

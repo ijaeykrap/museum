@@ -9,30 +9,19 @@ $lineColor: #e4e4e4;
     format("woff");
   font-weight: normal;
 }
-@font-face {
-  font-family: "Pretendard-Bold";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
-    format("woff");
-  font-weight: Bold;
-}
-@font-face {
-  font-family: "Pretendard-SemiBold";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
-    format("woff");
-  font-weight: SemiBold;
-}
+
 @font-face {
   font-family: "Pretendard-Light";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
     format("woff");
-  font-weight: 300;
-  font-style: normal;
 }
 * {
   box-sizing: border-box;
-  font-family: "Pretendard";
 }
-
+@mixin animate {
+  transform: translateY(0%);
+  opacity: 1;
+}
 .item {
   border-top: 1px solid $lineColor;
   border-bottom: 1px solid $lineColor;
@@ -42,6 +31,12 @@ $lineColor: #e4e4e4;
   .imgArea {
     width: 100%;
     height: 317px;
+    transform: translateY(-15%);
+    opacity: 0;
+    &.animate {
+      @include animate;
+      transition: all 0.3s;
+    }
     .img {
       width: 100%;
       height: 100%;
@@ -51,11 +46,6 @@ $lineColor: #e4e4e4;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      opacity: 0;
-      &.animate {
-        opacity: 1;
-        transition: opacity 0.3s;
-      }
     }
   }
   .text {
@@ -74,8 +64,7 @@ $lineColor: #e4e4e4;
       transform: translateY(-20%);
       opacity: 0;
       &.animate {
-        transform: translateY(0%);
-        opacity: 1;
+        @include animate;
         transition: all 0.3s;
       }
     }
@@ -87,8 +76,7 @@ $lineColor: #e4e4e4;
       transform: translateY(-20%);
       opacity: 0;
       &.animate {
-        transform: translateY(0%);
-        opacity: 1;
+        @include animate;
         transition: all 0.4s;
       }
     }
@@ -101,8 +89,7 @@ $lineColor: #e4e4e4;
       transform: translateY(-20%);
       opacity: 0;
       &.animate {
-        transform: translateY(0%);
-        opacity: 1;
+        @include animate;
         transition: all 0.5s;
       }
     }
@@ -119,6 +106,12 @@ $lineColor: #e4e4e4;
     .imgArea {
       width: 100%;
       height: 479px;
+      transform: translateY(-15%);
+      opacity: 0;
+      &.animate {
+        @include animate;
+        transition: all 0.3s;
+      }
       .img {
         width: 100%;
         height: 100%;
@@ -128,11 +121,6 @@ $lineColor: #e4e4e4;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        opacity: 0;
-        &.animate {
-          opacity: 1;
-          transition: opacity 0.3s;
-        }
       }
     }
     .text {
@@ -153,8 +141,7 @@ $lineColor: #e4e4e4;
         transform: translateY(-20%);
         opacity: 0;
         &.animate {
-          transform: translateY(0%);
-          opacity: 1;
+          @include animate;
           transition: all 0.3s;
         }
       }
@@ -165,8 +152,7 @@ $lineColor: #e4e4e4;
         transform: translateY(-20%);
         opacity: 0;
         &.animate {
-          transform: translateY(0%);
-          opacity: 1;
+          @include animate;
           transition: all 0.4s;
         }
       }
@@ -180,8 +166,7 @@ $lineColor: #e4e4e4;
         transform: translateY(-20%);
         opacity: 0;
         &.animate {
-          transform: translateY(0%);
-          opacity: 1;
+          @include animate;
           transition: all 0.5s;
         }
       }
@@ -198,6 +183,12 @@ $lineColor: #e4e4e4;
     .imgArea {
       width: 100%;
       height: 717px;
+      transform: translateY(-15%);
+      opacity: 0;
+      &.animate {
+        @include animate;
+        transition: all 0.3s;
+      }
       .img {
         width: 100%;
         height: 100%;
@@ -207,11 +198,6 @@ $lineColor: #e4e4e4;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        opacity: 0;
-        &.animate {
-          opacity: 1;
-          transition: opacity 0.3s;
-        }
       }
     }
 
@@ -233,8 +219,7 @@ $lineColor: #e4e4e4;
         transform: translateY(-20%);
         opacity: 0;
         &.animate {
-          transform: translateY(0%);
-          opacity: 1;
+          @include animate;
           transition: all 0.3s;
         }
       }
@@ -245,8 +230,7 @@ $lineColor: #e4e4e4;
         transform: translateY(-20%);
         opacity: 0;
         &.animate {
-          transform: translateY(0%);
-          opacity: 1;
+          @include animate;
           transition: all 0.4s;
         }
       }
@@ -260,8 +244,7 @@ $lineColor: #e4e4e4;
         transform: translateY(-20%);
         opacity: 0;
         &.animate {
-          transform: translateY(0%);
-          opacity: 1;
+          @include animate;
           transition: all 0.5s;
         }
       }
@@ -279,6 +262,12 @@ $lineColor: #e4e4e4;
     .imgArea {
       width: 100%;
       height: 717px;
+      opacity: 0;
+      transform: translateY(-15%);
+      &.animate {
+        @include animate;
+        transition: all 0.3s;
+      }
       .img {
         width: 100%;
         height: 100%;
@@ -288,11 +277,6 @@ $lineColor: #e4e4e4;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        opacity: 0;
-        &.animate {
-          opacity: 1;
-          transition: opacity 0.3s;
-        }
       }
     }
     .text {
@@ -313,8 +297,7 @@ $lineColor: #e4e4e4;
         transform: translateY(-20%);
         opacity: 0;
         &.animate {
-          transform: translateY(0%);
-          opacity: 1;
+          @include animate;
           transition: all 0.3s;
         }
       }
@@ -325,8 +308,7 @@ $lineColor: #e4e4e4;
         transform: translateY(-20%);
         opacity: 0;
         &.animate {
-          transform: translateY(0%);
-          opacity: 1;
+          @include animate;
           transition: all 0.4s;
         }
       }
@@ -340,8 +322,7 @@ $lineColor: #e4e4e4;
         transform: translateY(-20%);
         opacity: 0;
         &.animate {
-          transform: translateY(0%);
-          opacity: 1;
+          @include animate;
           transition: all 0.5s;
         }
       }

@@ -4,24 +4,11 @@
   font-weight: normal;
 }
 @font-face {
-  font-family: "Pretendard-Bold";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff") format("woff");
-  font-weight: Bold;
-}
-@font-face {
-  font-family: "Pretendard-SemiBold";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff") format("woff");
-  font-weight: SemiBold;
-}
-@font-face {
   font-family: "Pretendard-Light";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
 }
 * {
   box-sizing: border-box;
-  font-family: "Pretendard";
 }
 
 .item {
@@ -34,6 +21,13 @@
 .item .imgArea {
   width: 100%;
   height: 317px;
+  transform: translateY(-15%);
+  opacity: 0;
+}
+.item .imgArea.animate {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: all 0.3s;
 }
 .item .imgArea .img {
   width: 100%;
@@ -44,11 +38,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0;
-}
-.item .imgArea .img.animate {
-  opacity: 1;
-  transition: opacity 0.3s;
 }
 .item .text {
   width: 81.33%;
@@ -111,6 +100,13 @@
   .item .imgArea {
     width: 100%;
     height: 479px;
+    transform: translateY(-15%);
+    opacity: 0;
+  }
+  .item .imgArea.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.3s;
   }
   .item .imgArea .img {
     width: 100%;
@@ -121,11 +117,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0;
-  }
-  .item .imgArea .img.animate {
-    opacity: 1;
-    transition: opacity 0.3s;
   }
   .item .text {
     width: 87.5%;
@@ -190,6 +181,13 @@
   .item .imgArea {
     width: 100%;
     height: 717px;
+    transform: translateY(-15%);
+    opacity: 0;
+  }
+  .item .imgArea.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.3s;
   }
   .item .imgArea .img {
     width: 100%;
@@ -200,11 +198,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0;
-  }
-  .item .imgArea .img.animate {
-    opacity: 1;
-    transition: opacity 0.3s;
   }
   .item .text {
     border-left: 1px solid #e4e4e4;
@@ -270,6 +263,13 @@
   .item .imgArea {
     width: 100%;
     height: 717px;
+    opacity: 0;
+    transform: translateY(-15%);
+  }
+  .item .imgArea.animate {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.3s;
   }
   .item .imgArea .img {
     width: 100%;
@@ -280,11 +280,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0;
-  }
-  .item .imgArea .img.animate {
-    opacity: 1;
-    transition: opacity 0.3s;
   }
   .item .text {
     border-left: 1px solid #e4e4e4;

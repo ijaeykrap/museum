@@ -51,6 +51,11 @@ $indicatorColor: #d8d8d8;
     overflow: hidden;
   }
 }
+@mixin moreHover {
+  background-color: $color1;
+  color: $color2;
+  transition: 0.3s;
+}
 
 .membership {
   margin-bottom: 150px;
@@ -125,10 +130,10 @@ $indicatorColor: #d8d8d8;
             transition: all 0.3s;
           }
           &:nth-child(2) {
-            transition: all 0.35s;
+            transition: all 0.45s;
           }
           &:nth-child(3) {
-            transition: all 0.4s;
+            transition: all 0.6s;
           }
         }
 
@@ -174,10 +179,9 @@ $indicatorColor: #d8d8d8;
       font-family: "Pretendard-Light";
       text-align: center;
       line-height: 45px;
-      transition: 0.3s;
+
       &:hover {
-        background-color: $color1;
-        color: $color2;
+        @include moreHover;
       }
     }
   }
@@ -197,7 +201,13 @@ $indicatorColor: #d8d8d8;
           text-indent: 100%;
           white-space: nowrap;
           overflow: hidden;
+          opacity: 0;
+          &.animate {
+            opacity: 1;
+            transition: all 0.3s;
+          }
         }
+
         .imgDarker {
           width: 100%;
           height: 391px;
@@ -205,6 +215,11 @@ $indicatorColor: #d8d8d8;
           position: absolute;
           top: 0;
           left: 0;
+          opacity: 0;
+          &.animate {
+            opacity: 1;
+            transition: all 0.3s;
+          }
         }
         h2 {
           font-family: "NanumSquare";
@@ -218,8 +233,14 @@ $indicatorColor: #d8d8d8;
           position: absolute;
           top: 50%;
           left: 50%;
-          transform: translate(-50%, -50%);
           margin: 0;
+          transform: translate(-50%, 80%);
+          opacity: 0;
+          &.animte {
+            transform: translate(-50%, -50%);
+            opacity: 1;
+            transition: all 0.3s;
+          }
         }
       }
       .list {
@@ -232,6 +253,21 @@ $indicatorColor: #d8d8d8;
           height: 173px;
           display: flex;
           flex-direction: row;
+          transform: translateY(-10%);
+          opacity: 0;
+          &.animate {
+            opacity: 1;
+            transform: translateY(0%);
+            &:nth-child(1) {
+              transition: all 0.3s;
+            }
+            &:nth-child(2) {
+              transition: all 0.45s;
+            }
+            &:nth-child(3) {
+              transition: all 0.6s;
+            }
+          }
           .itemInner {
             width: 87.5%;
             height: 100%;
@@ -284,10 +320,8 @@ $indicatorColor: #d8d8d8;
         font-family: "Pretendard-SemiBold";
         text-align: center;
         line-height: 80px;
-        transition: 0.3s;
         &:hover {
-          background-color: $color1;
-          color: $color2;
+          @include moreHover;
         }
       }
     }
@@ -309,6 +343,11 @@ $indicatorColor: #d8d8d8;
           text-indent: 100%;
           white-space: nowrap;
           overflow: hidden;
+          opacity: 0;
+          &.animate {
+            opacity: 1;
+            transition: all 0.3s;
+          }
         }
         .imgDarker {
           width: 100%;
@@ -317,6 +356,11 @@ $indicatorColor: #d8d8d8;
           position: absolute;
           top: 0;
           left: 0;
+          opacity: 0;
+          &.animate {
+            opacity: 1;
+            transition: all 0.3s;
+          }
         }
         h2 {
           font-family: "NanumSquare";
@@ -330,7 +374,7 @@ $indicatorColor: #d8d8d8;
           position: absolute;
           top: 10px;
           left: 50%;
-          transform: translate(-50%, -50%);
+          top: 150px;
           opacity: 0;
           margin: 0;
           &.animate {
@@ -371,10 +415,10 @@ $indicatorColor: #d8d8d8;
               transition: all 0.3s;
             }
             &.animate:nth-child(2) {
-              transition: all 0.4s;
+              transition: all 0.45s;
             }
             &.animate:last-child {
-              transition: all 0.5s;
+              transition: all 0.6s;
             }
           }
           .itemInner {
@@ -430,10 +474,8 @@ $indicatorColor: #d8d8d8;
         font-family: "Pretendard-SemiBold";
         text-align: center;
         line-height: 80px;
-        transition: 0.3s;
         &:hover {
-          background-color: $color1;
-          color: $color2;
+          @include moreHover;
         }
       }
     }
@@ -457,6 +499,11 @@ $indicatorColor: #d8d8d8;
           text-indent: 100%;
           white-space: nowrap;
           overflow: hidden;
+          opacity: 0;
+          &.animate {
+            opacity: 1;
+            transition: all 0.3s;
+          }
         }
         .imgDarker {
           width: 100%;
@@ -465,6 +512,11 @@ $indicatorColor: #d8d8d8;
           position: absolute;
           top: 0;
           left: 0;
+          opacity: 0;
+          &.animate {
+            opacity: 1;
+            transition: all 0.3s;
+          }
         }
         h2 {
           font-family: "NanumSquare";
@@ -476,10 +528,15 @@ $indicatorColor: #d8d8d8;
           font-weight: 200;
           color: $color2;
           position: absolute;
-          top: 100px;
+          top: 150px;
           left: 50%;
-          transform: translate(-50%, -50%);
+          transform: translateX(-50%);
           margin: 0;
+          &.animate {
+            top: 100px;
+            opacity: 1;
+            transition: all 0.3s;
+          }
         }
       }
       .list {
@@ -498,6 +555,25 @@ $indicatorColor: #d8d8d8;
           border-top: none;
           height: 204px;
           color: $color2;
+          transform: translate(-10%, 0);
+          opacity: 0;
+          &.animate {
+            transform: translateX(0%);
+            opacity: 1;
+            .numBox {
+              border-right: none;
+              border-left: none;
+            }
+            &:first-child {
+              transition: all 0.3s;
+            }
+            &.animate:nth-child(2) {
+              transition: all 0.45s;
+            }
+            &.animate:last-child {
+              transition: all 0.6s;
+            }
+          }
           .itemInner {
             height: 100%;
             margin: 0 auto;
@@ -552,8 +628,7 @@ $indicatorColor: #d8d8d8;
           line-height: 80px;
           transition: 0.3s;
           &:hover {
-            background-color: $color1;
-            color: $color2;
+            @include moreHover;
           }
         }
       }

@@ -118,10 +118,10 @@
   transition: all 0.3s;
 }
 .membership .membershipInner .list li.animate:nth-child(2) {
-  transition: all 0.35s;
+  transition: all 0.45s;
 }
 .membership .membershipInner .list li.animate:nth-child(3) {
-  transition: all 0.4s;
+  transition: all 0.6s;
 }
 .membership .membershipInner .list li .itemInner {
   width: 81.33%;
@@ -159,11 +159,11 @@
   font-family: "Pretendard-Light";
   text-align: center;
   line-height: 45px;
-  transition: 0.3s;
 }
 .membership .more button:hover {
   background-color: #000;
   color: #fff;
+  transition: 0.3s;
 }
 
 @media screen and (min-width: 768px) {
@@ -181,6 +181,11 @@
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
+    opacity: 0;
+  }
+  .membership .membershipInner .banner .img.animate {
+    opacity: 1;
+    transition: all 0.3s;
   }
   .membership .membershipInner .banner .imgDarker {
     width: 100%;
@@ -189,6 +194,11 @@
     position: absolute;
     top: 0;
     left: 0;
+    opacity: 0;
+  }
+  .membership .membershipInner .banner .imgDarker.animate {
+    opacity: 1;
+    transition: all 0.3s;
   }
   .membership .membershipInner .banner h2 {
     font-family: "NanumSquare";
@@ -202,8 +212,14 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     margin: 0;
+    transform: translate(-50%, 80%);
+    opacity: 0;
+  }
+  .membership .membershipInner .banner h2.animte {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: all 0.3s;
   }
   .membership .membershipInner .list {
     margin: 50px 0 50px 0;
@@ -215,6 +231,21 @@
     height: 173px;
     display: flex;
     flex-direction: row;
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  .membership .membershipInner .list li.animate {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  .membership .membershipInner .list li.animate:nth-child(1) {
+    transition: all 0.3s;
+  }
+  .membership .membershipInner .list li.animate:nth-child(2) {
+    transition: all 0.45s;
+  }
+  .membership .membershipInner .list li.animate:nth-child(3) {
+    transition: all 0.6s;
   }
   .membership .membershipInner .list li .itemInner {
     width: 87.5%;
@@ -263,11 +294,11 @@
     font-family: "Pretendard-SemiBold";
     text-align: center;
     line-height: 80px;
-    transition: 0.3s;
   }
   .membership .more button:hover {
     background-color: #000;
     color: #fff;
+    transition: 0.3s;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -286,6 +317,11 @@
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
+    opacity: 0;
+  }
+  .membership .membershipInner .banner .img.animate {
+    opacity: 1;
+    transition: all 0.3s;
   }
   .membership .membershipInner .banner .imgDarker {
     width: 100%;
@@ -294,6 +330,11 @@
     position: absolute;
     top: 0;
     left: 0;
+    opacity: 0;
+  }
+  .membership .membershipInner .banner .imgDarker.animate {
+    opacity: 1;
+    transition: all 0.3s;
   }
   .membership .membershipInner .banner h2 {
     font-family: "NanumSquare";
@@ -307,7 +348,7 @@
     position: absolute;
     top: 10px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    top: 150px;
     opacity: 0;
     margin: 0;
   }
@@ -349,10 +390,10 @@
     transition: all 0.3s;
   }
   .membership .membershipInner .list li.animate.animate:nth-child(2) {
-    transition: all 0.4s;
+    transition: all 0.45s;
   }
   .membership .membershipInner .list li.animate.animate:last-child {
-    transition: all 0.5s;
+    transition: all 0.6s;
   }
   .membership .membershipInner .list li .itemInner {
     height: 100%;
@@ -402,11 +443,11 @@
     font-family: "Pretendard-SemiBold";
     text-align: center;
     line-height: 80px;
-    transition: 0.3s;
   }
   .membership .more button:hover {
     background-color: #000;
     color: #fff;
+    transition: 0.3s;
   }
 }
 @media screen and (min-width: 1650px) {
@@ -429,6 +470,11 @@
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
+    opacity: 0;
+  }
+  .membership .membershipInner .banner .img.animate {
+    opacity: 1;
+    transition: all 0.3s;
   }
   .membership .membershipInner .banner .imgDarker {
     width: 100%;
@@ -437,6 +483,11 @@
     position: absolute;
     top: 0;
     left: 0;
+    opacity: 0;
+  }
+  .membership .membershipInner .banner .imgDarker.animate {
+    opacity: 1;
+    transition: all 0.3s;
   }
   .membership .membershipInner .banner h2 {
     font-family: "NanumSquare";
@@ -448,10 +499,15 @@
     font-weight: 200;
     color: #fff;
     position: absolute;
-    top: 100px;
+    top: 150px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     margin: 0;
+  }
+  .membership .membershipInner .banner h2.animate {
+    top: 100px;
+    opacity: 1;
+    transition: all 0.3s;
   }
   .membership .membershipInner .list {
     position: absolute;
@@ -469,6 +525,25 @@
     border-top: none;
     height: 204px;
     color: #fff;
+    transform: translate(-10%, 0);
+    opacity: 0;
+  }
+  .membership .membershipInner .list li.animate {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  .membership .membershipInner .list li.animate .numBox {
+    border-right: none;
+    border-left: none;
+  }
+  .membership .membershipInner .list li.animate:first-child {
+    transition: all 0.3s;
+  }
+  .membership .membershipInner .list li.animate.animate:nth-child(2) {
+    transition: all 0.45s;
+  }
+  .membership .membershipInner .list li.animate.animate:last-child {
+    transition: all 0.6s;
   }
   .membership .membershipInner .list li .itemInner {
     height: 100%;
@@ -523,5 +598,6 @@
   .membership .membershipInner .more button:hover {
     background-color: #000;
     color: #fff;
+    transition: 0.3s;
   }
 }/*# sourceMappingURL=Membership.module.css.map */
