@@ -1,10 +1,10 @@
 import btn from "./ScrollBtn.module.css";
 export default function ScrollBtn() {
   const toTop = () => {
-    window.scrollTo(0, 0, { behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
   const toBottom = () => {
-    window.scrollTo(0, document.body.scrollHeight, { behavior: "smooth" });
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
   };
 
   return (

@@ -19,6 +19,7 @@
   white-space: nowrap;
   overflow: hidden;
   cursor: pointer;
+  transition: all 0.3s;
 }
 .btnContainer .bottom {
   transform: rotateX(180deg);
